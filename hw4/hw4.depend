@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1667008770 source:/home/solisjose46/Desktop/SER486/github/hw4/main.c
+	"uart.h"
+	"simpleled.h"
+	"simpledelay.h"
+	"temp.h"
+
+1666907093 /home/solisjose46/Desktop/SER486/github/hw4/uart.h
+
+1666907093 /home/solisjose46/Desktop/SER486/github/hw4/simpleled.h
+
+1666907093 /home/solisjose46/Desktop/SER486/github/hw4/simpledelay.h
+
+1667004824 /home/solisjose46/Desktop/SER486/github/hw4/temp.h
+
+1667008721 source:/home/solisjose46/Desktop/SER486/github/hw4/temp.c
+

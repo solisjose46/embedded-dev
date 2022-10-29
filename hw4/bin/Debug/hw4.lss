@@ -13,19 +13,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   4 .stab         00000834  00000000  00000000  00000b34  2**2
                   CONTENTS, READONLY, DEBUGGING
-  5 .stabstr      0000092d  00000000  00000000  00001368  2**0
+  5 .stabstr      00000935  00000000  00000000  00001368  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .comment      00000011  00000000  00000000  00001c95  2**0
+  6 .comment      00000011  00000000  00000000  00001c9d  2**0
                   CONTENTS, READONLY
-  7 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001ca8  2**2
+  7 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001cb0  2**2
                   CONTENTS, READONLY
-  8 .debug_info   000005f4  00000000  00000000  00001ce8  2**0
+  8 .debug_info   000005f4  00000000  00000000  00001cf0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_abbrev 000005a2  00000000  00000000  000022dc  2**0
+  9 .debug_abbrev 000005a2  00000000  00000000  000022e4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_line   0000001a  00000000  00000000  0000287e  2**0
+ 10 .debug_line   0000001a  00000000  00000000  00002886  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    00000208  00000000  00000000  00002898  2**0
+ 11 .debug_str    00000208  00000000  00000000  000028a0  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -110,8 +110,7 @@ int main(void)
   aa:	00 d0       	rcall	.+0      	; 0xac <main+0x6>
   ac:	cd b7       	in	r28, 0x3d	; 61
   ae:	de b7       	in	r29, 0x3e	; 62
-
-    // Insert code
+    /*Initialize uart, led then temperature*/
     uart_init();
   b0:	0e 94 2f 01 	call	0x25e	; 0x25e <uart_init>
     led_init();
@@ -119,22 +118,28 @@ int main(void)
     temp_init();
   b8:	0e 94 80 00 	call	0x100	; 0x100 <temp_init>
 
+    /*Write author's name to console*/
     uart_writestr("SER486 HW4 Jose Solis Salazar\n\r");
   bc:	82 e0       	ldi	r24, 0x02	; 2
   be:	91 e0       	ldi	r25, 0x01	; 1
   c0:	0e 94 35 01 	call	0x26a	; 0x26a <uart_writestr>
 
+    /*Loop forever*/
     while(1){
+        /*Begin the temp conversion*/
         temp_start();
   c4:	0e 94 c6 00 	call	0x18c	; 0x18c <temp_start>
 
+        /*Wait until data is ready to read*/
         while(!temp_is_data_ready()){
   c8:	00 00       	nop
   ca:	0e 94 a3 00 	call	0x146	; 0x146 <temp_is_data_ready>
   ce:	89 2b       	or	r24, r25
   d0:	e1 f3       	breq	.-8      	; 0xca <main+0x24>
-            // do nothing but wait
+            /*Wait*/
         }
+
+        /*Get reading and print to console*/
         signed int temperature = temp_get();
   d2:	0e 94 d7 00 	call	0x1ae	; 0x1ae <temp_get>
   d6:	9a 83       	std	Y+2, r25	; 0x02
@@ -149,10 +154,12 @@ int main(void)
   e6:	bc 01       	movw	r22, r24
   e8:	cd 01       	movw	r24, r26
   ea:	0e 94 63 01 	call	0x2c6	; 0x2c6 <uart_writedec32>
+        /*start on new line to make it easier to read on console*/
         uart_writestr("\n\r");
   ee:	82 e2       	ldi	r24, 0x22	; 34
   f0:	91 e0       	ldi	r25, 0x01	; 1
   f2:	0e 94 35 01 	call	0x26a	; 0x26a <uart_writestr>
+        /*Wait 1000 ms = 1 second*/
         delay(1000);
   f6:	88 ee       	ldi	r24, 0xE8	; 232
   f8:	93 e0       	ldi	r25, 0x03	; 3
@@ -161,10 +168,10 @@ int main(void)
   fe:	e2 cf       	rjmp	.-60     	; 0xc4 <main+0x1e>
 
 00000100 <temp_init>:
-#define INPUT_SELECTOR ((unsigned char) 0b1000)
-#define DIVISOR_SELECTOR ((unsigned char) 0b110)
-#define CONVERSION_SELECTOR ((unsigned char) 0b1)
-
+ * Changes:
+ *     ADMUX and ADCSRA register values
+ *
+ */
 void temp_init()
 {
  100:	cf 93       	push	r28
@@ -172,14 +179,14 @@ void temp_init()
  104:	00 d0       	rcall	.+0      	; 0x106 <temp_init+0x6>
  106:	cd b7       	in	r28, 0x3d	; 61
  108:	de b7       	in	r29, 0x3e	; 62
-    unsigned char adMuxConfig = ((VOLTAGE_REF << 6) | (INPUT_SELECTOR));
+    unsigned char ad_mux_value = ((VOLTAGE_REF << 6) | (INPUT_SELECTOR));
  10a:	88 ec       	ldi	r24, 0xC8	; 200
  10c:	89 83       	std	Y+1, r24	; 0x01
-    unsigned char adcsraConfig = ((CONVERSION_SELECTOR << 7) | (DIVISOR_SELECTOR));
+    unsigned char adcsra_value = ((CONVERSION_SELECTOR << 7) | (DIVISOR_SELECTOR));
  10e:	86 e8       	ldi	r24, 0x86	; 134
  110:	8a 83       	std	Y+2, r24	; 0x02
 
-    ADMUX |= adMuxConfig;
+    ADMUX |= ad_mux_value;
  112:	8c e7       	ldi	r24, 0x7C	; 124
  114:	90 e0       	ldi	r25, 0x00	; 0
  116:	2c e7       	ldi	r18, 0x7C	; 124
@@ -190,7 +197,7 @@ void temp_init()
  120:	23 2b       	or	r18, r19
  122:	fc 01       	movw	r30, r24
  124:	20 83       	st	Z, r18
-    ADCSRA |= adcsraConfig;
+    ADCSRA |= adcsra_value;
  126:	8a e7       	ldi	r24, 0x7A	; 122
  128:	90 e0       	ldi	r25, 0x00	; 0
  12a:	2a e7       	ldi	r18, 0x7A	; 122
@@ -210,7 +217,10 @@ void temp_init()
  144:	08 95       	ret
 
 00000146 <temp_is_data_ready>:
-
+ * Changes:
+ *     No Changes
+ *
+ */
 int temp_is_data_ready()
 {
  146:	cf 93       	push	r28
@@ -258,7 +268,10 @@ int temp_is_data_ready()
  18a:	08 95       	ret
 
 0000018c <temp_start>:
-
+ * Changes:
+ *     ADCSRA register value
+ *
+ */
 void temp_start()
 {
  18c:	cf 93       	push	r28
@@ -282,7 +295,10 @@ void temp_start()
  1ac:	08 95       	ret
 
 000001ae <temp_get>:
-
+ * Changes:
+ *     No Changes
+ *
+ */
 signed int temp_get()
 {
  1ae:	cf 93       	push	r28
