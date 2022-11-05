@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1667625071 source:/home/solisjose46/Desktop/SER486/github/project1/delay.c
+
+1667624748 source:/home/solisjose46/Desktop/SER486/github/project1/led.c
+	"led.h"
+	"delay.h"
+
+1667439751 /home/solisjose46/Desktop/SER486/github/project1/led.h
+
+1667439964 /home/solisjose46/Desktop/SER486/github/project1/delay.h
+
+1667623689 source:/home/solisjose46/Desktop/SER486/github/project1/main.c
+	"delay.h"
+	"led.h"
+	"rtc.h"
+	"timer1.h"
+	"uart.h"
+
+1667439771 /home/solisjose46/Desktop/SER486/github/project1/timer1.h
+
+1667439766 /home/solisjose46/Desktop/SER486/github/project1/rtc.h
+
+1667439774 /home/solisjose46/Desktop/SER486/github/project1/uart.h
+
+1667625063 source:/home/solisjose46/Desktop/SER486/github/project1/timer1.c
+

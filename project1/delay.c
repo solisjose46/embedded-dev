@@ -1,38 +1,59 @@
+/*
+ * delay.c
+ *
+ * SER486 Assignment 4
+ * Fall 2022
+ * Author: Jose Solis Salazar
+ * Modified By:
+ *
+ * Uses 8 bit timer0 of the Atmega 328p to create custom timers for timer interrupt design.
+ *
+ */
+
 /* Register Macros */
-#define SREG (*(volatile char*) 0x5F )
-#define TCCR0A (*(volatile unsigned char*) 0x44 )
-#define TCCR0B (*(volatile unsigned char*) 0x45 )
-#define TIMSK0 (*(volatile unsigned char*) 0x6E )
-#define OCR0A (*(volatile unsigned char*) 0x47 )
+#define SREG (*((volatile char*) 0x5F ))
+#define TCCR0A (*((volatile unsigned char*) 0x44 ))
+#define TCCR0B (*((volatile unsigned char*) 0x45 ))
+#define TIMSK0 (*((volatile unsigned char*) 0x6E ))
+#define OCR0A (*((volatile unsigned char*) 0x47 ))
 
 /* Timer Configuration Macros */
-#define COMA (0x0 << 7 | 0x0 << 6)
-#define COMB (0x0 << 5 | 0x0 << 4)
-#define WGMA (0x1 << 1 | 0x0)
-#define WGMB (0x0 << 3)
-#define CS (0x1 << 1 | 0x1)
-#define ENABLE_TIMER_INTERRUPT (0x1 << 1)
-#define TIMER_LIMIT (0xF9)
+#define COM (0b0000 << 4)
+#define WGMA (0b10)
+#define WGMB (0b0 << 3)
+#define CS (0b011)
+#define ENABLE_TIMER_INTERRUPT (0b010)
 
-/*Internal State*/
-static int count[2];
-static int limit[2];
-static int initialized = 0;
+/* 0d249 limit */
+#define TOP (0xF9)
 
-static void delay_init(){
-    /* Set timer0 compare to 1ms tick */
-    /* Set CTC mode and clock divisor */
-    /* Enable interrupts on compare A */
-    /* Stop further initialization */
 
-    /* Set normal port operation and ctc mode */
-    TCCR0A = COMA | COMB | WGMA
-    /* Set normal port operation and select 64 prescaler */
-    TCCR0B = WGMB | CS
-    /* Enable compare match interrupt */
-    TIMSK0 = ENABLE_TIMER_INTERRUPT
-    /* Set timer limit to 0d249 */
-    OCR0A = TIMER_LIMIT
+/* Internal State */
+static volatile unsigned int count[2];
+static unsigned int limit[2];
+static unsigned char initialized = 0;
+
+
+/*
+ * init()
+ *
+ * Initialize timer0 mode, prescaler and enable timer interrupt.
+ *
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ *
+ * Changes:
+ *     TCCR0A, TCCR0B, TIMSK0, OCR0A
+ *
+ */
+static void init() {
+    TCCR0A = (COM | WGMA);
+    TCCR0B = (WGMB | CS);
+    TIMSK0 = ENABLE_TIMER_INTERRUPT;
+    OCR0A = TOP;
 
     count[0] = 0;
     count[1] = 0;
@@ -42,58 +63,121 @@ static void delay_init(){
     initialized = 1;
 }
 
-unsigned int delay_get(unsigned int num){
-    /* Get global interrupt enable  */
+/*
+ * delay_get(unsigned num)
+ *
+ * Returns ticks elapsed for count[num]
+ *
+ * arguments:
+ *     num
+ *
+ * returns:
+ *     Returns ticks elapsed for count[num]
+ *
+ * Changes:
+ *     Nothing
+ *
+ */
+unsigned delay_get(unsigned num) {
+
+    /* get global interrupt enable bit state */
     unsigned char sreg_state = SREG;
 
-    /* Disable interrupts */
+    /* disable interrupts */
     __builtin_avr_cli();
 
-    /* Get count[n] value */
+    /* get the count[n] value */
     unsigned int value = count[num];
 
-    /* Restore global interrupt state */
-    SGEG = sreg_state;
+    /* restore global interrupt state */
+    SREG = sreg_state;
 
-    /* Return the count value */
+    /* return the count value */
     return value;
+
 }
 
-void delay_set(unsigned int num, unsigned int time){
-    /* Initialize the delay counter */
-    if(initialized == 0){
-       delay_init();
-    }
-    /* Get global interrupt bit state */
-    unsigned int sreg_state = SREG;
 
-    /* Disable interrupts */
+/*
+ * delay_set(unsigned int num, unsigned int time)
+ *
+ * Resets ticks for count[num] and tick limit
+ *
+ * arguments:
+ *     num, time
+ *
+ * returns:
+ *     Nothing
+ *
+ * Changes:
+ *     count[num], limit[num]
+ *
+ */
+void delay_set(unsigned int num, unsigned int time){
+
+    if (initialized != 1) {
+        init();
+    }
+
+    /* get global interrupt enable bit state */
+    unsigned char sreg_state = SREG;
+
+    /* disable interrupts */
     __builtin_avr_cli();
 
-    /* Set the time limit for delay[n] and clear the count for delay[n] */
+    /* set the limit for delay[n] and clear the count for delay[n] */
     limit[num] = time;
     count[num] = 0;
 
-    /* Restore the global interrupt state */
+    /* restore global interrupt state */
     SREG = sreg_state;
+
 }
 
-unsigned int delay_isdone(unsigned int num){
-    /* result = 0 */
-    unsigned int isdone = 0;
+/*
+ * delay_set(unsigned int num)
+ *
+ * Checks if count[num] has reached its tick limit
+ *
+ * arguments:
+ *     num
+ *
+ * returns:
+ *     1 = if limit reached, 0 if not yet reached limit
+ *
+ * Changes:
+ *     Nothing
+ *
+ */
+unsigned char delay_isdone(unsigned int num) {
 
-    /* result = 1 */
-    if(count[num] == limit[num]){
-       isdone = 1;
+    unsigned char value = 0;
+
+    if (count[num] == limit[num]) {
+            value = 1;
     }
 
-    /* return result */
-    return isdone;
+    return value;
+
 }
 
+/*
+ * __vector_14
+ *
+ * Our interrupt handler which increments our timers.
+ *
+ *
+ * returns:
+ *     Nothing
+ *
+ * Changes:
+ *     count[0], count[1]
+ *
+ */
 void __vector_14(void) __attribute__ ((signal,used, externally_visible));
-void __vector_14(){
-    /* For each instance of delay, increment its count as long as it is gte than its limit */
+void __vector_14(void) {
+
     count[0]++;
     count[1]++;
-}
+
+ }
