@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1668217962 source:/home/solisjose46/Desktop/SER486/github/project2/config.c
+	"eeprom.h"
+	"config.h"
+	"util.h"
+
+1668211965 /home/solisjose46/Desktop/SER486/github/project2/eeprom.h
+
+1668216156 /home/solisjose46/Desktop/SER486/github/project2/config.h
+
+1668218297 /home/solisjose46/Desktop/SER486/github/project2/util.h
+
+1668221137 source:/home/solisjose46/Desktop/SER486/github/project2/eeprom.c
+	"eeprom.h"
+
+1667958298 /home/solisjose46/Desktop/SER486/github/project2/uart.h
+
+1668220677 source:/home/solisjose46/Desktop/SER486/github/project2/main.c
+	"vpd.h"
+	"uart.h"
+	"eeprom.h"
+	"config.h"
+	"led.h"
+	"log.h"
+	"rtc.h"
+
+1668213023 /home/solisjose46/Desktop/SER486/github/project2/vpd.h
+
+1667958298 /home/solisjose46/Desktop/SER486/github/project2/led.h
+
+1667958298 /home/solisjose46/Desktop/SER486/github/project2/log.h
+
+1667958298 /home/solisjose46/Desktop/SER486/github/project2/rtc.h
+
+1668219742 source:/home/solisjose46/Desktop/SER486/github/project2/util.c
+
+1668221104 source:/home/solisjose46/Desktop/SER486/github/project2/vpd.c
+	"eeprom.h"
+	"util.h"
+	"vpd.h"
+

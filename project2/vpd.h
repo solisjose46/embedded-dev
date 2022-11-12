@@ -12,12 +12,13 @@
 *
 */
 
-#define TOKEN_SIZE (4)
-#define MODEL_SIZE (12)
-#define MANUFACTURER_SIZE (12)
-#define SERIAL_SIZE (12)
-#define MAC_ADDR_SIZE (6)
-#define COUNTRY_ORIGIN_SIZE (4)
+/* Array sizes as variables */
+#define TOKEN_SIZE 4
+#define MODEL_SIZE 12
+#define MANUFACTURER_SIZE 12
+#define SERIAL_SIZE 12
+#define MAC_ADDR_SIZE 6
+#define COUNTRY_ORIGIN_SIZE 4
 
 typedef struct{
    char token[TOKEN_SIZE];
@@ -32,6 +33,7 @@ typedef struct{
 
 extern vpd_struct vpd;
 
-void vpd_init(); 
+/* Initialize vpd member data from the EEPROM. */
+void vpd_init();
 
 #endif // VPD_H_INCLUDED

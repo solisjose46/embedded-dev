@@ -1,0 +1,973 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+                              obj/Debug/main.o (led_set_blink)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+                              obj/Debug/main.o (led_init)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                              obj/Debug/main.o (log_init)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                              obj/Debug/main.o (rtc_init)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o) (str_cpy)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o) (timer1_init)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                              obj/Debug/main.o (uart_init)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+                              obj/Debug/main.o (dump_eeprom)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o) (delay_isdone)
+/home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o) (serial_init)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o) (__mulsi3)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o) (__udivmodhi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o) (__divmodhi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o) (__udivmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o) (__divmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o) (__negsi2)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                              obj/Debug/config.o (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                              obj/Debug/config.o (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o) (__umulhisi3)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o) (__muluhisi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+rxbuf               0x40              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+vpd                 0x37              obj/Debug/vpd.o
+rtc_base            0x4               /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+txbuf               0x40              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+config              0x12              obj/Debug/config.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+LOAD obj/Debug/config.o
+LOAD obj/Debug/eeprom.o
+LOAD obj/Debug/main.o
+LOAD obj/Debug/util.o
+LOAD obj/Debug/vpd.o
+LOAD /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libatmega328p.a
+END GROUP
+                0x0000000000020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x197c
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000000000000068                . = ALIGN (0x2)
+                0x0000000000000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000068        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000068                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+                0x0000000000000068                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000068                __ctors_start = .
+ *(.ctors)
+                0x0000000000000068                __ctors_end = .
+                0x0000000000000068                __dtors_start = .
+ *(.dtors)
+                0x0000000000000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000068        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000068        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000074       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000074                __do_copy_data
+ .init4         0x000000000000008a       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x000000000000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000000000009a        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000a2        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000a2                __vector_1
+                0x00000000000000a2                __vector_24
+                0x00000000000000a2                __vector_12
+                0x00000000000000a2                __bad_interrupt
+                0x00000000000000a2                __vector_6
+                0x00000000000000a2                __vector_3
+                0x00000000000000a2                __vector_23
+                0x00000000000000a2                __vector_25
+                0x00000000000000a2                __vector_13
+                0x00000000000000a2                __vector_17
+                0x00000000000000a2                __vector_7
+                0x00000000000000a2                __vector_5
+                0x00000000000000a2                __vector_4
+                0x00000000000000a2                __vector_9
+                0x00000000000000a2                __vector_2
+                0x00000000000000a2                __vector_21
+                0x00000000000000a2                __vector_15
+                0x00000000000000a2                __vector_8
+                0x00000000000000a2                __vector_10
+                0x00000000000000a2                __vector_16
+                0x00000000000000a2                __vector_20
+ .text          0x00000000000000a6       0xea obj/Debug/config.o
+                0x00000000000000f4                config_init
+                0x000000000000013a                config_update
+                0x000000000000017a                config_set_modified
+ .text          0x0000000000000190      0x216 obj/Debug/eeprom.o
+                0x0000000000000190                eeprom_writebuf
+                0x0000000000000246                eeprom_readbuf
+                0x0000000000000306                eeprom_isbusy
+                0x000000000000031c                __vector_22
+ .text          0x00000000000003a6       0xb8 obj/Debug/main.o
+                0x00000000000003a6                main
+ .text          0x000000000000045e      0x10e obj/Debug/util.o
+                0x000000000000045e                update_checksum
+                0x00000000000004ec                is_checksum_valid
+ .text          0x000000000000056c       0x90 obj/Debug/vpd.o
+                0x00000000000005ba                vpd_init
+ .text          0x00000000000005fc       0xd8 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+                0x00000000000005fc                led_set_blink
+                0x0000000000000620                led_update
+ .text          0x00000000000006d4       0x18 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+                0x00000000000006d4                led_init
+                0x00000000000006da                led_on
+                0x00000000000006de                led_off
+                0x00000000000006e2                led_is_on
+ .text          0x00000000000006ec      0x3d8 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                0x00000000000006ec                log_is_data_valid
+                0x0000000000000738                log_init
+                0x00000000000008c2                log_update
+                0x000000000000092e                log_add_record
+                0x00000000000009d0                log_clear
+                0x0000000000000a0a                log_get_num_entries
+                0x0000000000000a3c                log_get_record
+ .text          0x0000000000000ac4      0x5e6 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                0x0000000000000ac4                rtc_init
+                0x0000000000000ac8                rtc_get_date
+                0x0000000000000aee                is_leapyear
+                0x0000000000000b22                rtc_set_by_datestr
+                0x0000000000000dec                get_month
+                0x0000000000000e7c                rtc_num2datestr
+                0x0000000000001082                rtc_get_date_string
+ .text          0x00000000000010aa       0xd8 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+                0x00000000000010aa                str_cpy
+                0x00000000000010be                str_writeudec16
+ .text          0x0000000000001182       0x98 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+                0x0000000000001182                __vector_11
+                0x00000000000011cc                timer1_init
+                0x00000000000011ea                timer1_get
+                0x0000000000001202                timer1_clear
+ .text          0x000000000000121a      0x194 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                0x000000000000121a                uart_init
+                0x0000000000001222                uart_writechar
+                0x0000000000001226                uart_writestr
+                0x000000000000123e                uart_writehex8
+                0x0000000000001270                uart_writehex16
+                0x0000000000001282                uart_writedec32
+ .text          0x00000000000013ae      0x194 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+                0x00000000000013ae                dump_eeprom
+ .text          0x0000000000001542      0x12c /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+                0x0000000000001542                __vector_14
+                0x00000000000015b6                delay_init
+                0x00000000000015c8                delay_get
+                0x00000000000015e8                delay_isdone
+                0x000000000000161a                delay_set
+ .text          0x000000000000166e      0x1e4 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                0x000000000000166e                serial_init
+                0x0000000000001694                __vector_18
+                0x00000000000016f6                __vector_19
+                0x000000000000175c                serial_rxchars
+                0x000000000000176a                serial_popchar
+                0x000000000000179e                serial_writechar
+                0x00000000000017fe                serial_writestr
+                0x0000000000001828                serial_writestr_P
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text          0x0000000000001852        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000001852                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc.mul
+                0x0000000000001852       0x20 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000001852                __mulsi3
+ .text.libgcc.div
+                0x0000000000001872        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc   0x0000000000001872        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.prologue
+                0x0000000000001872        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.builtins
+                0x0000000000001872        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fmul
+                0x0000000000001872        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fixed
+                0x0000000000001872        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.mul
+                0x0000000000001872        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x0000000000001872       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000001872                __udivmodhi4
+ .text.libgcc   0x000000000000189a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x000000000000189a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x000000000000189a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x000000000000189a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x000000000000189a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x000000000000189a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x000000000000189a       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x000000000000189a                __divmodhi4
+                0x000000000000189a                _div
+ .text.libgcc   0x00000000000018c2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000000018c2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000000018c2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000000018c2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000000018c2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x00000000000018c2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x00000000000018c2       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x00000000000018c2                __udivmodsi4
+ .text.libgcc   0x0000000000001906        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000001906        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000001906        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000001906        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000001906        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000001906        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.div
+                0x0000000000001906       0x2e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000001906                __divmodsi4
+ .text.libgcc   0x0000000000001934        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000001934        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000001934        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000001934        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000001934        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000001934        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.div
+                0x0000000000001934       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000001934                __negsi2
+ .text.libgcc   0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.prologue
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.builtins
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fmul
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fixed
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.mul
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000001944        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000001944       0x1e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000001944                __umulhisi3
+ .text.libgcc.div
+                0x0000000000001962        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000001962        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000001962        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000001962        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000001962        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000001962        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x0000000000001962       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000001962                __muluhisi3
+ .text.libgcc.div
+                0x0000000000001978        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000001978        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000001978        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000001978        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000001978        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000001978        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000001978                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000001978        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000001978                exit
+                0x0000000000001978                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000001978        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000000000000197c                _etext = .
+
+.siminfo        0x000000000000197c       0x28
+ .siminfo       0x000000000000197c       0x28 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                0x000000000000197c                siminfo_serial_out
+                0x0000000000001987                siminfo_serial_in
+                0x0000000000001992                siminfo_cpufrequency
+                0x0000000000001998                siminfo_device
+
+.data           0x0000000000800100       0xcc load address 0x00000000000019a4
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .data          0x0000000000800100       0x12 obj/Debug/config.o
+ .data          0x0000000000800112        0x0 obj/Debug/eeprom.o
+ .data          0x0000000000800112        0x0 obj/Debug/main.o
+ .data          0x0000000000800112        0x0 obj/Debug/util.o
+ .data          0x0000000000800112       0x37 obj/Debug/vpd.o
+ .data          0x0000000000800149        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+ .data          0x0000000000800149        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+ .data          0x0000000000800149        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+ .data          0x0000000000800149       0x14 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+ .data          0x000000000080015d        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+ .data          0x000000000080015d        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+ .data          0x000000000080015d        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+ .data          0x000000000080015d        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+ .data          0x000000000080015d        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+ .data          0x000000000080015d        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .data          0x000000000080015d        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ *(.data*)
+ *(.rodata)
+ .rodata        0x000000000080015d       0x48 obj/Debug/main.o
+ .rodata        0x00000000008001a5        0xc /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00000000008001b1       0x14 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+ .rodata.str1.1
+                0x00000000008001c5        0x7 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+ *(.gnu.linkonce.d*)
+                0x00000000008001cc                . = ALIGN (0x2)
+                0x00000000008001cc                _edata = .
+                0x00000000008001cc                PROVIDE (__data_end, .)
+
+.bss            0x00000000008001cc      0x1ad
+                0x00000000008001cc                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00000000008001cc        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x00000000008001cc        0x1 obj/Debug/config.o
+ .bss           0x00000000008001cd       0x45 obj/Debug/eeprom.o
+ .bss           0x0000000000800212        0x0 obj/Debug/main.o
+ .bss           0x0000000000800212        0x0 obj/Debug/util.o
+ .bss           0x0000000000800212        0x0 obj/Debug/vpd.o
+ .bss           0x0000000000800212        0x5 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+ .bss           0x0000000000800217        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+ .bss           0x0000000000800217       0x83 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+ .bss           0x000000000080029a        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+ .bss           0x000000000080029a        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+ .bss           0x000000000080029a        0x4 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+ .bss           0x000000000080029e        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+ .bss           0x000000000080029e        0x0 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+ .bss           0x000000000080029e        0xa /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+ .bss           0x00000000008002a8        0x4 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                0x00000000008002a8                txtail
+                0x00000000008002a9                txhead
+                0x00000000008002aa                rxtail
+                0x00000000008002ab                rxhead
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .bss           0x00000000008002ac        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00000000008002ac       0x12 obj/Debug/config.o
+                0x00000000008002ac                config
+ COMMON         0x00000000008002be       0x37 obj/Debug/vpd.o
+                0x00000000008002be                vpd
+ COMMON         0x00000000008002f5        0x4 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                0x00000000008002f5                rtc_base
+ COMMON         0x00000000008002f9       0x80 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                0x00000000008002f9                rxbuf
+                0x0000000000800339                txbuf
+                0x0000000000800379                PROVIDE (__bss_end, .)
+                0x00000000000019a4                __data_load_start = LOADADDR (.data)
+                0x0000000000001a70                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800379        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800379                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x0000000000000000     0x1890
+ *(.stab)
+ .stab          0x0000000000000000      0x540 obj/Debug/config.o
+ .stab          0x0000000000000540      0x648 obj/Debug/eeprom.o
+                                        0x654 (size before relaxing)
+ .stab          0x0000000000000b88      0x48c obj/Debug/main.o
+                                        0x498 (size before relaxing)
+ .stab          0x0000000000001014      0x45c obj/Debug/util.o
+                                        0x468 (size before relaxing)
+ .stab          0x0000000000001470      0x420 obj/Debug/vpd.o
+                                        0x444 (size before relaxing)
+
+.stabstr        0x0000000000000000      0xe28
+ *(.stabstr)
+ .stabstr       0x0000000000000000      0xe28 obj/Debug/config.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 obj/Debug/config.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 obj/Debug/eeprom.o
+ .comment       0x0000000000000011       0x12 obj/Debug/main.o
+ .comment       0x0000000000000011       0x12 obj/Debug/util.o
+ .comment       0x0000000000000011       0x12 obj/Debug/vpd.o
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x5f4
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x5f4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_abbrev   0x0000000000000000      0x5a2
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x5a2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_line     0x0000000000000000       0x1a
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000      0x208
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x208 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bin/Debug/project2.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+__FUSE_REGION_LENGTH__                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__bad_interrupt                                   /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__bss_end                                         /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+__divmodsi4                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+                                                  obj/Debug/vpd.o
+                                                  obj/Debug/eeprom.o
+                                                  obj/Debug/config.o
+__do_copy_data                                    /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                                                  obj/Debug/vpd.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/config.o
+__heap_end                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__init                                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__mulsi3                                          /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+__muluhisi3                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+__negsi2                                          /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+__stack                                           /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__udivmodhi4                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+__udivmodsi4                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+__umulhisi3                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+__vector_1                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_10                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_11                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_12                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_13                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_14                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_15                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_16                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_17                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_18                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_19                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_2                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_20                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_21                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_22                                       obj/Debug/eeprom.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_23                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_24                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_25                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_3                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_4                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_5                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_6                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_7                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_8                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_9                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_default                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vectors                                         /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+_div                                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+_exit                                             /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+config                                            obj/Debug/config.o
+                                                  obj/Debug/main.o
+config_init                                       obj/Debug/config.o
+                                                  obj/Debug/main.o
+config_set_modified                               obj/Debug/config.o
+                                                  obj/Debug/main.o
+config_update                                     obj/Debug/config.o
+                                                  obj/Debug/main.o
+delay_get                                         /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+delay_init                                        /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+delay_isdone                                      /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+delay_set                                         /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(delay.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+dump_eeprom                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+                                                  obj/Debug/main.o
+eeprom_isbusy                                     obj/Debug/eeprom.o
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/vpd.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/config.o
+eeprom_readbuf                                    obj/Debug/eeprom.o
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/vpd.o
+                                                  obj/Debug/config.o
+eeprom_writebuf                                   obj/Debug/eeprom.o
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/vpd.o
+                                                  obj/Debug/config.o
+exit                                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+get_month                                         /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+is_checksum_valid                                 obj/Debug/util.o
+is_leapyear                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+led_init                                          /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+                                                  obj/Debug/main.o
+led_is_on                                         /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+led_off                                           /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+led_on                                            /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led_part.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+led_set_blink                                     /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+                                                  obj/Debug/main.o
+led_update                                        /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(led.o)
+                                                  obj/Debug/main.o
+log_add_record                                    /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/main.o
+log_clear                                         /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/main.o
+log_get_num_entries                               /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+log_get_record                                    /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+log_init                                          /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/main.o
+log_is_data_valid                                 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+log_update                                        /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/main.o
+main                                              obj/Debug/main.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+rtc_base                                          /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+rtc_get_date                                      /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+rtc_get_date_string                               /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+rtc_init                                          /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                                                  obj/Debug/main.o
+rtc_num2datestr                                   /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+rtc_set_by_datestr                                /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+                                                  obj/Debug/main.o
+rxbuf                                             /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+rxhead                                            /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+rxtail                                            /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+serial_init                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+serial_popchar                                    /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+serial_rxchars                                    /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+serial_writechar                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+serial_writestr                                   /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+serial_writestr_P                                 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+siminfo_cpufrequency                              /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+siminfo_device                                    /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+siminfo_serial_in                                 /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+siminfo_serial_out                                /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+str_cpy                                           /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+str_writeudec16                                   /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+timer1_clear                                      /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+timer1_get                                        /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+timer1_init                                       /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(rtc.o)
+txbuf                                             /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+txhead                                            /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+txtail                                            /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(serial.o)
+uart_init                                         /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                                                  obj/Debug/main.o
+uart_writechar                                    /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+uart_writedec32                                   /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+uart_writehex16                                   /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+uart_writehex8                                    /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+uart_writestr                                     /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(util_part.o)
+                                                  obj/Debug/main.o
+update_checksum                                   obj/Debug/util.o
+                                                  /home/solisjose46/Desktop/SER486/github/project2/lib_proj2.a(log.o)
+                                                  obj/Debug/vpd.o
+                                                  obj/Debug/config.o
+vpd                                               obj/Debug/vpd.o
+                                                  obj/Debug/main.o
+vpd_init                                          obj/Debug/vpd.o
+                                                  obj/Debug/main.o
