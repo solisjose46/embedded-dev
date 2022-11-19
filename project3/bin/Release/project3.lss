@@ -3,25 +3,25 @@ bin/Release/project3.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         000002b4  00800100  00002732  000027c6  2**0
+  0 .data         000002be  00800100  00002732  000027c6  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   1 .text         0000270a  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .siminfo      00000028  0000270a  0000270a  0000279e  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .bss          000001f6  008003b4  008003b4  00002a7a  2**0
+  3 .bss          000001f6  008003be  008003be  00002a84  2**0
                   ALLOC
-  4 .comment      00000011  00000000  00000000  00002a7a  2**0
+  4 .comment      00000011  00000000  00000000  00002a84  2**0
                   CONTENTS, READONLY
-  5 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00002a8c  2**2
+  5 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00002a98  2**2
                   CONTENTS, READONLY
-  6 .debug_info   000005f4  00000000  00000000  00002acc  2**0
+  6 .debug_info   000005f4  00000000  00000000  00002ad8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000005a2  00000000  00000000  000030c0  2**0
+  7 .debug_abbrev 000005a2  00000000  00000000  000030cc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000001a  00000000  00000000  00003662  2**0
+  8 .debug_line   0000001a  00000000  00000000  0000366e  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000208  00000000  00000000  0000367c  2**0
+  9 .debug_str    00000208  00000000  00000000  00003688  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -80,13 +80,13 @@ Disassembly of section .text:
       90:	02 c0       	rjmp	.+4      	; 0x96 <__do_copy_data+0x10>
       92:	05 90       	lpm	r0, Z+
       94:	0d 92       	st	X+, r0
-      96:	a4 3b       	cpi	r26, 0xB4	; 180
+      96:	ae 3b       	cpi	r26, 0xBE	; 190
       98:	b1 07       	cpc	r27, r17
       9a:	d9 f7       	brne	.-10     	; 0x92 <__do_copy_data+0xc>
 
 0000009c <__do_clear_bss>:
       9c:	25 e0       	ldi	r18, 0x05	; 5
-      9e:	a4 eb       	ldi	r26, 0xB4	; 180
+      9e:	ae eb       	ldi	r26, 0xBE	; 190
       a0:	b3 e0       	ldi	r27, 0x03	; 3
       a2:	01 c0       	rjmp	.+2      	; 0xa6 <.do_clear_bss_start>
 
@@ -94,7 +94,7 @@ Disassembly of section .text:
       a4:	1d 92       	st	X+, r1
 
 000000a6 <.do_clear_bss_start>:
-      a6:	aa 3a       	cpi	r26, 0xAA	; 170
+      a6:	a4 3b       	cpi	r26, 0xB4	; 180
       a8:	b2 07       	cpc	r27, r18
       aa:	e1 f7       	brne	.-8      	; 0xa4 <.do_clear_bss_loop>
       ac:	0e 94 6b 12 	call	0x24d6	; 0x24d6 <main>
@@ -106,8 +106,8 @@ Disassembly of section .text:
 000000b8 <tempfsm_update>:
       b8:	0f 93       	push	r16
       ba:	1f 93       	push	r17
-      bc:	e0 91 b4 03 	lds	r30, 0x03B4	; 0x8003b4 <__data_end>
-      c0:	f0 91 b5 03 	lds	r31, 0x03B5	; 0x8003b5 <__data_end+0x1>
+      bc:	e0 91 be 03 	lds	r30, 0x03BE	; 0x8003be <__data_end>
+      c0:	f0 91 bf 03 	lds	r31, 0x03BF	; 0x8003bf <__data_end+0x1>
       c4:	e9 30       	cpi	r30, 0x09	; 9
       c6:	f1 05       	cpc	r31, r1
       c8:	08 f0       	brcs	.+2      	; 0xcc <tempfsm_update+0x14>
@@ -120,8 +120,8 @@ Disassembly of section .text:
       d8:	64 f0       	brlt	.+24     	; 0xf2 <tempfsm_update+0x3a>
       da:	83 e0       	ldi	r24, 0x03	; 3
       dc:	90 e0       	ldi	r25, 0x00	; 0
-      de:	90 93 b5 03 	sts	0x03B5, r25	; 0x8003b5 <__data_end+0x1>
-      e2:	80 93 b4 03 	sts	0x03B4, r24	; 0x8003b4 <__data_end>
+      de:	90 93 bf 03 	sts	0x03BF, r25	; 0x8003bf <__data_end+0x1>
+      e2:	80 93 be 03 	sts	0x03BE, r24	; 0x8003be <__data_end>
       e6:	86 e0       	ldi	r24, 0x06	; 6
       e8:	90 e0       	ldi	r25, 0x00	; 0
       ea:	0e 94 8e 01 	call	0x31c	; 0x31c <alarm_send>
@@ -133,8 +133,8 @@ Disassembly of section .text:
       f8:	7c c0       	rjmp	.+248    	; 0x1f2 <tempfsm_update+0x13a>
       fa:	86 e0       	ldi	r24, 0x06	; 6
       fc:	90 e0       	ldi	r25, 0x00	; 0
-      fe:	90 93 b5 03 	sts	0x03B5, r25	; 0x8003b5 <__data_end+0x1>
-     102:	80 93 b4 03 	sts	0x03B4, r24	; 0x8003b4 <__data_end>
+      fe:	90 93 bf 03 	sts	0x03BF, r25	; 0x8003bf <__data_end+0x1>
+     102:	80 93 be 03 	sts	0x03BE, r24	; 0x8003be <__data_end>
      106:	88 e0       	ldi	r24, 0x08	; 8
      108:	90 e0       	ldi	r25, 0x00	; 0
      10a:	0e 94 8e 01 	call	0x31c	; 0x31c <alarm_send>
@@ -165,8 +165,8 @@ Disassembly of section .text:
      140:	54 f0       	brlt	.+20     	; 0x156 <tempfsm_update+0x9e>
      142:	85 e0       	ldi	r24, 0x05	; 5
      144:	90 e0       	ldi	r25, 0x00	; 0
-     146:	90 93 b5 03 	sts	0x03B5, r25	; 0x8003b5 <__data_end+0x1>
-     14a:	80 93 b4 03 	sts	0x03B4, r24	; 0x8003b4 <__data_end>
+     146:	90 93 bf 03 	sts	0x03BF, r25	; 0x8003bf <__data_end+0x1>
+     14a:	80 93 be 03 	sts	0x03BE, r24	; 0x8003be <__data_end>
      14e:	0e 94 8e 01 	call	0x31c	; 0x31c <alarm_send>
      152:	85 e0       	ldi	r24, 0x05	; 5
      154:	20 c0       	rjmp	.+64     	; 0x196 <tempfsm_update+0xde>
@@ -193,8 +193,8 @@ Disassembly of section .text:
      17e:	74 f0       	brlt	.+28     	; 0x19c <tempfsm_update+0xe4>
      180:	88 e0       	ldi	r24, 0x08	; 8
      182:	90 e0       	ldi	r25, 0x00	; 0
-     184:	90 93 b5 03 	sts	0x03B5, r25	; 0x8003b5 <__data_end+0x1>
-     188:	80 93 b4 03 	sts	0x03B4, r24	; 0x8003b4 <__data_end>
+     184:	90 93 bf 03 	sts	0x03BF, r25	; 0x8003bf <__data_end+0x1>
+     188:	80 93 be 03 	sts	0x03BE, r24	; 0x8003be <__data_end>
      18c:	87 e0       	ldi	r24, 0x07	; 7
      18e:	90 e0       	ldi	r25, 0x00	; 0
      190:	0e 94 8e 01 	call	0x31c	; 0x31c <alarm_send>
@@ -206,9 +206,9 @@ Disassembly of section .text:
      1a0:	14 f5       	brge	.+68     	; 0x1e6 <tempfsm_update+0x12e>
      1a2:	81 e0       	ldi	r24, 0x01	; 1
      1a4:	90 e0       	ldi	r25, 0x00	; 0
-     1a6:	90 93 b5 03 	sts	0x03B5, r25	; 0x8003b5 <__data_end+0x1>
-     1aa:	80 93 b4 03 	sts	0x03B4, r24	; 0x8003b4 <__data_end>
-     1ae:	85 ef       	ldi	r24, 0xF5	; 245
+     1a6:	90 93 bf 03 	sts	0x03BF, r25	; 0x8003bf <__data_end+0x1>
+     1aa:	80 93 be 03 	sts	0x03BE, r24	; 0x8003be <__data_end>
+     1ae:	8f ef       	ldi	r24, 0xFF	; 255
      1b0:	91 e0       	ldi	r25, 0x01	; 1
      1b2:	1b c0       	rjmp	.+54     	; 0x1ea <tempfsm_update+0x132>
      1b4:	82 17       	cp	r24, r18
@@ -216,9 +216,9 @@ Disassembly of section .text:
      1b8:	4c f4       	brge	.+18     	; 0x1cc <tempfsm_update+0x114>
      1ba:	88 e0       	ldi	r24, 0x08	; 8
      1bc:	90 e0       	ldi	r25, 0x00	; 0
-     1be:	90 93 b5 03 	sts	0x03B5, r25	; 0x8003b5 <__data_end+0x1>
-     1c2:	80 93 b4 03 	sts	0x03B4, r24	; 0x8003b4 <__data_end>
-     1c6:	8a ec       	ldi	r24, 0xCA	; 202
+     1be:	90 93 bf 03 	sts	0x03BF, r25	; 0x8003bf <__data_end+0x1>
+     1c2:	80 93 be 03 	sts	0x03BE, r24	; 0x8003be <__data_end>
+     1c6:	84 ed       	ldi	r24, 0xD4	; 212
      1c8:	91 e0       	ldi	r25, 0x01	; 1
      1ca:	0f c0       	rjmp	.+30     	; 0x1ea <tempfsm_update+0x132>
      1cc:	08 17       	cp	r16, r24
@@ -230,9 +230,9 @@ Disassembly of section .text:
      1d8:	b4 f7       	brge	.-20     	; 0x1c6 <tempfsm_update+0x10e>
      1da:	87 e0       	ldi	r24, 0x07	; 7
      1dc:	90 e0       	ldi	r25, 0x00	; 0
-     1de:	90 93 b5 03 	sts	0x03B5, r25	; 0x8003b5 <__data_end+0x1>
-     1e2:	80 93 b4 03 	sts	0x03B4, r24	; 0x8003b4 <__data_end>
-     1e6:	88 ec       	ldi	r24, 0xC8	; 200
+     1de:	90 93 bf 03 	sts	0x03BF, r25	; 0x8003bf <__data_end+0x1>
+     1e2:	80 93 be 03 	sts	0x03BE, r24	; 0x8003be <__data_end>
+     1e6:	82 ed       	ldi	r24, 0xD2	; 210
      1e8:	91 e0       	ldi	r25, 0x01	; 1
      1ea:	1f 91       	pop	r17
      1ec:	0f 91       	pop	r16
@@ -242,18 +242,18 @@ Disassembly of section .text:
      1f6:	08 95       	ret
 
 000001f8 <tempfsm_reset>:
-     1f8:	10 92 b5 03 	sts	0x03B5, r1	; 0x8003b5 <__data_end+0x1>
-     1fc:	10 92 b4 03 	sts	0x03B4, r1	; 0x8003b4 <__data_end>
+     1f8:	10 92 bf 03 	sts	0x03BF, r1	; 0x8003bf <__data_end+0x1>
+     1fc:	10 92 be 03 	sts	0x03BE, r1	; 0x8003be <__data_end>
      200:	08 95       	ret
 
 00000202 <tempfsm_init>:
-     202:	10 92 b5 03 	sts	0x03B5, r1	; 0x8003b5 <__data_end+0x1>
-     206:	10 92 b4 03 	sts	0x03B4, r1	; 0x8003b4 <__data_end>
+     202:	10 92 bf 03 	sts	0x03BF, r1	; 0x8003bf <__data_end+0x1>
+     206:	10 92 be 03 	sts	0x03BE, r1	; 0x8003be <__data_end>
      20a:	08 95       	ret
 
 0000020c <update_tcrit_hi>:
-     20c:	20 91 9e 04 	lds	r18, 0x049E	; 0x80049e <config+0x6>
-     210:	30 91 9f 04 	lds	r19, 0x049F	; 0x80049f <config+0x7>
+     20c:	20 91 a8 04 	lds	r18, 0x04A8	; 0x8004a8 <config+0x6>
+     210:	30 91 a9 04 	lds	r19, 0x04A9	; 0x8004a9 <config+0x7>
      214:	28 17       	cp	r18, r24
      216:	39 07       	cpc	r19, r25
      218:	7c f4       	brge	.+30     	; 0x238 <update_tcrit_hi+0x2c>
@@ -261,8 +261,8 @@ Disassembly of section .text:
      21c:	24 e0       	ldi	r18, 0x04	; 4
      21e:	92 07       	cpc	r25, r18
      220:	5c f4       	brge	.+22     	; 0x238 <update_tcrit_hi+0x2c>
-     222:	90 93 9d 04 	sts	0x049D, r25	; 0x80049d <config+0x5>
-     226:	80 93 9c 04 	sts	0x049C, r24	; 0x80049c <config+0x4>
+     222:	90 93 a7 04 	sts	0x04A7, r25	; 0x8004a7 <config+0x5>
+     226:	80 93 a6 04 	sts	0x04A6, r24	; 0x8004a6 <config+0x4>
      22a:	0e 94 a0 01 	call	0x340	; 0x340 <config_set_modified>
      22e:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <config_update>
      232:	80 e0       	ldi	r24, 0x00	; 0
@@ -273,18 +273,18 @@ Disassembly of section .text:
      23c:	08 95       	ret
 
 0000023e <update_twarn_hi>:
-     23e:	20 91 a2 04 	lds	r18, 0x04A2	; 0x8004a2 <config+0xa>
-     242:	30 91 a3 04 	lds	r19, 0x04A3	; 0x8004a3 <config+0xb>
+     23e:	20 91 ac 04 	lds	r18, 0x04AC	; 0x8004ac <config+0xa>
+     242:	30 91 ad 04 	lds	r19, 0x04AD	; 0x8004ad <config+0xb>
      246:	82 17       	cp	r24, r18
      248:	93 07       	cpc	r25, r19
      24a:	94 f0       	brlt	.+36     	; 0x270 <update_twarn_hi+0x32>
-     24c:	20 91 9c 04 	lds	r18, 0x049C	; 0x80049c <config+0x4>
-     250:	30 91 9d 04 	lds	r19, 0x049D	; 0x80049d <config+0x5>
+     24c:	20 91 a6 04 	lds	r18, 0x04A6	; 0x8004a6 <config+0x4>
+     250:	30 91 a7 04 	lds	r19, 0x04A7	; 0x8004a7 <config+0x5>
      254:	28 17       	cp	r18, r24
      256:	39 07       	cpc	r19, r25
      258:	5c f0       	brlt	.+22     	; 0x270 <update_twarn_hi+0x32>
-     25a:	90 93 9f 04 	sts	0x049F, r25	; 0x80049f <config+0x7>
-     25e:	80 93 9e 04 	sts	0x049E, r24	; 0x80049e <config+0x6>
+     25a:	90 93 a9 04 	sts	0x04A9, r25	; 0x8004a9 <config+0x7>
+     25e:	80 93 a8 04 	sts	0x04A8, r24	; 0x8004a8 <config+0x6>
      262:	0e 94 a0 01 	call	0x340	; 0x340 <config_set_modified>
      266:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <config_update>
      26a:	80 e0       	ldi	r24, 0x00	; 0
@@ -295,13 +295,13 @@ Disassembly of section .text:
      274:	08 95       	ret
 
 00000276 <update_tcrit_lo>:
-     276:	20 91 a0 04 	lds	r18, 0x04A0	; 0x8004a0 <config+0x8>
-     27a:	30 91 a1 04 	lds	r19, 0x04A1	; 0x8004a1 <config+0x9>
+     276:	20 91 aa 04 	lds	r18, 0x04AA	; 0x8004aa <config+0x8>
+     27a:	30 91 ab 04 	lds	r19, 0x04AB	; 0x8004ab <config+0x9>
      27e:	82 17       	cp	r24, r18
      280:	93 07       	cpc	r25, r19
      282:	4c f4       	brge	.+18     	; 0x296 <update_tcrit_lo+0x20>
-     284:	90 93 a1 04 	sts	0x04A1, r25	; 0x8004a1 <config+0x9>
-     288:	80 93 a0 04 	sts	0x04A0, r24	; 0x8004a0 <config+0x8>
+     284:	90 93 ab 04 	sts	0x04AB, r25	; 0x8004ab <config+0x9>
+     288:	80 93 aa 04 	sts	0x04AA, r24	; 0x8004aa <config+0x8>
      28c:	0e 94 a0 01 	call	0x340	; 0x340 <config_set_modified>
      290:	80 e0       	ldi	r24, 0x00	; 0
      292:	90 e0       	ldi	r25, 0x00	; 0
@@ -311,18 +311,18 @@ Disassembly of section .text:
      29a:	08 95       	ret
 
 0000029c <update_twarn_lo>:
-     29c:	20 91 a0 04 	lds	r18, 0x04A0	; 0x8004a0 <config+0x8>
-     2a0:	30 91 a1 04 	lds	r19, 0x04A1	; 0x8004a1 <config+0x9>
+     29c:	20 91 aa 04 	lds	r18, 0x04AA	; 0x8004aa <config+0x8>
+     2a0:	30 91 ab 04 	lds	r19, 0x04AB	; 0x8004ab <config+0x9>
      2a4:	28 17       	cp	r18, r24
      2a6:	39 07       	cpc	r19, r25
      2a8:	94 f4       	brge	.+36     	; 0x2ce <update_twarn_lo+0x32>
-     2aa:	20 91 9e 04 	lds	r18, 0x049E	; 0x80049e <config+0x6>
-     2ae:	30 91 9f 04 	lds	r19, 0x049F	; 0x80049f <config+0x7>
+     2aa:	20 91 a8 04 	lds	r18, 0x04A8	; 0x8004a8 <config+0x6>
+     2ae:	30 91 a9 04 	lds	r19, 0x04A9	; 0x8004a9 <config+0x7>
      2b2:	82 17       	cp	r24, r18
      2b4:	93 07       	cpc	r25, r19
      2b6:	5c f4       	brge	.+22     	; 0x2ce <update_twarn_lo+0x32>
-     2b8:	90 93 a3 04 	sts	0x04A3, r25	; 0x8004a3 <config+0xb>
-     2bc:	80 93 a2 04 	sts	0x04A2, r24	; 0x8004a2 <config+0xa>
+     2b8:	90 93 ad 04 	sts	0x04AD, r25	; 0x8004ad <config+0xb>
+     2bc:	80 93 ac 04 	sts	0x04AC, r24	; 0x8004ac <config+0xa>
      2c0:	0e 94 a0 01 	call	0x340	; 0x340 <config_set_modified>
      2c4:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <config_update>
      2c8:	80 e0       	ldi	r24, 0x00	; 0
@@ -376,14 +376,14 @@ Disassembly of section .text:
      31c:	cf 93       	push	r28
      31e:	df 93       	push	r29
      320:	ec 01       	movw	r28, r24
-     322:	8c ec       	ldi	r24, 0xCC	; 204
+     322:	86 ed       	ldi	r24, 0xD6	; 214
      324:	91 e0       	ldi	r25, 0x01	; 1
      326:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
      32a:	be 01       	movw	r22, r28
      32c:	80 e0       	ldi	r24, 0x00	; 0
      32e:	90 e0       	ldi	r25, 0x00	; 0
      330:	0e 94 5f 0a 	call	0x14be	; 0x14be <uart_writedec32>
-     334:	81 ef       	ldi	r24, 0xF1	; 241
+     334:	8b ef       	ldi	r24, 0xFB	; 251
      336:	91 e0       	ldi	r25, 0x01	; 1
      338:	df 91       	pop	r29
      33a:	cf 91       	pop	r28
@@ -391,32 +391,32 @@ Disassembly of section .text:
 
 00000340 <config_set_modified>:
      340:	81 e0       	ldi	r24, 0x01	; 1
-     342:	80 93 b6 03 	sts	0x03B6, r24	; 0x8003b6 <modified>
+     342:	80 93 c0 03 	sts	0x03C0, r24	; 0x8003c0 <modified>
      346:	08 95       	ret
 
 00000348 <config_is_data_valid>:
-     348:	80 91 98 04 	lds	r24, 0x0498	; 0x800498 <config>
+     348:	80 91 a2 04 	lds	r24, 0x04A2	; 0x8004a2 <config>
      34c:	81 34       	cpi	r24, 0x41	; 65
      34e:	61 f4       	brne	.+24     	; 0x368 <config_is_data_valid+0x20>
-     350:	80 91 99 04 	lds	r24, 0x0499	; 0x800499 <config+0x1>
+     350:	80 91 a3 04 	lds	r24, 0x04A3	; 0x8004a3 <config+0x1>
      354:	83 35       	cpi	r24, 0x53	; 83
      356:	41 f4       	brne	.+16     	; 0x368 <config_is_data_valid+0x20>
      358:	81 e0       	ldi	r24, 0x01	; 1
      35a:	90 e0       	ldi	r25, 0x00	; 0
-     35c:	20 91 9a 04 	lds	r18, 0x049A	; 0x80049a <config+0x2>
+     35c:	20 91 a4 04 	lds	r18, 0x04A4	; 0x8004a4 <config+0x2>
      360:	25 35       	cpi	r18, 0x55	; 85
      362:	21 f0       	breq	.+8      	; 0x36c <config_is_data_valid+0x24>
      364:	80 e0       	ldi	r24, 0x00	; 0
      366:	02 c0       	rjmp	.+4      	; 0x36c <config_is_data_valid+0x24>
      368:	80 e0       	ldi	r24, 0x00	; 0
      36a:	90 e0       	ldi	r25, 0x00	; 0
-     36c:	e8 e9       	ldi	r30, 0x98	; 152
+     36c:	e2 ea       	ldi	r30, 0xA2	; 162
      36e:	f4 e0       	ldi	r31, 0x04	; 4
      370:	20 e0       	ldi	r18, 0x00	; 0
      372:	31 91       	ld	r19, Z+
      374:	23 0f       	add	r18, r19
      376:	34 e0       	ldi	r19, 0x04	; 4
-     378:	eb 3a       	cpi	r30, 0xAB	; 171
+     378:	e5 3b       	cpi	r30, 0xB5	; 181
      37a:	f3 07       	cpc	r31, r19
      37c:	d1 f7       	brne	.-12     	; 0x372 <config_is_data_valid+0x2a>
      37e:	22 23       	and	r18, r18
@@ -443,7 +443,7 @@ Disassembly of section .text:
      3a6:	89 2b       	or	r24, r25
      3a8:	e1 f7       	brne	.-8      	; 0x3a2 <config_init>
      3aa:	42 e1       	ldi	r20, 0x12	; 18
-     3ac:	68 e9       	ldi	r22, 0x98	; 152
+     3ac:	62 ea       	ldi	r22, 0xA2	; 162
      3ae:	74 e0       	ldi	r23, 0x04	; 4
      3b0:	80 e4       	ldi	r24, 0x40	; 64
      3b2:	90 e0       	ldi	r25, 0x00	; 0
@@ -453,51 +453,51 @@ Disassembly of section .text:
      3be:	49 f4       	brne	.+18     	; 0x3d2 <config_init+0x30>
      3c0:	0e 94 c4 01 	call	0x388	; 0x388 <config_write_defaults>
      3c4:	42 e1       	ldi	r20, 0x12	; 18
-     3c6:	68 e9       	ldi	r22, 0x98	; 152
+     3c6:	62 ea       	ldi	r22, 0xA2	; 162
      3c8:	74 e0       	ldi	r23, 0x04	; 4
      3ca:	80 e4       	ldi	r24, 0x40	; 64
      3cc:	90 e0       	ldi	r25, 0x00	; 0
      3ce:	0e 94 64 03 	call	0x6c8	; 0x6c8 <eeprom_readbuf>
-     3d2:	10 92 b6 03 	sts	0x03B6, r1	; 0x8003b6 <modified>
+     3d2:	10 92 c0 03 	sts	0x03C0, r1	; 0x8003c0 <modified>
      3d6:	08 95       	ret
 
 000003d8 <config_update>:
      3d8:	0e 94 79 03 	call	0x6f2	; 0x6f2 <eeprom_isbusy>
      3dc:	89 2b       	or	r24, r25
      3de:	99 f4       	brne	.+38     	; 0x406 <__LOCK_REGION_LENGTH__+0x6>
-     3e0:	80 91 b6 03 	lds	r24, 0x03B6	; 0x8003b6 <modified>
+     3e0:	80 91 c0 03 	lds	r24, 0x03C0	; 0x8003c0 <modified>
      3e4:	88 23       	and	r24, r24
      3e6:	79 f0       	breq	.+30     	; 0x406 <__LOCK_REGION_LENGTH__+0x6>
      3e8:	62 e1       	ldi	r22, 0x12	; 18
      3ea:	70 e0       	ldi	r23, 0x00	; 0
-     3ec:	88 e9       	ldi	r24, 0x98	; 152
+     3ec:	82 ea       	ldi	r24, 0xA2	; 162
      3ee:	94 e0       	ldi	r25, 0x04	; 4
      3f0:	0e 94 fb 0e 	call	0x1df6	; 0x1df6 <update_checksum>
      3f4:	42 e1       	ldi	r20, 0x12	; 18
-     3f6:	68 e9       	ldi	r22, 0x98	; 152
+     3f6:	62 ea       	ldi	r22, 0xA2	; 162
      3f8:	74 e0       	ldi	r23, 0x04	; 4
      3fa:	80 e4       	ldi	r24, 0x40	; 64
      3fc:	90 e0       	ldi	r25, 0x00	; 0
      3fe:	0e 94 30 03 	call	0x660	; 0x660 <eeprom_writebuf>
-     402:	10 92 b6 03 	sts	0x03B6, r1	; 0x8003b6 <modified>
+     402:	10 92 c0 03 	sts	0x03C0, r1	; 0x8003c0 <modified>
      406:	08 95       	ret
 
 00000408 <config_update_noisr>:
-     408:	80 91 b6 03 	lds	r24, 0x03B6	; 0x8003b6 <modified>
+     408:	80 91 c0 03 	lds	r24, 0x03C0	; 0x8003c0 <modified>
      40c:	88 23       	and	r24, r24
      40e:	79 f0       	breq	.+30     	; 0x42e <config_update_noisr+0x26>
      410:	62 e1       	ldi	r22, 0x12	; 18
      412:	70 e0       	ldi	r23, 0x00	; 0
-     414:	88 e9       	ldi	r24, 0x98	; 152
+     414:	82 ea       	ldi	r24, 0xA2	; 162
      416:	94 e0       	ldi	r25, 0x04	; 4
      418:	0e 94 fb 0e 	call	0x1df6	; 0x1df6 <update_checksum>
      41c:	42 e1       	ldi	r20, 0x12	; 18
-     41e:	68 e9       	ldi	r22, 0x98	; 152
+     41e:	62 ea       	ldi	r22, 0xA2	; 162
      420:	74 e0       	ldi	r23, 0x04	; 4
      422:	80 e4       	ldi	r24, 0x40	; 64
      424:	90 e0       	ldi	r25, 0x00	; 0
      426:	0e 94 4d 03 	call	0x69a	; 0x69a <eeprom_writebuf_noisr>
-     42a:	10 92 b6 03 	sts	0x03B6, r1	; 0x8003b6 <modified>
+     42a:	10 92 c0 03 	sts	0x03C0, r1	; 0x8003c0 <modified>
      42e:	08 95       	ret
 
 00000430 <__vector_14>:
@@ -512,41 +512,41 @@ Disassembly of section .text:
      440:	9f 93       	push	r25
      442:	af 93       	push	r26
      444:	bf 93       	push	r27
-     446:	20 91 c1 03 	lds	r18, 0x03C1	; 0x8003c1 <delay_count>
-     44a:	30 91 c2 03 	lds	r19, 0x03C2	; 0x8003c2 <delay_count+0x1>
-     44e:	80 91 b9 03 	lds	r24, 0x03B9	; 0x8003b9 <delay_limit>
-     452:	90 91 ba 03 	lds	r25, 0x03BA	; 0x8003ba <delay_limit+0x1>
+     446:	20 91 cb 03 	lds	r18, 0x03CB	; 0x8003cb <delay_count>
+     44a:	30 91 cc 03 	lds	r19, 0x03CC	; 0x8003cc <delay_count+0x1>
+     44e:	80 91 c3 03 	lds	r24, 0x03C3	; 0x8003c3 <delay_limit>
+     452:	90 91 c4 03 	lds	r25, 0x03C4	; 0x8003c4 <delay_limit+0x1>
      456:	28 17       	cp	r18, r24
      458:	39 07       	cpc	r19, r25
      45a:	49 f0       	breq	.+18     	; 0x46e <__vector_14+0x3e>
-     45c:	80 91 c1 03 	lds	r24, 0x03C1	; 0x8003c1 <delay_count>
-     460:	90 91 c2 03 	lds	r25, 0x03C2	; 0x8003c2 <delay_count+0x1>
+     45c:	80 91 cb 03 	lds	r24, 0x03CB	; 0x8003cb <delay_count>
+     460:	90 91 cc 03 	lds	r25, 0x03CC	; 0x8003cc <delay_count+0x1>
      464:	01 96       	adiw	r24, 0x01	; 1
-     466:	90 93 c2 03 	sts	0x03C2, r25	; 0x8003c2 <delay_count+0x1>
-     46a:	80 93 c1 03 	sts	0x03C1, r24	; 0x8003c1 <delay_count>
-     46e:	20 91 c3 03 	lds	r18, 0x03C3	; 0x8003c3 <delay_count+0x2>
-     472:	30 91 c4 03 	lds	r19, 0x03C4	; 0x8003c4 <delay_count+0x3>
-     476:	80 91 bb 03 	lds	r24, 0x03BB	; 0x8003bb <delay_limit+0x2>
-     47a:	90 91 bc 03 	lds	r25, 0x03BC	; 0x8003bc <delay_limit+0x3>
+     466:	90 93 cc 03 	sts	0x03CC, r25	; 0x8003cc <delay_count+0x1>
+     46a:	80 93 cb 03 	sts	0x03CB, r24	; 0x8003cb <delay_count>
+     46e:	20 91 cd 03 	lds	r18, 0x03CD	; 0x8003cd <delay_count+0x2>
+     472:	30 91 ce 03 	lds	r19, 0x03CE	; 0x8003ce <delay_count+0x3>
+     476:	80 91 c5 03 	lds	r24, 0x03C5	; 0x8003c5 <delay_limit+0x2>
+     47a:	90 91 c6 03 	lds	r25, 0x03C6	; 0x8003c6 <delay_limit+0x3>
      47e:	28 17       	cp	r18, r24
      480:	39 07       	cpc	r19, r25
      482:	49 f0       	breq	.+18     	; 0x496 <__vector_14+0x66>
-     484:	80 91 c3 03 	lds	r24, 0x03C3	; 0x8003c3 <delay_count+0x2>
-     488:	90 91 c4 03 	lds	r25, 0x03C4	; 0x8003c4 <delay_count+0x3>
+     484:	80 91 cd 03 	lds	r24, 0x03CD	; 0x8003cd <delay_count+0x2>
+     488:	90 91 ce 03 	lds	r25, 0x03CE	; 0x8003ce <delay_count+0x3>
      48c:	01 96       	adiw	r24, 0x01	; 1
-     48e:	90 93 c4 03 	sts	0x03C4, r25	; 0x8003c4 <delay_count+0x3>
-     492:	80 93 c3 03 	sts	0x03C3, r24	; 0x8003c3 <delay_count+0x2>
-     496:	80 91 bd 03 	lds	r24, 0x03BD	; 0x8003bd <ms>
-     49a:	90 91 be 03 	lds	r25, 0x03BE	; 0x8003be <ms+0x1>
-     49e:	a0 91 bf 03 	lds	r26, 0x03BF	; 0x8003bf <ms+0x2>
-     4a2:	b0 91 c0 03 	lds	r27, 0x03C0	; 0x8003c0 <ms+0x3>
+     48e:	90 93 ce 03 	sts	0x03CE, r25	; 0x8003ce <delay_count+0x3>
+     492:	80 93 cd 03 	sts	0x03CD, r24	; 0x8003cd <delay_count+0x2>
+     496:	80 91 c7 03 	lds	r24, 0x03C7	; 0x8003c7 <ms>
+     49a:	90 91 c8 03 	lds	r25, 0x03C8	; 0x8003c8 <ms+0x1>
+     49e:	a0 91 c9 03 	lds	r26, 0x03C9	; 0x8003c9 <ms+0x2>
+     4a2:	b0 91 ca 03 	lds	r27, 0x03CA	; 0x8003ca <ms+0x3>
      4a6:	01 96       	adiw	r24, 0x01	; 1
      4a8:	a1 1d       	adc	r26, r1
      4aa:	b1 1d       	adc	r27, r1
-     4ac:	80 93 bd 03 	sts	0x03BD, r24	; 0x8003bd <ms>
-     4b0:	90 93 be 03 	sts	0x03BE, r25	; 0x8003be <ms+0x1>
-     4b4:	a0 93 bf 03 	sts	0x03BF, r26	; 0x8003bf <ms+0x2>
-     4b8:	b0 93 c0 03 	sts	0x03C0, r27	; 0x8003c0 <ms+0x3>
+     4ac:	80 93 c7 03 	sts	0x03C7, r24	; 0x8003c7 <ms>
+     4b0:	90 93 c8 03 	sts	0x03C8, r25	; 0x8003c8 <ms+0x1>
+     4b4:	a0 93 c9 03 	sts	0x03C9, r26	; 0x8003c9 <ms+0x2>
+     4b8:	b0 93 ca 03 	sts	0x03CA, r27	; 0x8003ca <ms+0x3>
      4bc:	bf 91       	pop	r27
      4be:	af 91       	pop	r26
      4c0:	9f 91       	pop	r25
@@ -568,10 +568,10 @@ Disassembly of section .text:
      4dc:	95 bd       	out	0x25, r25	; 37
      4de:	78 94       	sei
      4e0:	80 93 6e 00 	sts	0x006E, r24	; 0x80006e <__TEXT_REGION_LENGTH__+0x7e006e>
-     4e4:	10 92 bd 03 	sts	0x03BD, r1	; 0x8003bd <ms>
-     4e8:	10 92 be 03 	sts	0x03BE, r1	; 0x8003be <ms+0x1>
-     4ec:	10 92 bf 03 	sts	0x03BF, r1	; 0x8003bf <ms+0x2>
-     4f0:	10 92 c0 03 	sts	0x03C0, r1	; 0x8003c0 <ms+0x3>
+     4e4:	10 92 c7 03 	sts	0x03C7, r1	; 0x8003c7 <ms>
+     4e8:	10 92 c8 03 	sts	0x03C8, r1	; 0x8003c8 <ms+0x1>
+     4ec:	10 92 c9 03 	sts	0x03C9, r1	; 0x8003c9 <ms+0x2>
+     4f0:	10 92 ca 03 	sts	0x03CA, r1	; 0x8003ca <ms+0x3>
      4f4:	08 95       	ret
 
 000004f6 <delay_get>:
@@ -582,7 +582,7 @@ Disassembly of section .text:
      4fe:	88 0f       	add	r24, r24
      500:	99 1f       	adc	r25, r25
      502:	fc 01       	movw	r30, r24
-     504:	ef 53       	subi	r30, 0x3F	; 63
+     504:	e5 53       	subi	r30, 0x35	; 53
      506:	fc 4f       	sbci	r31, 0xFC	; 252
      508:	80 81       	ld	r24, Z
      50a:	91 81       	ldd	r25, Z+1	; 0x01
@@ -599,12 +599,12 @@ Disassembly of section .text:
      51c:	88 0f       	add	r24, r24
      51e:	99 1f       	adc	r25, r25
      520:	fc 01       	movw	r30, r24
-     522:	ef 53       	subi	r30, 0x3F	; 63
+     522:	e5 53       	subi	r30, 0x35	; 53
      524:	fc 4f       	sbci	r31, 0xFC	; 252
      526:	20 81       	ld	r18, Z
      528:	31 81       	ldd	r19, Z+1	; 0x01
      52a:	fc 01       	movw	r30, r24
-     52c:	e7 54       	subi	r30, 0x47	; 71
+     52c:	ed 53       	subi	r30, 0x3D	; 61
      52e:	fc 4f       	sbci	r31, 0xFC	; 252
      530:	81 e0       	ldi	r24, 0x01	; 1
      532:	90 e0       	ldi	r25, 0x00	; 0
@@ -626,15 +626,15 @@ Disassembly of section .text:
      54e:	df 93       	push	r29
      550:	ec 01       	movw	r28, r24
      552:	8b 01       	movw	r16, r22
-     554:	80 91 b7 03 	lds	r24, 0x03B7	; 0x8003b7 <initialized>
-     558:	90 91 b8 03 	lds	r25, 0x03B8	; 0x8003b8 <initialized+0x1>
+     554:	80 91 c1 03 	lds	r24, 0x03C1	; 0x8003c1 <initialized>
+     558:	90 91 c2 03 	lds	r25, 0x03C2	; 0x8003c2 <initialized+0x1>
      55c:	89 2b       	or	r24, r25
      55e:	41 f4       	brne	.+16     	; 0x570 <delay_set+0x28>
      560:	0e 94 69 02 	call	0x4d2	; 0x4d2 <delay_init>
      564:	81 e0       	ldi	r24, 0x01	; 1
      566:	90 e0       	ldi	r25, 0x00	; 0
-     568:	90 93 b8 03 	sts	0x03B8, r25	; 0x8003b8 <initialized+0x1>
-     56c:	80 93 b7 03 	sts	0x03B7, r24	; 0x8003b7 <initialized>
+     568:	90 93 c2 03 	sts	0x03C2, r25	; 0x8003c2 <initialized+0x1>
+     56c:	80 93 c1 03 	sts	0x03C1, r24	; 0x8003c1 <initialized>
      570:	c2 30       	cpi	r28, 0x02	; 2
      572:	d1 05       	cpc	r29, r1
      574:	70 f4       	brcc	.+28     	; 0x592 <delay_set+0x4a>
@@ -643,11 +643,11 @@ Disassembly of section .text:
      57a:	cc 0f       	add	r28, r28
      57c:	dd 1f       	adc	r29, r29
      57e:	fe 01       	movw	r30, r28
-     580:	e7 54       	subi	r30, 0x47	; 71
+     580:	ed 53       	subi	r30, 0x3D	; 61
      582:	fc 4f       	sbci	r31, 0xFC	; 252
      584:	11 83       	std	Z+1, r17	; 0x01
      586:	00 83       	st	Z, r16
-     588:	cf 53       	subi	r28, 0x3F	; 63
+     588:	c5 53       	subi	r28, 0x35	; 53
      58a:	dc 4f       	sbci	r29, 0xFC	; 252
      58c:	19 82       	std	Y+1, r1	; 0x01
      58e:	18 82       	st	Y, r1
@@ -659,20 +659,20 @@ Disassembly of section .text:
      59a:	08 95       	ret
 
 0000059c <millis>:
-     59c:	80 91 b7 03 	lds	r24, 0x03B7	; 0x8003b7 <initialized>
-     5a0:	90 91 b8 03 	lds	r25, 0x03B8	; 0x8003b8 <initialized+0x1>
+     59c:	80 91 c1 03 	lds	r24, 0x03C1	; 0x8003c1 <initialized>
+     5a0:	90 91 c2 03 	lds	r25, 0x03C2	; 0x8003c2 <initialized+0x1>
      5a4:	89 2b       	or	r24, r25
      5a6:	41 f4       	brne	.+16     	; 0x5b8 <millis+0x1c>
      5a8:	0e 94 69 02 	call	0x4d2	; 0x4d2 <delay_init>
      5ac:	81 e0       	ldi	r24, 0x01	; 1
      5ae:	90 e0       	ldi	r25, 0x00	; 0
-     5b0:	90 93 b8 03 	sts	0x03B8, r25	; 0x8003b8 <initialized+0x1>
-     5b4:	80 93 b7 03 	sts	0x03B7, r24	; 0x8003b7 <initialized>
+     5b0:	90 93 c2 03 	sts	0x03C2, r25	; 0x8003c2 <initialized+0x1>
+     5b4:	80 93 c1 03 	sts	0x03C1, r24	; 0x8003c1 <initialized>
      5b8:	f8 94       	cli
-     5ba:	60 91 bd 03 	lds	r22, 0x03BD	; 0x8003bd <ms>
-     5be:	70 91 be 03 	lds	r23, 0x03BE	; 0x8003be <ms+0x1>
-     5c2:	80 91 bf 03 	lds	r24, 0x03BF	; 0x8003bf <ms+0x2>
-     5c6:	90 91 c0 03 	lds	r25, 0x03C0	; 0x8003c0 <ms+0x3>
+     5ba:	60 91 c7 03 	lds	r22, 0x03C7	; 0x8003c7 <ms>
+     5be:	70 91 c8 03 	lds	r23, 0x03C8	; 0x8003c8 <ms+0x1>
+     5c2:	80 91 c9 03 	lds	r24, 0x03C9	; 0x8003c9 <ms+0x2>
+     5c6:	90 91 ca 03 	lds	r25, 0x03CA	; 0x8003ca <ms+0x3>
      5ca:	78 94       	sei
      5cc:	08 95       	ret
 
@@ -699,30 +699,30 @@ Disassembly of section .text:
      5f0:	bf 93       	push	r27
      5f2:	ef 93       	push	r30
      5f4:	ff 93       	push	r31
-     5f6:	e0 91 ee 04 	lds	r30, 0x04EE	; 0x8004ee <bufidx>
-     5fa:	80 91 ad 04 	lds	r24, 0x04AD	; 0x8004ad <writesize>
+     5f6:	e0 91 f8 04 	lds	r30, 0x04F8	; 0x8004f8 <bufidx>
+     5fa:	80 91 b7 04 	lds	r24, 0x04B7	; 0x8004b7 <writesize>
      5fe:	e8 17       	cp	r30, r24
      600:	20 f0       	brcs	.+8      	; 0x60a <__vector_22+0x36>
      602:	fb 98       	cbi	0x1f, 3	; 31
-     604:	10 92 aa 04 	sts	0x04AA, r1	; 0x8004aa <write_busy>
+     604:	10 92 b4 04 	sts	0x04B4, r1	; 0x8004b4 <write_busy>
      608:	1a c0       	rjmp	.+52     	; 0x63e <__vector_22+0x6a>
-     60a:	80 91 ab 04 	lds	r24, 0x04AB	; 0x8004ab <writeaddr>
-     60e:	90 91 ac 04 	lds	r25, 0x04AC	; 0x8004ac <writeaddr+0x1>
+     60a:	80 91 b5 04 	lds	r24, 0x04B5	; 0x8004b5 <writeaddr>
+     60e:	90 91 b6 04 	lds	r25, 0x04B6	; 0x8004b6 <writeaddr+0x1>
      612:	92 bd       	out	0x22, r25	; 34
      614:	81 bd       	out	0x21, r24	; 33
      616:	81 e0       	ldi	r24, 0x01	; 1
      618:	8e 0f       	add	r24, r30
-     61a:	80 93 ee 04 	sts	0x04EE, r24	; 0x8004ee <bufidx>
+     61a:	80 93 f8 04 	sts	0x04F8, r24	; 0x8004f8 <bufidx>
      61e:	f0 e0       	ldi	r31, 0x00	; 0
-     620:	e2 55       	subi	r30, 0x52	; 82
+     620:	e8 54       	subi	r30, 0x48	; 72
      622:	fb 4f       	sbci	r31, 0xFB	; 251
      624:	80 81       	ld	r24, Z
      626:	80 bd       	out	0x20, r24	; 32
-     628:	80 91 ab 04 	lds	r24, 0x04AB	; 0x8004ab <writeaddr>
-     62c:	90 91 ac 04 	lds	r25, 0x04AC	; 0x8004ac <writeaddr+0x1>
+     628:	80 91 b5 04 	lds	r24, 0x04B5	; 0x8004b5 <writeaddr>
+     62c:	90 91 b6 04 	lds	r25, 0x04B6	; 0x8004b6 <writeaddr+0x1>
      630:	01 96       	adiw	r24, 0x01	; 1
-     632:	90 93 ac 04 	sts	0x04AC, r25	; 0x8004ac <writeaddr+0x1>
-     636:	80 93 ab 04 	sts	0x04AB, r24	; 0x8004ab <writeaddr>
+     632:	90 93 b6 04 	sts	0x04B6, r25	; 0x8004b6 <writeaddr+0x1>
+     636:	80 93 b5 04 	sts	0x04B5, r24	; 0x8004b5 <writeaddr>
      63a:	0e 94 e7 02 	call	0x5ce	; 0x5ce <eeprom_startwrite>
      63e:	ff 91       	pop	r31
      640:	ef 91       	pop	r30
@@ -743,17 +743,17 @@ Disassembly of section .text:
      65e:	18 95       	reti
 
 00000660 <eeprom_writebuf>:
-     660:	20 91 aa 04 	lds	r18, 0x04AA	; 0x8004aa <write_busy>
+     660:	20 91 b4 04 	lds	r18, 0x04B4	; 0x8004b4 <write_busy>
      664:	21 11       	cpse	r18, r1
      666:	fc cf       	rjmp	.-8      	; 0x660 <eeprom_writebuf>
-     668:	90 93 ac 04 	sts	0x04AC, r25	; 0x8004ac <writeaddr+0x1>
-     66c:	80 93 ab 04 	sts	0x04AB, r24	; 0x8004ab <writeaddr>
+     668:	90 93 b6 04 	sts	0x04B6, r25	; 0x8004b6 <writeaddr+0x1>
+     66c:	80 93 b5 04 	sts	0x04B5, r24	; 0x8004b5 <writeaddr>
      670:	81 e0       	ldi	r24, 0x01	; 1
-     672:	80 93 aa 04 	sts	0x04AA, r24	; 0x8004aa <write_busy>
-     676:	10 92 ee 04 	sts	0x04EE, r1	; 0x8004ee <bufidx>
-     67a:	40 93 ad 04 	sts	0x04AD, r20	; 0x8004ad <writesize>
+     672:	80 93 b4 04 	sts	0x04B4, r24	; 0x8004b4 <write_busy>
+     676:	10 92 f8 04 	sts	0x04F8, r1	; 0x8004f8 <bufidx>
+     67a:	40 93 b7 04 	sts	0x04B7, r20	; 0x8004b7 <writesize>
      67e:	96 2f       	mov	r25, r22
-     680:	ae ea       	ldi	r26, 0xAE	; 174
+     680:	a8 eb       	ldi	r26, 0xB8	; 184
      682:	b4 e0       	ldi	r27, 0x04	; 4
      684:	fb 01       	movw	r30, r22
      686:	8e 2f       	mov	r24, r30
@@ -793,7 +793,7 @@ Disassembly of section .text:
      6c6:	08 95       	ret
 
 000006c8 <eeprom_readbuf>:
-     6c8:	20 91 aa 04 	lds	r18, 0x04AA	; 0x8004aa <write_busy>
+     6c8:	20 91 b4 04 	lds	r18, 0x04B4	; 0x8004b4 <write_busy>
      6cc:	21 11       	cpse	r18, r1
      6ce:	fc cf       	rjmp	.-8      	; 0x6c8 <eeprom_readbuf>
      6d0:	fb 01       	movw	r30, r22
@@ -815,7 +815,7 @@ Disassembly of section .text:
      6f0:	08 95       	ret
 
 000006f2 <eeprom_isbusy>:
-     6f2:	80 91 aa 04 	lds	r24, 0x04AA	; 0x8004aa <write_busy>
+     6f2:	80 91 b4 04 	lds	r24, 0x04B4	; 0x8004b4 <write_busy>
      6f6:	90 e0       	ldi	r25, 0x00	; 0
      6f8:	08 95       	ret
 
@@ -838,11 +838,11 @@ Disassembly of section .text:
      712:	08 95       	ret
 
 00000714 <led_set_blink>:
-     714:	90 93 c6 03 	sts	0x03C6, r25	; 0x8003c6 <blink_msg+0x1>
-     718:	80 93 c5 03 	sts	0x03C5, r24	; 0x8003c5 <blink_msg>
-     71c:	10 92 c9 03 	sts	0x03C9, r1	; 0x8003c9 <blink_pos+0x1>
-     720:	10 92 c8 03 	sts	0x03C8, r1	; 0x8003c8 <blink_pos>
-     724:	10 92 c7 03 	sts	0x03C7, r1	; 0x8003c7 <blink_state>
+     714:	90 93 d0 03 	sts	0x03D0, r25	; 0x8003d0 <blink_msg+0x1>
+     718:	80 93 cf 03 	sts	0x03CF, r24	; 0x8003cf <blink_msg>
+     71c:	10 92 d3 03 	sts	0x03D3, r1	; 0x8003d3 <blink_pos+0x1>
+     720:	10 92 d2 03 	sts	0x03D2, r1	; 0x8003d2 <blink_pos>
+     724:	10 92 d1 03 	sts	0x03D1, r1	; 0x8003d1 <blink_state>
      728:	60 e0       	ldi	r22, 0x00	; 0
      72a:	70 e0       	ldi	r23, 0x00	; 0
      72c:	80 e0       	ldi	r24, 0x00	; 0
@@ -851,8 +851,8 @@ Disassembly of section .text:
      734:	0c 94 88 03 	jmp	0x710	; 0x710 <led_off>
 
 00000738 <led_update>:
-     738:	80 91 c5 03 	lds	r24, 0x03C5	; 0x8003c5 <blink_msg>
-     73c:	90 91 c6 03 	lds	r25, 0x03C6	; 0x8003c6 <blink_msg+0x1>
+     738:	80 91 cf 03 	lds	r24, 0x03CF	; 0x8003cf <blink_msg>
+     73c:	90 91 d0 03 	lds	r25, 0x03D0	; 0x8003d0 <blink_msg+0x1>
      740:	89 2b       	or	r24, r25
      742:	09 f4       	brne	.+2      	; 0x746 <led_update+0xe>
      744:	52 c0       	rjmp	.+164    	; 0x7ea <led_update+0xb2>
@@ -862,13 +862,13 @@ Disassembly of section .text:
      74e:	89 2b       	or	r24, r25
      750:	09 f4       	brne	.+2      	; 0x754 <led_update+0x1c>
      752:	4b c0       	rjmp	.+150    	; 0x7ea <led_update+0xb2>
-     754:	80 91 c7 03 	lds	r24, 0x03C7	; 0x8003c7 <blink_state>
+     754:	80 91 d1 03 	lds	r24, 0x03D1	; 0x8003d1 <blink_state>
      758:	81 11       	cpse	r24, r1
      75a:	34 c0       	rjmp	.+104    	; 0x7c4 <led_update+0x8c>
-     75c:	20 91 c8 03 	lds	r18, 0x03C8	; 0x8003c8 <blink_pos>
-     760:	30 91 c9 03 	lds	r19, 0x03C9	; 0x8003c9 <blink_pos+0x1>
-     764:	e0 91 c5 03 	lds	r30, 0x03C5	; 0x8003c5 <blink_msg>
-     768:	f0 91 c6 03 	lds	r31, 0x03C6	; 0x8003c6 <blink_msg+0x1>
+     75c:	20 91 d2 03 	lds	r18, 0x03D2	; 0x8003d2 <blink_pos>
+     760:	30 91 d3 03 	lds	r19, 0x03D3	; 0x8003d3 <blink_pos+0x1>
+     764:	e0 91 cf 03 	lds	r30, 0x03CF	; 0x8003cf <blink_msg>
+     768:	f0 91 d0 03 	lds	r31, 0x03D0	; 0x8003d0 <blink_msg+0x1>
      76c:	e2 0f       	add	r30, r18
      76e:	f3 1f       	adc	r31, r19
      770:	80 81       	ld	r24, Z
@@ -877,8 +877,8 @@ Disassembly of section .text:
      776:	3c f4       	brge	.+14     	; 0x786 <led_update+0x4e>
      778:	81 11       	cpse	r24, r1
      77a:	1d c0       	rjmp	.+58     	; 0x7b6 <led_update+0x7e>
-     77c:	10 92 c9 03 	sts	0x03C9, r1	; 0x8003c9 <blink_pos+0x1>
-     780:	10 92 c8 03 	sts	0x03C8, r1	; 0x8003c8 <blink_pos>
+     77c:	10 92 d3 03 	sts	0x03D3, r1	; 0x8003d3 <blink_pos+0x1>
+     780:	10 92 d2 03 	sts	0x03D2, r1	; 0x8003d2 <blink_pos>
      784:	08 95       	ret
      786:	8d 32       	cpi	r24, 0x2D	; 45
      788:	39 f0       	breq	.+14     	; 0x798 <led_update+0x60>
@@ -895,15 +895,15 @@ Disassembly of section .text:
      7a2:	90 e0       	ldi	r25, 0x00	; 0
      7a4:	0e 94 a4 02 	call	0x548	; 0x548 <delay_set>
      7a8:	81 e0       	ldi	r24, 0x01	; 1
-     7aa:	80 93 c7 03 	sts	0x03C7, r24	; 0x8003c7 <blink_state>
+     7aa:	80 93 d1 03 	sts	0x03D1, r24	; 0x8003d1 <blink_state>
      7ae:	08 95       	ret
      7b0:	68 ee       	ldi	r22, 0xE8	; 232
      7b2:	73 e0       	ldi	r23, 0x03	; 3
      7b4:	0b c0       	rjmp	.+22     	; 0x7cc <led_update+0x94>
      7b6:	2f 5f       	subi	r18, 0xFF	; 255
      7b8:	3f 4f       	sbci	r19, 0xFF	; 255
-     7ba:	30 93 c9 03 	sts	0x03C9, r19	; 0x8003c9 <blink_pos+0x1>
-     7be:	20 93 c8 03 	sts	0x03C8, r18	; 0x8003c8 <blink_pos>
+     7ba:	30 93 d3 03 	sts	0x03D3, r19	; 0x8003d3 <blink_pos+0x1>
+     7be:	20 93 d2 03 	sts	0x03D2, r18	; 0x8003d2 <blink_pos>
      7c2:	08 95       	ret
      7c4:	0e 94 88 03 	call	0x710	; 0x710 <led_off>
      7c8:	64 e6       	ldi	r22, 0x64	; 100
@@ -911,12 +911,12 @@ Disassembly of section .text:
      7cc:	80 e0       	ldi	r24, 0x00	; 0
      7ce:	90 e0       	ldi	r25, 0x00	; 0
      7d0:	0e 94 a4 02 	call	0x548	; 0x548 <delay_set>
-     7d4:	10 92 c7 03 	sts	0x03C7, r1	; 0x8003c7 <blink_state>
-     7d8:	80 91 c8 03 	lds	r24, 0x03C8	; 0x8003c8 <blink_pos>
-     7dc:	90 91 c9 03 	lds	r25, 0x03C9	; 0x8003c9 <blink_pos+0x1>
+     7d4:	10 92 d1 03 	sts	0x03D1, r1	; 0x8003d1 <blink_state>
+     7d8:	80 91 d2 03 	lds	r24, 0x03D2	; 0x8003d2 <blink_pos>
+     7dc:	90 91 d3 03 	lds	r25, 0x03D3	; 0x8003d3 <blink_pos+0x1>
      7e0:	01 96       	adiw	r24, 0x01	; 1
-     7e2:	90 93 c9 03 	sts	0x03C9, r25	; 0x8003c9 <blink_pos+0x1>
-     7e6:	80 93 c8 03 	sts	0x03C8, r24	; 0x8003c8 <blink_pos>
+     7e2:	90 93 d3 03 	sts	0x03D3, r25	; 0x8003d3 <blink_pos+0x1>
+     7e6:	80 93 d2 03 	sts	0x03D2, r24	; 0x8003d2 <blink_pos>
      7ea:	08 95       	ret
 
 000007ec <led_is_on>:
@@ -937,7 +937,7 @@ Disassembly of section .text:
      804:	50 0d       	add	r21, r0
      806:	11 24       	eor	r1, r1
      808:	fa 01       	movw	r30, r20
-     80a:	e3 53       	subi	r30, 0x33	; 51
+     80a:	e9 52       	subi	r30, 0x29	; 41
      80c:	fc 4f       	sbci	r31, 0xFC	; 252
      80e:	80 81       	ld	r24, Z
      810:	81 32       	cpi	r24, 0x21	; 33
@@ -948,7 +948,7 @@ Disassembly of section .text:
      81a:	fa 01       	movw	r30, r20
      81c:	e8 0f       	add	r30, r24
      81e:	f9 1f       	adc	r31, r25
-     820:	e3 53       	subi	r30, 0x33	; 51
+     820:	e9 52       	subi	r30, 0x29	; 41
      822:	fc 4f       	sbci	r31, 0xFC	; 252
      824:	30 81       	ld	r19, Z
      826:	23 0f       	add	r18, r19
@@ -984,12 +984,12 @@ Disassembly of section .text:
      85e:	0e 94 79 03 	call	0x6f2	; 0x6f2 <eeprom_isbusy>
      862:	89 2b       	or	r24, r25
      864:	e1 f7       	brne	.-8      	; 0x85e <log_init+0x1c>
-     866:	0d e3       	ldi	r16, 0x3D	; 61
+     866:	07 e4       	ldi	r16, 0x47	; 71
      868:	14 e0       	ldi	r17, 0x04	; 4
      86a:	c0 e8       	ldi	r28, 0x80	; 128
      86c:	d0 e0       	ldi	r29, 0x00	; 0
      86e:	be 01       	movw	r22, r28
-     870:	63 5b       	subi	r22, 0xB3	; 179
+     870:	69 5a       	subi	r22, 0xA9	; 169
      872:	7c 4f       	sbci	r23, 0xFC	; 252
      874:	47 e0       	ldi	r20, 0x07	; 7
      876:	ce 01       	movw	r24, r28
@@ -1001,7 +1001,7 @@ Disassembly of section .text:
      884:	c0 3f       	cpi	r28, 0xF0	; 240
      886:	d1 05       	cpc	r29, r1
      888:	91 f7       	brne	.-28     	; 0x86e <log_init+0x2c>
-     88a:	4d ec       	ldi	r20, 0xCD	; 205
+     88a:	47 ed       	ldi	r20, 0xD7	; 215
      88c:	e4 2e       	mov	r14, r20
      88e:	43 e0       	ldi	r20, 0x03	; 3
      890:	f4 2e       	mov	r15, r20
@@ -1033,8 +1033,8 @@ Disassembly of section .text:
      8c6:	dd 20       	and	r13, r13
      8c8:	09 f4       	brne	.+2      	; 0x8cc <log_init+0x8a>
      8ca:	6a c0       	rjmp	.+212    	; 0x9a0 <__stack+0xa1>
-     8cc:	b0 92 cc 03 	sts	0x03CC, r11	; 0x8003cc <last_written>
-     8d0:	70 92 cb 03 	sts	0x03CB, r7	; 0x8003cb <last_transaction_written>
+     8cc:	b0 92 d6 03 	sts	0x03D6, r11	; 0x8003d6 <last_written>
+     8d0:	70 92 d5 03 	sts	0x03D5, r7	; 0x8003d5 <last_transaction_written>
      8d4:	cb 2d       	mov	r28, r11
      8d6:	d0 e0       	ldi	r29, 0x00	; 0
      8d8:	8e 01       	movw	r16, r28
@@ -1053,7 +1053,7 @@ Disassembly of section .text:
      8f2:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <log_is_data_valid>
      8f6:	89 2b       	or	r24, r25
      8f8:	61 f4       	brne	.+24     	; 0x912 <__stack+0x13>
-     8fa:	b0 92 ca 03 	sts	0x03CA, r11	; 0x8003ca <tail>
+     8fa:	b0 92 d4 03 	sts	0x03D4, r11	; 0x8003d4 <tail>
      8fe:	8e 01       	movw	r16, r28
      900:	01 50       	subi	r16, 0x01	; 1
      902:	11 09       	sbc	r17, r1
@@ -1069,7 +1069,7 @@ Disassembly of section .text:
      916:	9d 9c       	mul	r9, r13
      918:	f0 0d       	add	r31, r0
      91a:	11 24       	eor	r1, r1
-     91c:	e3 53       	subi	r30, 0x33	; 51
+     91c:	e9 52       	subi	r30, 0x29	; 41
      91e:	fc 4f       	sbci	r31, 0xFC	; 252
      920:	40 81       	ld	r20, Z
      922:	24 2f       	mov	r18, r20
@@ -1082,8 +1082,8 @@ Disassembly of section .text:
      930:	28 17       	cp	r18, r24
      932:	39 07       	cpc	r19, r25
      934:	11 f7       	brne	.-60     	; 0x8fa <log_init+0xb8>
-     936:	c0 92 cc 03 	sts	0x03CC, r12	; 0x8003cc <last_written>
-     93a:	40 93 cb 03 	sts	0x03CB, r20	; 0x8003cb <last_transaction_written>
+     936:	c0 92 d6 03 	sts	0x03D6, r12	; 0x8003d6 <last_written>
+     93a:	40 93 d5 03 	sts	0x03D5, r20	; 0x8003d5 <last_transaction_written>
      93e:	aa 94       	dec	r10
      940:	0f 5f       	subi	r16, 0xFF	; 255
      942:	1f 4f       	sbci	r17, 0xFF	; 255
@@ -1102,13 +1102,13 @@ Disassembly of section .text:
      95c:	28 17       	cp	r18, r24
      95e:	39 07       	cpc	r19, r25
      960:	31 f5       	brne	.+76     	; 0x9ae <__stack+0xaf>
-     962:	c0 92 ca 03 	sts	0x03CA, r12	; 0x8003ca <tail>
+     962:	c0 92 d4 03 	sts	0x03D4, r12	; 0x8003d4 <tail>
      966:	68 9c       	mul	r6, r8
      968:	f0 01       	movw	r30, r0
      96a:	69 9c       	mul	r6, r9
      96c:	f0 0d       	add	r31, r0
      96e:	11 24       	eor	r1, r1
-     970:	e3 53       	subi	r30, 0x33	; 51
+     970:	e9 52       	subi	r30, 0x29	; 41
      972:	fc 4f       	sbci	r31, 0xFC	; 252
      974:	70 80       	ld	r7, Z
      976:	01 50       	subi	r16, 0x01	; 1
@@ -1131,9 +1131,9 @@ Disassembly of section .text:
      99c:	b9 f6       	brne	.-82     	; 0x94c <__stack+0x4d>
      99e:	07 c0       	rjmp	.+14     	; 0x9ae <__stack+0xaf>
      9a0:	8f e0       	ldi	r24, 0x0F	; 15
-     9a2:	80 93 cc 03 	sts	0x03CC, r24	; 0x8003cc <last_written>
-     9a6:	10 92 cb 03 	sts	0x03CB, r1	; 0x8003cb <last_transaction_written>
-     9aa:	10 92 ca 03 	sts	0x03CA, r1	; 0x8003ca <tail>
+     9a2:	80 93 d6 03 	sts	0x03D6, r24	; 0x8003d6 <last_written>
+     9a6:	10 92 d5 03 	sts	0x03D5, r1	; 0x8003d5 <last_transaction_written>
+     9aa:	10 92 d4 03 	sts	0x03D4, r1	; 0x8003d4 <tail>
      9ae:	df 91       	pop	r29
      9b0:	cf 91       	pop	r28
      9b2:	1f 91       	pop	r17
@@ -1159,7 +1159,7 @@ Disassembly of section .text:
      9d6:	0e 94 79 03 	call	0x6f2	; 0x6f2 <eeprom_isbusy>
      9da:	89 2b       	or	r24, r25
      9dc:	39 f5       	brne	.+78     	; 0xa2c <log_update+0x60>
-     9de:	ed e3       	ldi	r30, 0x3D	; 61
+     9de:	e7 e4       	ldi	r30, 0x47	; 71
      9e0:	f4 e0       	ldi	r31, 0x04	; 4
      9e2:	c0 e0       	ldi	r28, 0x00	; 0
      9e4:	d0 e0       	ldi	r29, 0x00	; 0
@@ -1173,7 +1173,7 @@ Disassembly of section .text:
      9f4:	90 0d       	add	r25, r0
      9f6:	11 24       	eor	r1, r1
      9f8:	9c 01       	movw	r18, r24
-     9fa:	23 53       	subi	r18, 0x33	; 51
+     9fa:	29 52       	subi	r18, 0x29	; 41
      9fc:	3c 4f       	sbci	r19, 0xFC	; 252
      9fe:	79 01       	movw	r14, r18
      a00:	67 e0       	ldi	r22, 0x07	; 7
@@ -1188,7 +1188,7 @@ Disassembly of section .text:
      a14:	80 58       	subi	r24, 0x80	; 128
      a16:	9f 4f       	sbci	r25, 0xFF	; 255
      a18:	0e 94 30 03 	call	0x660	; 0x660 <eeprom_writebuf>
-     a1c:	c3 5c       	subi	r28, 0xC3	; 195
+     a1c:	c9 5b       	subi	r28, 0xB9	; 185
      a1e:	db 4f       	sbci	r29, 0xFB	; 251
      a20:	18 82       	st	Y, r1
      a22:	04 c0       	rjmp	.+8      	; 0xa2c <log_update+0x60>
@@ -1209,7 +1209,7 @@ Disassembly of section .text:
      a3c:	1f 93       	push	r17
      a3e:	cf 93       	push	r28
      a40:	df 93       	push	r29
-     a42:	ed e3       	ldi	r30, 0x3D	; 61
+     a42:	e7 e4       	ldi	r30, 0x47	; 71
      a44:	f4 e0       	ldi	r31, 0x04	; 4
      a46:	c0 e0       	ldi	r28, 0x00	; 0
      a48:	d0 e0       	ldi	r29, 0x00	; 0
@@ -1223,7 +1223,7 @@ Disassembly of section .text:
      a58:	90 0d       	add	r25, r0
      a5a:	11 24       	eor	r1, r1
      a5c:	9c 01       	movw	r18, r24
-     a5e:	23 53       	subi	r18, 0x33	; 51
+     a5e:	29 52       	subi	r18, 0x29	; 41
      a60:	3c 4f       	sbci	r19, 0xFC	; 252
      a62:	79 01       	movw	r14, r18
      a64:	67 e0       	ldi	r22, 0x07	; 7
@@ -1238,7 +1238,7 @@ Disassembly of section .text:
      a78:	80 58       	subi	r24, 0x80	; 128
      a7a:	9f 4f       	sbci	r25, 0xFF	; 255
      a7c:	0e 94 4d 03 	call	0x69a	; 0x69a <eeprom_writebuf_noisr>
-     a80:	c3 5c       	subi	r28, 0xC3	; 195
+     a80:	c9 5b       	subi	r28, 0xB9	; 185
      a82:	db 4f       	sbci	r29, 0xFB	; 251
      a84:	18 82       	st	Y, r1
      a86:	04 c0       	rjmp	.+8      	; 0xa90 <log_update_noisr+0x58>
@@ -1261,31 +1261,31 @@ Disassembly of section .text:
      aa4:	cf 93       	push	r28
      aa6:	df 93       	push	r29
      aa8:	e8 2e       	mov	r14, r24
-     aaa:	c0 91 cc 03 	lds	r28, 0x03CC	; 0x8003cc <last_written>
+     aaa:	c0 91 d6 03 	lds	r28, 0x03D6	; 0x8003d6 <last_written>
      aae:	d0 e0       	ldi	r29, 0x00	; 0
      ab0:	21 96       	adiw	r28, 0x01	; 1
      ab2:	cf 70       	andi	r28, 0x0F	; 15
      ab4:	dd 27       	eor	r29, r29
-     ab6:	80 91 ca 03 	lds	r24, 0x03CA	; 0x8003ca <tail>
+     ab6:	80 91 d4 03 	lds	r24, 0x03D4	; 0x8003d4 <tail>
      aba:	90 e0       	ldi	r25, 0x00	; 0
      abc:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <log_is_data_valid>
      ac0:	f8 2e       	mov	r15, r24
-     ac2:	80 91 cb 03 	lds	r24, 0x03CB	; 0x8003cb <last_transaction_written>
+     ac2:	80 91 d5 03 	lds	r24, 0x03D5	; 0x8003d5 <last_transaction_written>
      ac6:	8f 5f       	subi	r24, 0xFF	; 255
      ac8:	81 32       	cpi	r24, 0x21	; 33
      aca:	18 f4       	brcc	.+6      	; 0xad2 <log_add_record+0x36>
-     acc:	80 93 cb 03 	sts	0x03CB, r24	; 0x8003cb <last_transaction_written>
+     acc:	80 93 d5 03 	sts	0x03D5, r24	; 0x8003d5 <last_transaction_written>
      ad0:	02 c0       	rjmp	.+4      	; 0xad6 <log_add_record+0x3a>
-     ad2:	10 92 cb 03 	sts	0x03CB, r1	; 0x8003cb <last_transaction_written>
+     ad2:	10 92 d5 03 	sts	0x03D5, r1	; 0x8003d5 <last_transaction_written>
      ad6:	87 e0       	ldi	r24, 0x07	; 7
      ad8:	8c 9f       	mul	r24, r28
      ada:	80 01       	movw	r16, r0
      adc:	8d 9f       	mul	r24, r29
      ade:	10 0d       	add	r17, r0
      ae0:	11 24       	eor	r1, r1
-     ae2:	03 53       	subi	r16, 0x33	; 51
+     ae2:	09 52       	subi	r16, 0x29	; 41
      ae4:	1c 4f       	sbci	r17, 0xFC	; 252
-     ae6:	80 91 cb 03 	lds	r24, 0x03CB	; 0x8003cb <last_transaction_written>
+     ae6:	80 91 d5 03 	lds	r24, 0x03D5	; 0x8003d5 <last_transaction_written>
      aea:	f8 01       	movw	r30, r16
      aec:	80 83       	st	Z, r24
      aee:	0e 94 1b 06 	call	0xc36	; 0xc36 <rtc_get_date>
@@ -1295,17 +1295,17 @@ Disassembly of section .text:
      af8:	83 83       	std	Z+3, r24	; 0x03
      afa:	94 83       	std	Z+4, r25	; 0x04
      afc:	e5 82       	std	Z+5, r14	; 0x05
-     afe:	c0 93 cc 03 	sts	0x03CC, r28	; 0x8003cc <last_written>
+     afe:	c0 93 d6 03 	sts	0x03D6, r28	; 0x8003d6 <last_written>
      b02:	67 e0       	ldi	r22, 0x07	; 7
      b04:	70 e0       	ldi	r23, 0x00	; 0
      b06:	c8 01       	movw	r24, r16
      b08:	0e 94 fb 0e 	call	0x1df6	; 0x1df6 <update_checksum>
-     b0c:	c3 5c       	subi	r28, 0xC3	; 195
+     b0c:	c9 5b       	subi	r28, 0xB9	; 185
      b0e:	db 4f       	sbci	r29, 0xFB	; 251
      b10:	81 e0       	ldi	r24, 0x01	; 1
      b12:	88 83       	st	Y, r24
-     b14:	80 91 cc 03 	lds	r24, 0x03CC	; 0x8003cc <last_written>
-     b18:	90 91 ca 03 	lds	r25, 0x03CA	; 0x8003ca <tail>
+     b14:	80 91 d6 03 	lds	r24, 0x03D6	; 0x8003d6 <last_written>
+     b18:	90 91 d4 03 	lds	r25, 0x03D4	; 0x8003d4 <tail>
      b1c:	89 13       	cpse	r24, r25
      b1e:	08 c0       	rjmp	.+16     	; 0xb30 <log_add_record+0x94>
      b20:	ff 20       	and	r15, r15
@@ -1314,7 +1314,7 @@ Disassembly of section .text:
      b26:	01 96       	adiw	r24, 0x01	; 1
      b28:	8f 70       	andi	r24, 0x0F	; 15
      b2a:	99 27       	eor	r25, r25
-     b2c:	80 93 ca 03 	sts	0x03CA, r24	; 0x8003ca <tail>
+     b2c:	80 93 d4 03 	sts	0x03D4, r24	; 0x8003d4 <tail>
      b30:	df 91       	pop	r29
      b32:	cf 91       	pop	r28
      b34:	1f 91       	pop	r17
@@ -1324,9 +1324,9 @@ Disassembly of section .text:
      b3c:	08 95       	ret
 
 00000b3e <log_clear>:
-     b3e:	ed ec       	ldi	r30, 0xCD	; 205
+     b3e:	e7 ed       	ldi	r30, 0xD7	; 215
      b40:	f3 e0       	ldi	r31, 0x03	; 3
-     b42:	ad e3       	ldi	r26, 0x3D	; 61
+     b42:	a7 e4       	ldi	r26, 0x47	; 71
      b44:	b4 e0       	ldi	r27, 0x04	; 4
      b46:	8f ef       	ldi	r24, 0xFF	; 255
      b48:	4f ef       	ldi	r20, 0xFF	; 255
@@ -1342,13 +1342,13 @@ Disassembly of section .text:
      b5c:	9d 93       	st	X+, r25
      b5e:	37 96       	adiw	r30, 0x07	; 7
      b60:	24 e0       	ldi	r18, 0x04	; 4
-     b62:	ed 33       	cpi	r30, 0x3D	; 61
+     b62:	e7 34       	cpi	r30, 0x47	; 71
      b64:	f2 07       	cpc	r31, r18
      b66:	a1 f7       	brne	.-24     	; 0xb50 <log_clear+0x12>
      b68:	8f e0       	ldi	r24, 0x0F	; 15
-     b6a:	80 93 cc 03 	sts	0x03CC, r24	; 0x8003cc <last_written>
-     b6e:	10 92 ca 03 	sts	0x03CA, r1	; 0x8003ca <tail>
-     b72:	10 92 cb 03 	sts	0x03CB, r1	; 0x8003cb <last_transaction_written>
+     b6a:	80 93 d6 03 	sts	0x03D6, r24	; 0x8003d6 <last_written>
+     b6e:	10 92 d4 03 	sts	0x03D4, r1	; 0x8003d4 <tail>
+     b72:	10 92 d5 03 	sts	0x03D5, r1	; 0x8003d5 <last_transaction_written>
      b76:	08 95       	ret
 
 00000b78 <log_get_num_entries>:
@@ -1356,7 +1356,7 @@ Disassembly of section .text:
      b7a:	1f 93       	push	r17
      b7c:	cf 93       	push	r28
      b7e:	df 93       	push	r29
-     b80:	00 91 ca 03 	lds	r16, 0x03CA	; 0x8003ca <tail>
+     b80:	00 91 d4 03 	lds	r16, 0x03D4	; 0x8003d4 <tail>
      b84:	c0 2f       	mov	r28, r16
      b86:	10 e0       	ldi	r17, 0x00	; 0
      b88:	d0 e0       	ldi	r29, 0x00	; 0
@@ -1400,7 +1400,7 @@ Disassembly of section .text:
      bd4:	ea 06       	cpc	r14, r26
      bd6:	fb 06       	cpc	r15, r27
      bd8:	f8 f4       	brcc	.+62     	; 0xc18 <log_get_record+0x6e>
-     bda:	80 91 ca 03 	lds	r24, 0x03CA	; 0x8003ca <tail>
+     bda:	80 91 d4 03 	lds	r24, 0x03D4	; 0x8003d4 <tail>
      bde:	90 e0       	ldi	r25, 0x00	; 0
      be0:	c8 0e       	add	r12, r24
      be2:	d9 1e       	adc	r13, r25
@@ -1413,7 +1413,7 @@ Disassembly of section .text:
      bf0:	8d 9d       	mul	r24, r13
      bf2:	f0 0d       	add	r31, r0
      bf4:	11 24       	eor	r1, r1
-     bf6:	e3 53       	subi	r30, 0x33	; 51
+     bf6:	e9 52       	subi	r30, 0x29	; 41
      bf8:	fc 4f       	sbci	r31, 0xFC	; 252
      bfa:	81 81       	ldd	r24, Z+1	; 0x01
      bfc:	92 81       	ldd	r25, Z+2	; 0x02
@@ -1451,10 +1451,10 @@ Disassembly of section .text:
      c36:	0c 94 13 0a 	jmp	0x1426	; 0x1426 <timer1_get>
 
 00000c3a <rtc_set_date>:
-     c3a:	60 93 ef 04 	sts	0x04EF, r22	; 0x8004ef <rtc_base>
-     c3e:	70 93 f0 04 	sts	0x04F0, r23	; 0x8004f0 <rtc_base+0x1>
-     c42:	80 93 f1 04 	sts	0x04F1, r24	; 0x8004f1 <rtc_base+0x2>
-     c46:	90 93 f2 04 	sts	0x04F2, r25	; 0x8004f2 <rtc_base+0x3>
+     c3a:	60 93 f9 04 	sts	0x04F9, r22	; 0x8004f9 <rtc_base>
+     c3e:	70 93 fa 04 	sts	0x04FA, r23	; 0x8004fa <rtc_base+0x1>
+     c42:	80 93 fb 04 	sts	0x04FB, r24	; 0x8004fb <rtc_base+0x2>
+     c46:	90 93 fc 04 	sts	0x04FC, r25	; 0x8004fc <rtc_base+0x3>
      c4a:	0c 94 1f 0a 	jmp	0x143e	; 0x143e <timer1_clear>
 
 00000c4e <is_leapyear>:
@@ -1797,10 +1797,10 @@ Disassembly of section .text:
      f02:	9d 1d       	adc	r25, r13
      f04:	ae 1d       	adc	r26, r14
      f06:	bf 1d       	adc	r27, r15
-     f08:	80 93 ef 04 	sts	0x04EF, r24	; 0x8004ef <rtc_base>
-     f0c:	90 93 f0 04 	sts	0x04F0, r25	; 0x8004f0 <rtc_base+0x1>
-     f10:	a0 93 f1 04 	sts	0x04F1, r26	; 0x8004f1 <rtc_base+0x2>
-     f14:	b0 93 f2 04 	sts	0x04F2, r27	; 0x8004f2 <rtc_base+0x3>
+     f08:	80 93 f9 04 	sts	0x04F9, r24	; 0x8004f9 <rtc_base>
+     f0c:	90 93 fa 04 	sts	0x04FA, r25	; 0x8004fa <rtc_base+0x1>
+     f10:	a0 93 fb 04 	sts	0x04FB, r26	; 0x8004fb <rtc_base+0x2>
+     f14:	b0 93 fc 04 	sts	0x04FC, r27	; 0x8004fc <rtc_base+0x3>
      f18:	67 96       	adiw	r28, 0x17	; 23
      f1a:	0f b6       	in	r0, 0x3f	; 63
      f1c:	f8 94       	cli
@@ -2074,7 +2074,7 @@ Disassembly of section .text:
     113e:	3a 01       	movw	r6, r20
     1140:	4b 01       	movw	r8, r22
     1142:	5c 01       	movw	r10, r24
-    1144:	66 ed       	ldi	r22, 0xD6	; 214
+    1144:	60 ee       	ldi	r22, 0xE0	; 224
     1146:	71 e0       	ldi	r23, 0x01	; 1
     1148:	84 e1       	ldi	r24, 0x14	; 20
     114a:	91 e0       	ldi	r25, 0x01	; 1
@@ -2150,10 +2150,10 @@ Disassembly of section .text:
     11e2:	0f 93       	push	r16
     11e4:	1f 93       	push	r17
     11e6:	0e 94 13 0a 	call	0x1426	; 0x1426 <timer1_get>
-    11ea:	00 91 ef 04 	lds	r16, 0x04EF	; 0x8004ef <rtc_base>
-    11ee:	10 91 f0 04 	lds	r17, 0x04F0	; 0x8004f0 <rtc_base+0x1>
-    11f2:	20 91 f1 04 	lds	r18, 0x04F1	; 0x8004f1 <rtc_base+0x2>
-    11f6:	30 91 f2 04 	lds	r19, 0x04F2	; 0x8004f2 <rtc_base+0x3>
+    11ea:	00 91 f9 04 	lds	r16, 0x04F9	; 0x8004f9 <rtc_base>
+    11ee:	10 91 fa 04 	lds	r17, 0x04FA	; 0x8004fa <rtc_base+0x1>
+    11f2:	20 91 fb 04 	lds	r18, 0x04FB	; 0x8004fb <rtc_base+0x2>
+    11f6:	30 91 fc 04 	lds	r19, 0x04FC	; 0x8004fc <rtc_base+0x3>
     11fa:	60 0f       	add	r22, r16
     11fc:	71 1f       	adc	r23, r17
     11fe:	82 1f       	adc	r24, r18
@@ -2400,17 +2400,17 @@ Disassembly of section .text:
     13c8:	9f 93       	push	r25
     13ca:	af 93       	push	r26
     13cc:	bf 93       	push	r27
-    13ce:	80 91 4d 04 	lds	r24, 0x044D	; 0x80044d <timer1_count>
-    13d2:	90 91 4e 04 	lds	r25, 0x044E	; 0x80044e <timer1_count+0x1>
-    13d6:	a0 91 4f 04 	lds	r26, 0x044F	; 0x80044f <timer1_count+0x2>
-    13da:	b0 91 50 04 	lds	r27, 0x0450	; 0x800450 <timer1_count+0x3>
+    13ce:	80 91 57 04 	lds	r24, 0x0457	; 0x800457 <timer1_count>
+    13d2:	90 91 58 04 	lds	r25, 0x0458	; 0x800458 <timer1_count+0x1>
+    13d6:	a0 91 59 04 	lds	r26, 0x0459	; 0x800459 <timer1_count+0x2>
+    13da:	b0 91 5a 04 	lds	r27, 0x045A	; 0x80045a <timer1_count+0x3>
     13de:	01 96       	adiw	r24, 0x01	; 1
     13e0:	a1 1d       	adc	r26, r1
     13e2:	b1 1d       	adc	r27, r1
-    13e4:	80 93 4d 04 	sts	0x044D, r24	; 0x80044d <timer1_count>
-    13e8:	90 93 4e 04 	sts	0x044E, r25	; 0x80044e <timer1_count+0x1>
-    13ec:	a0 93 4f 04 	sts	0x044F, r26	; 0x80044f <timer1_count+0x2>
-    13f0:	b0 93 50 04 	sts	0x0450, r27	; 0x800450 <timer1_count+0x3>
+    13e4:	80 93 57 04 	sts	0x0457, r24	; 0x800457 <timer1_count>
+    13e8:	90 93 58 04 	sts	0x0458, r25	; 0x800458 <timer1_count+0x1>
+    13ec:	a0 93 59 04 	sts	0x0459, r26	; 0x800459 <timer1_count+0x2>
+    13f0:	b0 93 5a 04 	sts	0x045A, r27	; 0x80045a <timer1_count+0x3>
     13f4:	bf 91       	pop	r27
     13f6:	af 91       	pop	r26
     13f8:	9f 91       	pop	r25
@@ -2437,20 +2437,20 @@ Disassembly of section .text:
 00001426 <timer1_get>:
     1426:	2f b7       	in	r18, 0x3f	; 63
     1428:	f8 94       	cli
-    142a:	60 91 4d 04 	lds	r22, 0x044D	; 0x80044d <timer1_count>
-    142e:	70 91 4e 04 	lds	r23, 0x044E	; 0x80044e <timer1_count+0x1>
-    1432:	80 91 4f 04 	lds	r24, 0x044F	; 0x80044f <timer1_count+0x2>
-    1436:	90 91 50 04 	lds	r25, 0x0450	; 0x800450 <timer1_count+0x3>
+    142a:	60 91 57 04 	lds	r22, 0x0457	; 0x800457 <timer1_count>
+    142e:	70 91 58 04 	lds	r23, 0x0458	; 0x800458 <timer1_count+0x1>
+    1432:	80 91 59 04 	lds	r24, 0x0459	; 0x800459 <timer1_count+0x2>
+    1436:	90 91 5a 04 	lds	r25, 0x045A	; 0x80045a <timer1_count+0x3>
     143a:	2f bf       	out	0x3f, r18	; 63
     143c:	08 95       	ret
 
 0000143e <timer1_clear>:
     143e:	8f b7       	in	r24, 0x3f	; 63
     1440:	f8 94       	cli
-    1442:	10 92 4d 04 	sts	0x044D, r1	; 0x80044d <timer1_count>
-    1446:	10 92 4e 04 	sts	0x044E, r1	; 0x80044e <timer1_count+0x1>
-    144a:	10 92 4f 04 	sts	0x044F, r1	; 0x80044f <timer1_count+0x2>
-    144e:	10 92 50 04 	sts	0x0450, r1	; 0x800450 <timer1_count+0x3>
+    1442:	10 92 57 04 	sts	0x0457, r1	; 0x800457 <timer1_count>
+    1446:	10 92 58 04 	sts	0x0458, r1	; 0x800458 <timer1_count+0x1>
+    144a:	10 92 59 04 	sts	0x0459, r1	; 0x800459 <timer1_count+0x2>
+    144e:	10 92 5a 04 	sts	0x045A, r1	; 0x80045a <timer1_count+0x3>
     1452:	8f bf       	out	0x3f, r24	; 63
     1454:	08 95       	ret
 
@@ -2731,7 +2731,7 @@ Disassembly of section .text:
     167c:	c0 17       	cp	r28, r16
     167e:	d1 07       	cpc	r29, r17
     1680:	a1 f7       	brne	.-24     	; 0x166a <uart_writeip+0x1c>
-    1682:	81 ef       	ldi	r24, 0xF1	; 241
+    1682:	8b ef       	ldi	r24, 0xFB	; 251
     1684:	91 e0       	ldi	r25, 0x01	; 1
     1686:	df 91       	pop	r29
     1688:	cf 91       	pop	r28
@@ -2753,23 +2753,23 @@ Disassembly of section .text:
     16aa:	0c 94 2f 0a 	jmp	0x145e	; 0x145e <uart_writechar>
 
 000016ae <send_error_response>:
-    16ae:	8a ee       	ldi	r24, 0xEA	; 234
+    16ae:	84 ef       	ldi	r24, 0xF4	; 244
     16b0:	91 e0       	ldi	r25, 0x01	; 1
     16b2:	0c 94 31 0a 	jmp	0x1462	; 0x1462 <uart_writestr>
 
 000016b6 <strtoi.constprop.2>:
     16b6:	dc 01       	movw	r26, r24
-    16b8:	80 91 51 04 	lds	r24, 0x0451	; 0x800451 <packet_buf>
+    16b8:	80 91 5b 04 	lds	r24, 0x045B	; 0x80045b <packet_buf>
     16bc:	8d 32       	cpi	r24, 0x2D	; 45
     16be:	29 f4       	brne	.+10     	; 0x16ca <strtoi.constprop.2+0x14>
     16c0:	8f ef       	ldi	r24, 0xFF	; 255
     16c2:	9f ef       	ldi	r25, 0xFF	; 255
-    16c4:	e2 e5       	ldi	r30, 0x52	; 82
+    16c4:	ec e5       	ldi	r30, 0x5C	; 92
     16c6:	f4 e0       	ldi	r31, 0x04	; 4
     16c8:	04 c0       	rjmp	.+8      	; 0x16d2 <strtoi.constprop.2+0x1c>
     16ca:	81 e0       	ldi	r24, 0x01	; 1
     16cc:	90 e0       	ldi	r25, 0x00	; 0
-    16ce:	e1 e5       	ldi	r30, 0x51	; 81
+    16ce:	eb e5       	ldi	r30, 0x5B	; 91
     16d0:	f4 e0       	ldi	r31, 0x04	; 4
     16d2:	11 96       	adiw	r26, 0x01	; 1
     16d4:	1c 92       	st	X, r1
@@ -2890,16 +2890,16 @@ Disassembly of section .text:
     17ae:	08 95       	ret
 
 000017b0 <flush_packet>:
-    17b0:	64 ef       	ldi	r22, 0xF4	; 244
+    17b0:	6e ef       	ldi	r22, 0xFE	; 254
     17b2:	71 e0       	ldi	r23, 0x01	; 1
-    17b4:	81 e5       	ldi	r24, 0x51	; 81
+    17b4:	8b e5       	ldi	r24, 0x5B	; 91
     17b6:	94 e0       	ldi	r25, 0x04	; 4
     17b8:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
     17bc:	88 23       	and	r24, r24
     17be:	49 f0       	breq	.+18     	; 0x17d2 <flush_packet+0x22>
     17c0:	e8 2f       	mov	r30, r24
     17c2:	f0 e0       	ldi	r31, 0x00	; 0
-    17c4:	e0 5b       	subi	r30, 0xB0	; 176
+    17c4:	e6 5a       	subi	r30, 0xA6	; 166
     17c6:	fb 4f       	sbci	r31, 0xFB	; 251
     17c8:	80 81       	ld	r24, Z
     17ca:	8f 32       	cpi	r24, 0x2F	; 47
@@ -2918,97 +2918,97 @@ Disassembly of section .text:
     17e0:	1f 92       	push	r1
     17e2:	cd b7       	in	r28, 0x3d	; 61
     17e4:	de b7       	in	r29, 0x3e	; 62
-    17e6:	64 ef       	ldi	r22, 0xF4	; 244
+    17e6:	6e ef       	ldi	r22, 0xFE	; 254
     17e8:	71 e0       	ldi	r23, 0x01	; 1
-    17ea:	81 e5       	ldi	r24, 0x51	; 81
+    17ea:	8b e5       	ldi	r24, 0x5B	; 91
     17ec:	94 e0       	ldi	r25, 0x04	; 4
     17ee:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    17f2:	67 ef       	ldi	r22, 0xF7	; 247
-    17f4:	71 e0       	ldi	r23, 0x01	; 1
-    17f6:	81 e5       	ldi	r24, 0x51	; 81
+    17f2:	61 e0       	ldi	r22, 0x01	; 1
+    17f4:	72 e0       	ldi	r23, 0x02	; 2
+    17f6:	8b e5       	ldi	r24, 0x5B	; 91
     17f8:	94 e0       	ldi	r25, 0x04	; 4
     17fa:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     17fe:	89 2b       	or	r24, r25
     1800:	09 f0       	breq	.+2      	; 0x1804 <parse_and_send_response+0x30>
     1802:	bb c1       	rjmp	.+886    	; 0x1b7a <parse_and_send_response+0x3a6>
-    1804:	64 ef       	ldi	r22, 0xF4	; 244
+    1804:	6e ef       	ldi	r22, 0xFE	; 254
     1806:	71 e0       	ldi	r23, 0x01	; 1
-    1808:	81 e5       	ldi	r24, 0x51	; 81
+    1808:	8b e5       	ldi	r24, 0x5B	; 91
     180a:	94 e0       	ldi	r25, 0x04	; 4
     180c:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1810:	62 e7       	ldi	r22, 0x72	; 114
+    1810:	6c e7       	ldi	r22, 0x7C	; 124
     1812:	73 e0       	ldi	r23, 0x03	; 3
-    1814:	81 e5       	ldi	r24, 0x51	; 81
+    1814:	8b e5       	ldi	r24, 0x5B	; 91
     1816:	94 e0       	ldi	r25, 0x04	; 4
     1818:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     181c:	89 2b       	or	r24, r25
     181e:	09 f0       	breq	.+2      	; 0x1822 <parse_and_send_response+0x4e>
     1820:	81 c2       	rjmp	.+1282   	; 0x1d24 <parse_and_send_response+0x550>
-    1822:	64 ef       	ldi	r22, 0xF4	; 244
+    1822:	6e ef       	ldi	r22, 0xFE	; 254
     1824:	71 e0       	ldi	r23, 0x01	; 1
-    1826:	81 e5       	ldi	r24, 0x51	; 81
+    1826:	8b e5       	ldi	r24, 0x5B	; 91
     1828:	94 e0       	ldi	r25, 0x04	; 4
     182a:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    182e:	6c ef       	ldi	r22, 0xFC	; 252
-    1830:	71 e0       	ldi	r23, 0x01	; 1
-    1832:	81 e5       	ldi	r24, 0x51	; 81
+    182e:	66 e0       	ldi	r22, 0x06	; 6
+    1830:	72 e0       	ldi	r23, 0x02	; 2
+    1832:	8b e5       	ldi	r24, 0x5B	; 91
     1834:	94 e0       	ldi	r25, 0x04	; 4
     1836:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     183a:	89 2b       	or	r24, r25
     183c:	09 f0       	breq	.+2      	; 0x1840 <parse_and_send_response+0x6c>
     183e:	72 c2       	rjmp	.+1252   	; 0x1d24 <parse_and_send_response+0x550>
-    1840:	8f e0       	ldi	r24, 0x0F	; 15
+    1840:	89 e1       	ldi	r24, 0x19	; 25
     1842:	93 e0       	ldi	r25, 0x03	; 3
     1844:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1848:	81 ef       	ldi	r24, 0xF1	; 241
+    1848:	8b ef       	ldi	r24, 0xFB	; 251
     184a:	91 e0       	ldi	r25, 0x01	; 1
     184c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1850:	83 e0       	ldi	r24, 0x03	; 3
+    1850:	8d e0       	ldi	r24, 0x0D	; 13
     1852:	92 e0       	ldi	r25, 0x02	; 2
     1854:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1858:	81 ef       	ldi	r24, 0xF1	; 241
+    1858:	8b ef       	ldi	r24, 0xFB	; 251
     185a:	91 e0       	ldi	r25, 0x01	; 1
     185c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1860:	8d e0       	ldi	r24, 0x0D	; 13
+    1860:	87 e1       	ldi	r24, 0x17	; 23
     1862:	92 e0       	ldi	r25, 0x02	; 2
     1864:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1868:	87 ef       	ldi	r24, 0xF7	; 247
-    186a:	94 e0       	ldi	r25, 0x04	; 4
+    1868:	81 e0       	ldi	r24, 0x01	; 1
+    186a:	95 e0       	ldi	r25, 0x05	; 5
     186c:	0e 94 49 0b 	call	0x1692	; 0x1692 <write_packet_string>
     1870:	8c e2       	ldi	r24, 0x2C	; 44
     1872:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1876:	81 ef       	ldi	r24, 0xF1	; 241
+    1876:	8b ef       	ldi	r24, 0xFB	; 251
     1878:	91 e0       	ldi	r25, 0x01	; 1
     187a:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    187e:	8a e1       	ldi	r24, 0x1A	; 26
+    187e:	84 e2       	ldi	r24, 0x24	; 36
     1880:	92 e0       	ldi	r25, 0x02	; 2
     1882:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1886:	83 e0       	ldi	r24, 0x03	; 3
+    1886:	8d e0       	ldi	r24, 0x0D	; 13
     1888:	95 e0       	ldi	r25, 0x05	; 5
     188a:	0e 94 49 0b 	call	0x1692	; 0x1692 <write_packet_string>
     188e:	8c e2       	ldi	r24, 0x2C	; 44
     1890:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1894:	81 ef       	ldi	r24, 0xF1	; 241
+    1894:	8b ef       	ldi	r24, 0xFB	; 251
     1896:	91 e0       	ldi	r25, 0x01	; 1
     1898:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    189c:	8e e2       	ldi	r24, 0x2E	; 46
+    189c:	88 e3       	ldi	r24, 0x38	; 56
     189e:	92 e0       	ldi	r25, 0x02	; 2
     18a0:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    18a4:	8f e0       	ldi	r24, 0x0F	; 15
+    18a4:	89 e1       	ldi	r24, 0x19	; 25
     18a6:	95 e0       	ldi	r25, 0x05	; 5
     18a8:	0e 94 49 0b 	call	0x1692	; 0x1692 <write_packet_string>
     18ac:	8c e2       	ldi	r24, 0x2C	; 44
     18ae:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    18b2:	81 ef       	ldi	r24, 0xF1	; 241
+    18b2:	8b ef       	ldi	r24, 0xFB	; 251
     18b4:	91 e0       	ldi	r25, 0x01	; 1
     18b6:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    18ba:	83 e4       	ldi	r24, 0x43	; 67
+    18ba:	8d e4       	ldi	r24, 0x4D	; 77
     18bc:	92 e0       	ldi	r25, 0x02	; 2
     18be:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    18c2:	60 91 1b 05 	lds	r22, 0x051B	; 0x80051b <vpd+0x28>
-    18c6:	70 91 1c 05 	lds	r23, 0x051C	; 0x80051c <vpd+0x29>
-    18ca:	80 91 1d 05 	lds	r24, 0x051D	; 0x80051d <vpd+0x2a>
-    18ce:	90 91 1e 05 	lds	r25, 0x051E	; 0x80051e <vpd+0x2b>
+    18c2:	60 91 25 05 	lds	r22, 0x0525	; 0x800525 <vpd+0x28>
+    18c6:	70 91 26 05 	lds	r23, 0x0526	; 0x800526 <vpd+0x29>
+    18ca:	80 91 27 05 	lds	r24, 0x0527	; 0x800527 <vpd+0x2a>
+    18ce:	90 91 28 05 	lds	r25, 0x0528	; 0x800528 <vpd+0x2b>
     18d2:	0e 94 ee 07 	call	0xfdc	; 0xfdc <rtc_num2datestr>
     18d6:	8c 01       	movw	r16, r24
     18d8:	fc 01       	movw	r30, r24
@@ -3021,15 +3021,15 @@ Disassembly of section .text:
     18ea:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
     18ee:	8c e2       	ldi	r24, 0x2C	; 44
     18f0:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    18f4:	81 ef       	ldi	r24, 0xF1	; 241
+    18f4:	8b ef       	ldi	r24, 0xFB	; 251
     18f6:	91 e0       	ldi	r25, 0x01	; 1
     18f8:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    18fc:	8b e5       	ldi	r24, 0x5B	; 91
+    18fc:	85 e6       	ldi	r24, 0x65	; 101
     18fe:	92 e0       	ldi	r25, 0x02	; 2
     1900:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1904:	80 91 1f 05 	lds	r24, 0x051F	; 0x80051f <vpd+0x2c>
+    1904:	80 91 29 05 	lds	r24, 0x0529	; 0x800529 <vpd+0x2c>
     1908:	0e 94 3d 0a 	call	0x147a	; 0x147a <uart_writehex8>
-    190c:	00 e2       	ldi	r16, 0x20	; 32
+    190c:	0a e2       	ldi	r16, 0x2A	; 42
     190e:	15 e0       	ldi	r17, 0x05	; 5
     1910:	8a e3       	ldi	r24, 0x3A	; 58
     1912:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
@@ -3038,35 +3038,35 @@ Disassembly of section .text:
     191a:	8f 01       	movw	r16, r30
     191c:	0e 94 3d 0a 	call	0x147a	; 0x147a <uart_writehex8>
     1920:	f5 e0       	ldi	r31, 0x05	; 5
-    1922:	05 32       	cpi	r16, 0x25	; 37
+    1922:	0f 32       	cpi	r16, 0x2F	; 47
     1924:	1f 07       	cpc	r17, r31
     1926:	a1 f7       	brne	.-24     	; 0x1910 <parse_and_send_response+0x13c>
-    1928:	8f e6       	ldi	r24, 0x6F	; 111
+    1928:	89 e7       	ldi	r24, 0x79	; 121
     192a:	92 e0       	ldi	r25, 0x02	; 2
     192c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1930:	81 ef       	ldi	r24, 0xF1	; 241
+    1930:	8b ef       	ldi	r24, 0xFB	; 251
     1932:	91 e0       	ldi	r25, 0x01	; 1
     1934:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1938:	82 e7       	ldi	r24, 0x72	; 114
+    1938:	8c e7       	ldi	r24, 0x7C	; 124
     193a:	92 e0       	ldi	r25, 0x02	; 2
     193c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1940:	85 e2       	ldi	r24, 0x25	; 37
+    1940:	8f e2       	ldi	r24, 0x2F	; 47
     1942:	95 e0       	ldi	r25, 0x05	; 5
     1944:	0e 94 49 0b 	call	0x1692	; 0x1692 <write_packet_string>
-    1948:	81 ef       	ldi	r24, 0xF1	; 241
+    1948:	8b ef       	ldi	r24, 0xFB	; 251
     194a:	91 e0       	ldi	r25, 0x01	; 1
     194c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1950:	82 e3       	ldi	r24, 0x32	; 50
+    1950:	8c e3       	ldi	r24, 0x3C	; 60
     1952:	93 e0       	ldi	r25, 0x03	; 3
     1954:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1958:	81 ef       	ldi	r24, 0xF1	; 241
+    1958:	8b ef       	ldi	r24, 0xFB	; 251
     195a:	91 e0       	ldi	r25, 0x01	; 1
     195c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1960:	86 e8       	ldi	r24, 0x86	; 134
+    1960:	80 e9       	ldi	r24, 0x90	; 144
     1962:	92 e0       	ldi	r25, 0x02	; 2
     1964:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1968:	60 91 9c 04 	lds	r22, 0x049C	; 0x80049c <config+0x4>
-    196c:	70 91 9d 04 	lds	r23, 0x049D	; 0x80049d <config+0x5>
+    1968:	60 91 a6 04 	lds	r22, 0x04A6	; 0x8004a6 <config+0x4>
+    196c:	70 91 a7 04 	lds	r23, 0x04A7	; 0x8004a7 <config+0x5>
     1970:	07 2e       	mov	r0, r23
     1972:	00 0c       	add	r0, r0
     1974:	88 0b       	sbc	r24, r24
@@ -3074,14 +3074,14 @@ Disassembly of section .text:
     1978:	0e 94 5f 0a 	call	0x14be	; 0x14be <uart_writedec32>
     197c:	8c e2       	ldi	r24, 0x2C	; 44
     197e:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1982:	81 ef       	ldi	r24, 0xF1	; 241
+    1982:	8b ef       	ldi	r24, 0xFB	; 251
     1984:	91 e0       	ldi	r25, 0x01	; 1
     1986:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    198a:	84 e9       	ldi	r24, 0x94	; 148
+    198a:	8e e9       	ldi	r24, 0x9E	; 158
     198c:	92 e0       	ldi	r25, 0x02	; 2
     198e:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1992:	60 91 9e 04 	lds	r22, 0x049E	; 0x80049e <config+0x6>
-    1996:	70 91 9f 04 	lds	r23, 0x049F	; 0x80049f <config+0x7>
+    1992:	60 91 a8 04 	lds	r22, 0x04A8	; 0x8004a8 <config+0x6>
+    1996:	70 91 a9 04 	lds	r23, 0x04A9	; 0x8004a9 <config+0x7>
     199a:	07 2e       	mov	r0, r23
     199c:	00 0c       	add	r0, r0
     199e:	88 0b       	sbc	r24, r24
@@ -3089,14 +3089,14 @@ Disassembly of section .text:
     19a2:	0e 94 5f 0a 	call	0x14be	; 0x14be <uart_writedec32>
     19a6:	8c e2       	ldi	r24, 0x2C	; 44
     19a8:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    19ac:	81 ef       	ldi	r24, 0xF1	; 241
+    19ac:	8b ef       	ldi	r24, 0xFB	; 251
     19ae:	91 e0       	ldi	r25, 0x01	; 1
     19b0:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    19b4:	82 ea       	ldi	r24, 0xA2	; 162
+    19b4:	8c ea       	ldi	r24, 0xAC	; 172
     19b6:	92 e0       	ldi	r25, 0x02	; 2
     19b8:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    19bc:	60 91 a0 04 	lds	r22, 0x04A0	; 0x8004a0 <config+0x8>
-    19c0:	70 91 a1 04 	lds	r23, 0x04A1	; 0x8004a1 <config+0x9>
+    19bc:	60 91 aa 04 	lds	r22, 0x04AA	; 0x8004aa <config+0x8>
+    19c0:	70 91 ab 04 	lds	r23, 0x04AB	; 0x8004ab <config+0x9>
     19c4:	07 2e       	mov	r0, r23
     19c6:	00 0c       	add	r0, r0
     19c8:	88 0b       	sbc	r24, r24
@@ -3104,14 +3104,14 @@ Disassembly of section .text:
     19cc:	0e 94 5f 0a 	call	0x14be	; 0x14be <uart_writedec32>
     19d0:	8c e2       	ldi	r24, 0x2C	; 44
     19d2:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    19d6:	81 ef       	ldi	r24, 0xF1	; 241
+    19d6:	8b ef       	ldi	r24, 0xFB	; 251
     19d8:	91 e0       	ldi	r25, 0x01	; 1
     19da:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    19de:	80 eb       	ldi	r24, 0xB0	; 176
+    19de:	8a eb       	ldi	r24, 0xBA	; 186
     19e0:	92 e0       	ldi	r25, 0x02	; 2
     19e2:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    19e6:	60 91 a2 04 	lds	r22, 0x04A2	; 0x8004a2 <config+0xa>
-    19ea:	70 91 a3 04 	lds	r23, 0x04A3	; 0x8004a3 <config+0xb>
+    19e6:	60 91 ac 04 	lds	r22, 0x04AC	; 0x8004ac <config+0xa>
+    19ea:	70 91 ad 04 	lds	r23, 0x04AD	; 0x8004ad <config+0xb>
     19ee:	07 2e       	mov	r0, r23
     19f0:	00 0c       	add	r0, r0
     19f2:	88 0b       	sbc	r24, r24
@@ -3119,10 +3119,10 @@ Disassembly of section .text:
     19f6:	0e 94 5f 0a 	call	0x14be	; 0x14be <uart_writedec32>
     19fa:	8c e2       	ldi	r24, 0x2C	; 44
     19fc:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1a00:	81 ef       	ldi	r24, 0xF1	; 241
+    1a00:	8b ef       	ldi	r24, 0xFB	; 251
     1a02:	91 e0       	ldi	r25, 0x01	; 1
     1a04:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1a08:	8e eb       	ldi	r24, 0xBE	; 190
+    1a08:	88 ec       	ldi	r24, 0xC8	; 200
     1a0a:	92 e0       	ldi	r25, 0x02	; 2
     1a0c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1a10:	60 91 00 01 	lds	r22, 0x0100	; 0x800100 <__data_start>
@@ -3134,58 +3134,58 @@ Disassembly of section .text:
     1a20:	0e 94 5f 0a 	call	0x14be	; 0x14be <uart_writedec32>
     1a24:	8c e2       	ldi	r24, 0x2C	; 44
     1a26:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1a2a:	81 ef       	ldi	r24, 0xF1	; 241
+    1a2a:	8b ef       	ldi	r24, 0xFB	; 251
     1a2c:	91 e0       	ldi	r25, 0x01	; 1
     1a2e:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1a32:	8f ec       	ldi	r24, 0xCF	; 207
+    1a32:	89 ed       	ldi	r24, 0xD9	; 217
     1a34:	92 e0       	ldi	r25, 0x02	; 2
     1a36:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1a3a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
     1a3e:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
-    1a42:	20 91 9c 04 	lds	r18, 0x049C	; 0x80049c <config+0x4>
-    1a46:	30 91 9d 04 	lds	r19, 0x049D	; 0x80049d <config+0x5>
+    1a42:	20 91 a6 04 	lds	r18, 0x04A6	; 0x8004a6 <config+0x4>
+    1a46:	30 91 a7 04 	lds	r19, 0x04A7	; 0x8004a7 <config+0x5>
     1a4a:	82 17       	cp	r24, r18
     1a4c:	93 07       	cpc	r25, r19
     1a4e:	1c f0       	brlt	.+6      	; 0x1a56 <parse_and_send_response+0x282>
-    1a50:	8a ed       	ldi	r24, 0xDA	; 218
+    1a50:	84 ee       	ldi	r24, 0xE4	; 228
     1a52:	92 e0       	ldi	r25, 0x02	; 2
     1a54:	20 c0       	rjmp	.+64     	; 0x1a96 <parse_and_send_response+0x2c2>
-    1a56:	20 91 9e 04 	lds	r18, 0x049E	; 0x80049e <config+0x6>
-    1a5a:	30 91 9f 04 	lds	r19, 0x049F	; 0x80049f <config+0x7>
+    1a56:	20 91 a8 04 	lds	r18, 0x04A8	; 0x8004a8 <config+0x6>
+    1a5a:	30 91 a9 04 	lds	r19, 0x04A9	; 0x8004a9 <config+0x7>
     1a5e:	82 17       	cp	r24, r18
     1a60:	93 07       	cpc	r25, r19
     1a62:	1c f0       	brlt	.+6      	; 0x1a6a <parse_and_send_response+0x296>
-    1a64:	82 ee       	ldi	r24, 0xE2	; 226
+    1a64:	8c ee       	ldi	r24, 0xEC	; 236
     1a66:	92 e0       	ldi	r25, 0x02	; 2
     1a68:	16 c0       	rjmp	.+44     	; 0x1a96 <parse_and_send_response+0x2c2>
-    1a6a:	20 91 a2 04 	lds	r18, 0x04A2	; 0x8004a2 <config+0xa>
-    1a6e:	30 91 a3 04 	lds	r19, 0x04A3	; 0x8004a3 <config+0xb>
+    1a6a:	20 91 ac 04 	lds	r18, 0x04AC	; 0x8004ac <config+0xa>
+    1a6e:	30 91 ad 04 	lds	r19, 0x04AD	; 0x8004ad <config+0xb>
     1a72:	28 17       	cp	r18, r24
     1a74:	39 07       	cpc	r19, r25
     1a76:	1c f4       	brge	.+6      	; 0x1a7e <parse_and_send_response+0x2aa>
-    1a78:	8a ee       	ldi	r24, 0xEA	; 234
+    1a78:	84 ef       	ldi	r24, 0xF4	; 244
     1a7a:	92 e0       	ldi	r25, 0x02	; 2
     1a7c:	0c c0       	rjmp	.+24     	; 0x1a96 <parse_and_send_response+0x2c2>
-    1a7e:	20 91 a0 04 	lds	r18, 0x04A0	; 0x8004a0 <config+0x8>
-    1a82:	30 91 a1 04 	lds	r19, 0x04A1	; 0x8004a1 <config+0x9>
+    1a7e:	20 91 aa 04 	lds	r18, 0x04AA	; 0x8004aa <config+0x8>
+    1a82:	30 91 ab 04 	lds	r19, 0x04AB	; 0x8004ab <config+0x9>
     1a86:	28 17       	cp	r18, r24
     1a88:	39 07       	cpc	r19, r25
     1a8a:	1c f4       	brge	.+6      	; 0x1a92 <parse_and_send_response+0x2be>
-    1a8c:	81 ef       	ldi	r24, 0xF1	; 241
+    1a8c:	8b ef       	ldi	r24, 0xFB	; 251
     1a8e:	92 e0       	ldi	r25, 0x02	; 2
     1a90:	02 c0       	rjmp	.+4      	; 0x1a96 <parse_and_send_response+0x2c2>
-    1a92:	89 ef       	ldi	r24, 0xF9	; 249
-    1a94:	92 e0       	ldi	r25, 0x02	; 2
+    1a92:	83 e0       	ldi	r24, 0x03	; 3
+    1a94:	93 e0       	ldi	r25, 0x03	; 3
     1a96:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1a9a:	8c e2       	ldi	r24, 0x2C	; 44
     1a9c:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1aa0:	81 ef       	ldi	r24, 0xF1	; 241
+    1aa0:	8b ef       	ldi	r24, 0xFB	; 251
     1aa2:	91 e0       	ldi	r25, 0x01	; 1
     1aa4:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1aa8:	81 e0       	ldi	r24, 0x01	; 1
+    1aa8:	8b e0       	ldi	r24, 0x0B	; 11
     1aaa:	93 e0       	ldi	r25, 0x03	; 3
     1aac:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1ab0:	81 ef       	ldi	r24, 0xF1	; 241
+    1ab0:	8b ef       	ldi	r24, 0xFB	; 251
     1ab2:	91 e0       	ldi	r25, 0x01	; 1
     1ab4:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1ab8:	10 e0       	ldi	r17, 0x00	; 0
@@ -3210,16 +3210,16 @@ Disassembly of section .text:
     1ae2:	39 f0       	breq	.+14     	; 0x1af2 <parse_and_send_response+0x31e>
     1ae4:	8c e2       	ldi	r24, 0x2C	; 44
     1ae6:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1aea:	81 ef       	ldi	r24, 0xF1	; 241
+    1aea:	8b ef       	ldi	r24, 0xFB	; 251
     1aec:	91 e0       	ldi	r25, 0x01	; 1
     1aee:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1af2:	8b e0       	ldi	r24, 0x0B	; 11
+    1af2:	85 e1       	ldi	r24, 0x15	; 21
     1af4:	93 e0       	ldi	r25, 0x03	; 3
     1af6:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1afa:	81 ef       	ldi	r24, 0xF1	; 241
+    1afa:	8b ef       	ldi	r24, 0xFB	; 251
     1afc:	91 e0       	ldi	r25, 0x01	; 1
     1afe:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1b02:	81 e1       	ldi	r24, 0x11	; 17
+    1b02:	8b e1       	ldi	r24, 0x1B	; 27
     1b04:	93 e0       	ldi	r25, 0x03	; 3
     1b06:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1b0a:	82 e2       	ldi	r24, 0x22	; 34
@@ -3234,7 +3234,7 @@ Disassembly of section .text:
     1b22:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
     1b26:	8c e2       	ldi	r24, 0x2C	; 44
     1b28:	0e 94 2f 0a 	call	0x145e	; 0x145e <uart_writechar>
-    1b2c:	84 e2       	ldi	r24, 0x24	; 36
+    1b2c:	8e e2       	ldi	r24, 0x2E	; 46
     1b2e:	93 e0       	ldi	r25, 0x03	; 3
     1b30:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1b34:	6d 81       	ldd	r22, Y+5	; 0x05
@@ -3242,139 +3242,139 @@ Disassembly of section .text:
     1b38:	80 e0       	ldi	r24, 0x00	; 0
     1b3a:	90 e0       	ldi	r25, 0x00	; 0
     1b3c:	0e 94 5f 0a 	call	0x14be	; 0x14be <uart_writedec32>
-    1b40:	81 ef       	ldi	r24, 0xF1	; 241
+    1b40:	8b ef       	ldi	r24, 0xFB	; 251
     1b42:	91 e0       	ldi	r25, 0x01	; 1
     1b44:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1b48:	80 e3       	ldi	r24, 0x30	; 48
+    1b48:	8a e3       	ldi	r24, 0x3A	; 58
     1b4a:	93 e0       	ldi	r25, 0x03	; 3
     1b4c:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1b50:	1f 5f       	subi	r17, 0xFF	; 255
     1b52:	b3 cf       	rjmp	.-154    	; 0x1aba <parse_and_send_response+0x2e6>
-    1b54:	81 ef       	ldi	r24, 0xF1	; 241
+    1b54:	8b ef       	ldi	r24, 0xFB	; 251
     1b56:	91 e0       	ldi	r25, 0x01	; 1
     1b58:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1b5c:	86 e3       	ldi	r24, 0x36	; 54
+    1b5c:	80 e4       	ldi	r24, 0x40	; 64
     1b5e:	93 e0       	ldi	r25, 0x03	; 3
     1b60:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1b64:	81 ef       	ldi	r24, 0xF1	; 241
+    1b64:	8b ef       	ldi	r24, 0xFB	; 251
     1b66:	91 e0       	ldi	r25, 0x01	; 1
     1b68:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1b6c:	84 e3       	ldi	r24, 0x34	; 52
+    1b6c:	8e e3       	ldi	r24, 0x3E	; 62
     1b6e:	93 e0       	ldi	r25, 0x03	; 3
     1b70:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    1b74:	81 ef       	ldi	r24, 0xF1	; 241
+    1b74:	8b ef       	ldi	r24, 0xFB	; 251
     1b76:	91 e0       	ldi	r25, 0x01	; 1
     1b78:	17 c1       	rjmp	.+558    	; 0x1da8 <parse_and_send_response+0x5d4>
-    1b7a:	6a e3       	ldi	r22, 0x3A	; 58
+    1b7a:	64 e4       	ldi	r22, 0x44	; 68
     1b7c:	73 e0       	ldi	r23, 0x03	; 3
-    1b7e:	81 e5       	ldi	r24, 0x51	; 81
+    1b7e:	8b e5       	ldi	r24, 0x5B	; 91
     1b80:	94 e0       	ldi	r25, 0x04	; 4
     1b82:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1b86:	89 2b       	or	r24, r25
     1b88:	09 f0       	breq	.+2      	; 0x1b8c <parse_and_send_response+0x3b8>
     1b8a:	d8 c0       	rjmp	.+432    	; 0x1d3c <parse_and_send_response+0x568>
-    1b8c:	64 ef       	ldi	r22, 0xF4	; 244
+    1b8c:	6e ef       	ldi	r22, 0xFE	; 254
     1b8e:	71 e0       	ldi	r23, 0x01	; 1
-    1b90:	81 e5       	ldi	r24, 0x51	; 81
+    1b90:	8b e5       	ldi	r24, 0x5B	; 91
     1b92:	94 e0       	ldi	r25, 0x04	; 4
     1b94:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1b98:	62 e7       	ldi	r22, 0x72	; 114
+    1b98:	6c e7       	ldi	r22, 0x7C	; 124
     1b9a:	73 e0       	ldi	r23, 0x03	; 3
-    1b9c:	81 e5       	ldi	r24, 0x51	; 81
+    1b9c:	8b e5       	ldi	r24, 0x5B	; 91
     1b9e:	94 e0       	ldi	r25, 0x04	; 4
     1ba0:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1ba4:	89 2b       	or	r24, r25
     1ba6:	09 f0       	breq	.+2      	; 0x1baa <parse_and_send_response+0x3d6>
     1ba8:	bd c0       	rjmp	.+378    	; 0x1d24 <parse_and_send_response+0x550>
-    1baa:	6f e3       	ldi	r22, 0x3F	; 63
+    1baa:	69 e4       	ldi	r22, 0x49	; 73
     1bac:	73 e0       	ldi	r23, 0x03	; 3
-    1bae:	81 e5       	ldi	r24, 0x51	; 81
+    1bae:	8b e5       	ldi	r24, 0x5B	; 91
     1bb0:	94 e0       	ldi	r25, 0x04	; 4
     1bb2:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1bb6:	63 e4       	ldi	r22, 0x43	; 67
+    1bb6:	6d e4       	ldi	r22, 0x4D	; 77
     1bb8:	73 e0       	ldi	r23, 0x03	; 3
-    1bba:	81 e5       	ldi	r24, 0x51	; 81
+    1bba:	8b e5       	ldi	r24, 0x5B	; 91
     1bbc:	94 e0       	ldi	r25, 0x04	; 4
     1bbe:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1bc2:	89 2b       	or	r24, r25
     1bc4:	89 f5       	brne	.+98     	; 0x1c28 <parse_and_send_response+0x454>
-    1bc6:	6b e4       	ldi	r22, 0x4B	; 75
+    1bc6:	65 e5       	ldi	r22, 0x55	; 85
     1bc8:	73 e0       	ldi	r23, 0x03	; 3
-    1bca:	81 e5       	ldi	r24, 0x51	; 81
+    1bca:	8b e5       	ldi	r24, 0x5B	; 91
     1bcc:	94 e0       	ldi	r25, 0x04	; 4
     1bce:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1bd2:	6f e4       	ldi	r22, 0x4F	; 79
+    1bd2:	69 e5       	ldi	r22, 0x59	; 89
     1bd4:	73 e0       	ldi	r23, 0x03	; 3
-    1bd6:	81 e5       	ldi	r24, 0x51	; 81
+    1bd6:	8b e5       	ldi	r24, 0x5B	; 91
     1bd8:	94 e0       	ldi	r25, 0x04	; 4
     1bda:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1bde:	89 2b       	or	r24, r25
     1be0:	09 f0       	breq	.+2      	; 0x1be4 <parse_and_send_response+0x410>
     1be2:	a0 c0       	rjmp	.+320    	; 0x1d24 <parse_and_send_response+0x550>
-    1be4:	64 ef       	ldi	r22, 0xF4	; 244
+    1be4:	6e ef       	ldi	r22, 0xFE	; 254
     1be6:	71 e0       	ldi	r23, 0x01	; 1
-    1be8:	81 e5       	ldi	r24, 0x51	; 81
+    1be8:	8b e5       	ldi	r24, 0x5B	; 91
     1bea:	94 e0       	ldi	r25, 0x04	; 4
     1bec:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1bf0:	66 e5       	ldi	r22, 0x56	; 86
+    1bf0:	60 e6       	ldi	r22, 0x60	; 96
     1bf2:	73 e0       	ldi	r23, 0x03	; 3
-    1bf4:	81 e5       	ldi	r24, 0x51	; 81
+    1bf4:	8b e5       	ldi	r24, 0x5B	; 91
     1bf6:	94 e0       	ldi	r25, 0x04	; 4
     1bf8:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1bfc:	89 2b       	or	r24, r25
     1bfe:	29 f4       	brne	.+10     	; 0x1c0a <parse_and_send_response+0x436>
-    1c00:	8e e5       	ldi	r24, 0x5E	; 94
+    1c00:	88 e6       	ldi	r24, 0x68	; 104
     1c02:	93 e0       	ldi	r25, 0x03	; 3
     1c04:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1c08:	8f c0       	rjmp	.+286    	; 0x1d28 <parse_and_send_response+0x554>
-    1c0a:	65 e6       	ldi	r22, 0x65	; 101
+    1c0a:	6f e6       	ldi	r22, 0x6F	; 111
     1c0c:	73 e0       	ldi	r23, 0x03	; 3
-    1c0e:	81 e5       	ldi	r24, 0x51	; 81
+    1c0e:	8b e5       	ldi	r24, 0x5B	; 91
     1c10:	94 e0       	ldi	r25, 0x04	; 4
     1c12:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1c16:	89 2b       	or	r24, r25
     1c18:	09 f0       	breq	.+2      	; 0x1c1c <parse_and_send_response+0x448>
     1c1a:	84 c0       	rjmp	.+264    	; 0x1d24 <parse_and_send_response+0x550>
-    1c1c:	8e e5       	ldi	r24, 0x5E	; 94
+    1c1c:	88 e6       	ldi	r24, 0x68	; 104
     1c1e:	93 e0       	ldi	r25, 0x03	; 3
     1c20:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1c24:	0e 94 75 01 	call	0x2ea	; 0x2ea <wdt_force_restart>
-    1c28:	6c e6       	ldi	r22, 0x6C	; 108
+    1c28:	66 e7       	ldi	r22, 0x76	; 118
     1c2a:	73 e0       	ldi	r23, 0x03	; 3
-    1c2c:	81 e5       	ldi	r24, 0x51	; 81
+    1c2c:	8b e5       	ldi	r24, 0x5B	; 91
     1c2e:	94 e0       	ldi	r25, 0x04	; 4
     1c30:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1c34:	89 2b       	or	r24, r25
     1c36:	09 f0       	breq	.+2      	; 0x1c3a <parse_and_send_response+0x466>
     1c38:	75 c0       	rjmp	.+234    	; 0x1d24 <parse_and_send_response+0x550>
-    1c3a:	6f e3       	ldi	r22, 0x3F	; 63
+    1c3a:	69 e4       	ldi	r22, 0x49	; 73
     1c3c:	73 e0       	ldi	r23, 0x03	; 3
-    1c3e:	81 e5       	ldi	r24, 0x51	; 81
+    1c3e:	8b e5       	ldi	r24, 0x5B	; 91
     1c40:	94 e0       	ldi	r25, 0x04	; 4
     1c42:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1c46:	64 e7       	ldi	r22, 0x74	; 116
+    1c46:	6e e7       	ldi	r22, 0x7E	; 126
     1c48:	73 e0       	ldi	r23, 0x03	; 3
-    1c4a:	81 e5       	ldi	r24, 0x51	; 81
+    1c4a:	8b e5       	ldi	r24, 0x5B	; 91
     1c4c:	94 e0       	ldi	r25, 0x04	; 4
     1c4e:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1c52:	89 2b       	or	r24, r25
     1c54:	09 f0       	breq	.+2      	; 0x1c58 <parse_and_send_response+0x484>
     1c56:	66 c0       	rjmp	.+204    	; 0x1d24 <parse_and_send_response+0x550>
-    1c58:	6c e7       	ldi	r22, 0x7C	; 124
+    1c58:	66 e8       	ldi	r22, 0x86	; 134
     1c5a:	73 e0       	ldi	r23, 0x03	; 3
-    1c5c:	81 e5       	ldi	r24, 0x51	; 81
+    1c5c:	8b e5       	ldi	r24, 0x5B	; 91
     1c5e:	94 e0       	ldi	r25, 0x04	; 4
     1c60:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1c64:	6f e7       	ldi	r22, 0x7F	; 127
+    1c64:	69 e8       	ldi	r22, 0x89	; 137
     1c66:	73 e0       	ldi	r23, 0x03	; 3
-    1c68:	81 e5       	ldi	r24, 0x51	; 81
+    1c68:	8b e5       	ldi	r24, 0x5B	; 91
     1c6a:	94 e0       	ldi	r25, 0x04	; 4
     1c6c:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1c70:	89 2b       	or	r24, r25
     1c72:	91 f4       	brne	.+36     	; 0x1c98 <parse_and_send_response+0x4c4>
-    1c74:	64 ef       	ldi	r22, 0xF4	; 244
+    1c74:	6e ef       	ldi	r22, 0xFE	; 254
     1c76:	71 e0       	ldi	r23, 0x01	; 1
-    1c78:	81 e5       	ldi	r24, 0x51	; 81
+    1c78:	8b e5       	ldi	r24, 0x5B	; 91
     1c7a:	94 e0       	ldi	r25, 0x04	; 4
     1c7c:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
     1c80:	ce 01       	movw	r24, r28
@@ -3387,16 +3387,16 @@ Disassembly of section .text:
     1c90:	9a 81       	ldd	r25, Y+2	; 0x02
     1c92:	0e 94 06 01 	call	0x20c	; 0x20c <update_tcrit_hi>
     1c96:	4f c0       	rjmp	.+158    	; 0x1d36 <parse_and_send_response+0x562>
-    1c98:	69 e8       	ldi	r22, 0x89	; 137
+    1c98:	63 e9       	ldi	r22, 0x93	; 147
     1c9a:	73 e0       	ldi	r23, 0x03	; 3
-    1c9c:	81 e5       	ldi	r24, 0x51	; 81
+    1c9c:	8b e5       	ldi	r24, 0x5B	; 91
     1c9e:	94 e0       	ldi	r25, 0x04	; 4
     1ca0:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1ca4:	89 2b       	or	r24, r25
     1ca6:	89 f4       	brne	.+34     	; 0x1cca <parse_and_send_response+0x4f6>
-    1ca8:	64 ef       	ldi	r22, 0xF4	; 244
+    1ca8:	6e ef       	ldi	r22, 0xFE	; 254
     1caa:	71 e0       	ldi	r23, 0x01	; 1
-    1cac:	81 e5       	ldi	r24, 0x51	; 81
+    1cac:	8b e5       	ldi	r24, 0x5B	; 91
     1cae:	94 e0       	ldi	r25, 0x04	; 4
     1cb0:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
     1cb4:	ce 01       	movw	r24, r28
@@ -3408,16 +3408,16 @@ Disassembly of section .text:
     1cc2:	9a 81       	ldd	r25, Y+2	; 0x02
     1cc4:	0e 94 1f 01 	call	0x23e	; 0x23e <update_twarn_hi>
     1cc8:	36 c0       	rjmp	.+108    	; 0x1d36 <parse_and_send_response+0x562>
-    1cca:	63 e9       	ldi	r22, 0x93	; 147
+    1cca:	6d e9       	ldi	r22, 0x9D	; 157
     1ccc:	73 e0       	ldi	r23, 0x03	; 3
-    1cce:	81 e5       	ldi	r24, 0x51	; 81
+    1cce:	8b e5       	ldi	r24, 0x5B	; 91
     1cd0:	94 e0       	ldi	r25, 0x04	; 4
     1cd2:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1cd6:	89 2b       	or	r24, r25
     1cd8:	89 f4       	brne	.+34     	; 0x1cfc <parse_and_send_response+0x528>
-    1cda:	64 ef       	ldi	r22, 0xF4	; 244
+    1cda:	6e ef       	ldi	r22, 0xFE	; 254
     1cdc:	71 e0       	ldi	r23, 0x01	; 1
-    1cde:	81 e5       	ldi	r24, 0x51	; 81
+    1cde:	8b e5       	ldi	r24, 0x5B	; 91
     1ce0:	94 e0       	ldi	r25, 0x04	; 4
     1ce2:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
     1ce6:	ce 01       	movw	r24, r28
@@ -3429,16 +3429,16 @@ Disassembly of section .text:
     1cf4:	9a 81       	ldd	r25, Y+2	; 0x02
     1cf6:	0e 94 3b 01 	call	0x276	; 0x276 <update_tcrit_lo>
     1cfa:	1d c0       	rjmp	.+58     	; 0x1d36 <parse_and_send_response+0x562>
-    1cfc:	6d e9       	ldi	r22, 0x9D	; 157
+    1cfc:	67 ea       	ldi	r22, 0xA7	; 167
     1cfe:	73 e0       	ldi	r23, 0x03	; 3
-    1d00:	81 e5       	ldi	r24, 0x51	; 81
+    1d00:	8b e5       	ldi	r24, 0x5B	; 91
     1d02:	94 e0       	ldi	r25, 0x04	; 4
     1d04:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1d08:	89 2b       	or	r24, r25
     1d0a:	61 f4       	brne	.+24     	; 0x1d24 <parse_and_send_response+0x550>
-    1d0c:	64 ef       	ldi	r22, 0xF4	; 244
+    1d0c:	6e ef       	ldi	r22, 0xFE	; 254
     1d0e:	71 e0       	ldi	r23, 0x01	; 1
-    1d10:	81 e5       	ldi	r24, 0x51	; 81
+    1d10:	8b e5       	ldi	r24, 0x5B	; 91
     1d12:	94 e0       	ldi	r25, 0x04	; 4
     1d14:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
     1d18:	ce 01       	movw	r24, r28
@@ -3455,51 +3455,51 @@ Disassembly of section .text:
     1d36:	89 2b       	or	r24, r25
     1d38:	a9 f1       	breq	.+106    	; 0x1da4 <parse_and_send_response+0x5d0>
     1d3a:	f4 cf       	rjmp	.-24     	; 0x1d24 <parse_and_send_response+0x550>
-    1d3c:	67 ea       	ldi	r22, 0xA7	; 167
+    1d3c:	61 eb       	ldi	r22, 0xB1	; 177
     1d3e:	73 e0       	ldi	r23, 0x03	; 3
-    1d40:	81 e5       	ldi	r24, 0x51	; 81
+    1d40:	8b e5       	ldi	r24, 0x5B	; 91
     1d42:	94 e0       	ldi	r25, 0x04	; 4
     1d44:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1d48:	89 2b       	or	r24, r25
     1d4a:	61 f7       	brne	.-40     	; 0x1d24 <parse_and_send_response+0x550>
-    1d4c:	64 ef       	ldi	r22, 0xF4	; 244
+    1d4c:	6e ef       	ldi	r22, 0xFE	; 254
     1d4e:	71 e0       	ldi	r23, 0x01	; 1
-    1d50:	81 e5       	ldi	r24, 0x51	; 81
+    1d50:	8b e5       	ldi	r24, 0x5B	; 91
     1d52:	94 e0       	ldi	r25, 0x04	; 4
     1d54:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1d58:	62 e7       	ldi	r22, 0x72	; 114
+    1d58:	6c e7       	ldi	r22, 0x7C	; 124
     1d5a:	73 e0       	ldi	r23, 0x03	; 3
-    1d5c:	81 e5       	ldi	r24, 0x51	; 81
+    1d5c:	8b e5       	ldi	r24, 0x5B	; 91
     1d5e:	94 e0       	ldi	r25, 0x04	; 4
     1d60:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1d64:	89 2b       	or	r24, r25
     1d66:	f1 f6       	brne	.-68     	; 0x1d24 <parse_and_send_response+0x550>
-    1d68:	64 ef       	ldi	r22, 0xF4	; 244
+    1d68:	6e ef       	ldi	r22, 0xFE	; 254
     1d6a:	71 e0       	ldi	r23, 0x01	; 1
-    1d6c:	81 e5       	ldi	r24, 0x51	; 81
+    1d6c:	8b e5       	ldi	r24, 0x5B	; 91
     1d6e:	94 e0       	ldi	r25, 0x04	; 4
     1d70:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1d74:	6c e6       	ldi	r22, 0x6C	; 108
+    1d74:	66 e7       	ldi	r22, 0x76	; 118
     1d76:	73 e0       	ldi	r23, 0x03	; 3
-    1d78:	81 e5       	ldi	r24, 0x51	; 81
+    1d78:	8b e5       	ldi	r24, 0x5B	; 91
     1d7a:	94 e0       	ldi	r25, 0x04	; 4
     1d7c:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1d80:	89 2b       	or	r24, r25
     1d82:	81 f6       	brne	.-96     	; 0x1d24 <parse_and_send_response+0x550>
-    1d84:	64 ef       	ldi	r22, 0xF4	; 244
+    1d84:	6e ef       	ldi	r22, 0xFE	; 254
     1d86:	71 e0       	ldi	r23, 0x01	; 1
-    1d88:	81 e5       	ldi	r24, 0x51	; 81
+    1d88:	8b e5       	ldi	r24, 0x5B	; 91
     1d8a:	94 e0       	ldi	r25, 0x04	; 4
     1d8c:	0e 94 a8 0b 	call	0x1750	; 0x1750 <uartsocket_readpacket>
-    1d90:	6f ea       	ldi	r22, 0xAF	; 175
+    1d90:	69 eb       	ldi	r22, 0xB9	; 185
     1d92:	73 e0       	ldi	r23, 0x03	; 3
-    1d94:	81 e5       	ldi	r24, 0x51	; 81
+    1d94:	8b e5       	ldi	r24, 0x5B	; 91
     1d96:	94 e0       	ldi	r25, 0x04	; 4
     1d98:	0e 94 e0 0e 	call	0x1dc0	; 0x1dc0 <str_cmp>
     1d9c:	89 2b       	or	r24, r25
     1d9e:	11 f6       	brne	.-124    	; 0x1d24 <parse_and_send_response+0x550>
     1da0:	0e 94 9f 05 	call	0xb3e	; 0xb3e <log_clear>
-    1da4:	8e e5       	ldi	r24, 0x5E	; 94
+    1da4:	88 e6       	ldi	r24, 0x68	; 104
     1da6:	93 e0       	ldi	r25, 0x03	; 3
     1da8:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     1dac:	0f 90       	pop	r0
@@ -3763,28 +3763,28 @@ Disassembly of section .text:
     1fd2:	08 95       	ret
 
 00001fd4 <vpd_is_data_valid>:
-    1fd4:	80 91 f3 04 	lds	r24, 0x04F3	; 0x8004f3 <vpd>
+    1fd4:	80 91 fd 04 	lds	r24, 0x04FD	; 0x8004fd <vpd>
     1fd8:	83 35       	cpi	r24, 0x53	; 83
     1fda:	61 f4       	brne	.+24     	; 0x1ff4 <vpd_is_data_valid+0x20>
-    1fdc:	80 91 f4 04 	lds	r24, 0x04F4	; 0x8004f4 <vpd+0x1>
+    1fdc:	80 91 fe 04 	lds	r24, 0x04FE	; 0x8004fe <vpd+0x1>
     1fe0:	85 34       	cpi	r24, 0x45	; 69
     1fe2:	41 f4       	brne	.+16     	; 0x1ff4 <vpd_is_data_valid+0x20>
     1fe4:	81 e0       	ldi	r24, 0x01	; 1
     1fe6:	90 e0       	ldi	r25, 0x00	; 0
-    1fe8:	20 91 f5 04 	lds	r18, 0x04F5	; 0x8004f5 <vpd+0x2>
+    1fe8:	20 91 ff 04 	lds	r18, 0x04FF	; 0x8004ff <vpd+0x2>
     1fec:	22 35       	cpi	r18, 0x52	; 82
     1fee:	21 f0       	breq	.+8      	; 0x1ff8 <vpd_is_data_valid+0x24>
     1ff0:	80 e0       	ldi	r24, 0x00	; 0
     1ff2:	02 c0       	rjmp	.+4      	; 0x1ff8 <vpd_is_data_valid+0x24>
     1ff4:	80 e0       	ldi	r24, 0x00	; 0
     1ff6:	90 e0       	ldi	r25, 0x00	; 0
-    1ff8:	e3 ef       	ldi	r30, 0xF3	; 243
+    1ff8:	ed ef       	ldi	r30, 0xFD	; 253
     1ffa:	f4 e0       	ldi	r31, 0x04	; 4
     1ffc:	20 e0       	ldi	r18, 0x00	; 0
     1ffe:	31 91       	ld	r19, Z+
     2000:	23 0f       	add	r18, r19
     2002:	35 e0       	ldi	r19, 0x05	; 5
-    2004:	eb 32       	cpi	r30, 0x2B	; 43
+    2004:	e5 33       	cpi	r30, 0x35	; 53
     2006:	f3 07       	cpc	r31, r19
     2008:	d1 f7       	brne	.-12     	; 0x1ffe <vpd_is_data_valid+0x2a>
     200a:	22 23       	and	r18, r18
@@ -3840,7 +3840,7 @@ Disassembly of section .text:
     206c:	89 2b       	or	r24, r25
     206e:	e1 f7       	brne	.-8      	; 0x2068 <vpd_init>
     2070:	47 e3       	ldi	r20, 0x37	; 55
-    2072:	63 ef       	ldi	r22, 0xF3	; 243
+    2072:	6d ef       	ldi	r22, 0xFD	; 253
     2074:	74 e0       	ldi	r23, 0x04	; 4
     2076:	80 e0       	ldi	r24, 0x00	; 0
     2078:	90 e0       	ldi	r25, 0x00	; 0
@@ -3850,7 +3850,7 @@ Disassembly of section .text:
     2084:	49 f4       	brne	.+18     	; 0x2098 <vpd_init+0x30>
     2086:	0e 94 0a 10 	call	0x2014	; 0x2014 <vpd_write_defaults>
     208a:	47 e3       	ldi	r20, 0x37	; 55
-    208c:	63 ef       	ldi	r22, 0xF3	; 243
+    208c:	6d ef       	ldi	r22, 0xFD	; 253
     208e:	74 e0       	ldi	r23, 0x04	; 4
     2090:	80 e0       	ldi	r24, 0x00	; 0
     2092:	90 e0       	ldi	r25, 0x00	; 0
@@ -3886,12 +3886,12 @@ Disassembly of section .text:
     20d0:	9f 93       	push	r25
     20d2:	ef 93       	push	r30
     20d4:	ff 93       	push	r31
-    20d6:	80 91 97 04 	lds	r24, 0x0497	; 0x800497 <socket_mode>
+    20d6:	80 91 a1 04 	lds	r24, 0x04A1	; 0x8004a1 <socket_mode>
     20da:	88 23       	and	r24, r24
     20dc:	09 f4       	brne	.+2      	; 0x20e0 <__vector_18+0x20>
     20de:	f0 c0       	rjmp	.+480    	; 0x22c0 <__vector_18+0x200>
     20e0:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
-    20e4:	90 91 96 04 	lds	r25, 0x0496	; 0x800496 <socket_connected>
+    20e4:	90 91 a0 04 	lds	r25, 0x04A0	; 0x8004a0 <socket_connected>
     20e8:	99 23       	and	r25, r25
     20ea:	09 f4       	brne	.+2      	; 0x20ee <__vector_18+0x2e>
     20ec:	e3 c0       	rjmp	.+454    	; 0x22b4 <__vector_18+0x1f4>
@@ -3902,8 +3902,8 @@ Disassembly of section .text:
     20f6:	8d 30       	cpi	r24, 0x0D	; 13
     20f8:	09 f0       	breq	.+2      	; 0x20fc <__vector_18+0x3c>
     20fa:	59 c0       	rjmp	.+178    	; 0x21ae <__vector_18+0xee>
-    20fc:	20 91 93 04 	lds	r18, 0x0493	; 0x800493 <rxtail>
-    2100:	90 91 94 04 	lds	r25, 0x0494	; 0x800494 <rxhead>
+    20fc:	20 91 9d 04 	lds	r18, 0x049D	; 0x80049d <rxtail>
+    2100:	90 91 9e 04 	lds	r25, 0x049E	; 0x80049e <rxhead>
     2104:	30 e0       	ldi	r19, 0x00	; 0
     2106:	29 1b       	sub	r18, r25
     2108:	31 09       	sbc	r19, r1
@@ -3913,17 +3913,17 @@ Disassembly of section .text:
     2110:	33 27       	eor	r19, r19
     2112:	23 2b       	or	r18, r19
     2114:	61 f0       	breq	.+24     	; 0x212e <__vector_18+0x6e>
-    2116:	e0 91 94 04 	lds	r30, 0x0494	; 0x800494 <rxhead>
+    2116:	e0 91 9e 04 	lds	r30, 0x049E	; 0x80049e <rxhead>
     211a:	f0 e0       	ldi	r31, 0x00	; 0
-    211c:	e6 5d       	subi	r30, 0xD6	; 214
+    211c:	ec 5c       	subi	r30, 0xCC	; 204
     211e:	fa 4f       	sbci	r31, 0xFA	; 250
     2120:	80 83       	st	Z, r24
-    2122:	90 91 94 04 	lds	r25, 0x0494	; 0x800494 <rxhead>
+    2122:	90 91 9e 04 	lds	r25, 0x049E	; 0x80049e <rxhead>
     2126:	9f 5f       	subi	r25, 0xFF	; 255
     2128:	9f 73       	andi	r25, 0x3F	; 63
-    212a:	90 93 94 04 	sts	0x0494, r25	; 0x800494 <rxhead>
-    212e:	20 91 91 04 	lds	r18, 0x0491	; 0x800491 <txtail>
-    2132:	90 91 92 04 	lds	r25, 0x0492	; 0x800492 <txhead>
+    212a:	90 93 9e 04 	sts	0x049E, r25	; 0x80049e <rxhead>
+    212e:	20 91 9b 04 	lds	r18, 0x049B	; 0x80049b <txtail>
+    2132:	90 91 9c 04 	lds	r25, 0x049C	; 0x80049c <txhead>
     2136:	30 e0       	ldi	r19, 0x00	; 0
     2138:	29 1b       	sub	r18, r25
     213a:	31 09       	sbc	r19, r1
@@ -3933,23 +3933,23 @@ Disassembly of section .text:
     2142:	33 27       	eor	r19, r19
     2144:	23 2b       	or	r18, r19
     2146:	89 f0       	breq	.+34     	; 0x216a <__vector_18+0xaa>
-    2148:	e0 91 92 04 	lds	r30, 0x0492	; 0x800492 <txhead>
+    2148:	e0 91 9c 04 	lds	r30, 0x049C	; 0x80049c <txhead>
     214c:	f0 e0       	ldi	r31, 0x00	; 0
-    214e:	e6 59       	subi	r30, 0x96	; 150
+    214e:	ec 58       	subi	r30, 0x8C	; 140
     2150:	fa 4f       	sbci	r31, 0xFA	; 250
     2152:	80 83       	st	Z, r24
-    2154:	90 91 92 04 	lds	r25, 0x0492	; 0x800492 <txhead>
+    2154:	90 91 9c 04 	lds	r25, 0x049C	; 0x80049c <txhead>
     2158:	9f 5f       	subi	r25, 0xFF	; 255
     215a:	9f 73       	andi	r25, 0x3F	; 63
-    215c:	90 93 92 04 	sts	0x0492, r25	; 0x800492 <txhead>
+    215c:	90 93 9c 04 	sts	0x049C, r25	; 0x80049c <txhead>
     2160:	90 91 c1 00 	lds	r25, 0x00C1	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
     2164:	90 62       	ori	r25, 0x20	; 32
     2166:	90 93 c1 00 	sts	0x00C1, r25	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
     216a:	8d 30       	cpi	r24, 0x0D	; 13
     216c:	09 f0       	breq	.+2      	; 0x2170 <__vector_18+0xb0>
     216e:	c5 c0       	rjmp	.+394    	; 0x22fa <__vector_18+0x23a>
-    2170:	80 91 91 04 	lds	r24, 0x0491	; 0x800491 <txtail>
-    2174:	20 91 92 04 	lds	r18, 0x0492	; 0x800492 <txhead>
+    2170:	80 91 9b 04 	lds	r24, 0x049B	; 0x80049b <txtail>
+    2174:	20 91 9c 04 	lds	r18, 0x049C	; 0x80049c <txhead>
     2178:	90 e0       	ldi	r25, 0x00	; 0
     217a:	82 1b       	sub	r24, r18
     217c:	91 09       	sbc	r25, r1
@@ -3958,26 +3958,26 @@ Disassembly of section .text:
     2182:	99 27       	eor	r25, r25
     2184:	89 2b       	or	r24, r25
     2186:	69 f0       	breq	.+26     	; 0x21a2 <__vector_18+0xe2>
-    2188:	e0 91 92 04 	lds	r30, 0x0492	; 0x800492 <txhead>
+    2188:	e0 91 9c 04 	lds	r30, 0x049C	; 0x80049c <txhead>
     218c:	f0 e0       	ldi	r31, 0x00	; 0
-    218e:	e6 59       	subi	r30, 0x96	; 150
+    218e:	ec 58       	subi	r30, 0x8C	; 140
     2190:	fa 4f       	sbci	r31, 0xFA	; 250
     2192:	8a e0       	ldi	r24, 0x0A	; 10
     2194:	80 83       	st	Z, r24
-    2196:	80 91 92 04 	lds	r24, 0x0492	; 0x800492 <txhead>
+    2196:	80 91 9c 04 	lds	r24, 0x049C	; 0x80049c <txhead>
     219a:	8f 5f       	subi	r24, 0xFF	; 255
     219c:	8f 73       	andi	r24, 0x3F	; 63
-    219e:	80 93 92 04 	sts	0x0492, r24	; 0x800492 <txhead>
-    21a2:	80 91 95 04 	lds	r24, 0x0495	; 0x800495 <packet_available>
+    219e:	80 93 9c 04 	sts	0x049C, r24	; 0x80049c <txhead>
+    21a2:	80 91 9f 04 	lds	r24, 0x049F	; 0x80049f <packet_available>
     21a6:	8f 5f       	subi	r24, 0xFF	; 255
-    21a8:	80 93 95 04 	sts	0x0495, r24	; 0x800495 <packet_available>
+    21a8:	80 93 9f 04 	sts	0x049F, r24	; 0x80049f <packet_available>
     21ac:	a6 c0       	rjmp	.+332    	; 0x22fa <__vector_18+0x23a>
     21ae:	88 30       	cpi	r24, 0x08	; 8
     21b0:	11 f0       	breq	.+4      	; 0x21b6 <__vector_18+0xf6>
     21b2:	8f 37       	cpi	r24, 0x7F	; 127
     21b4:	c1 f5       	brne	.+112    	; 0x2226 <__vector_18+0x166>
-    21b6:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
-    21ba:	20 91 93 04 	lds	r18, 0x0493	; 0x800493 <rxtail>
+    21b6:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
+    21ba:	20 91 9d 04 	lds	r18, 0x049D	; 0x80049d <rxtail>
     21be:	90 e0       	ldi	r25, 0x00	; 0
     21c0:	82 1b       	sub	r24, r18
     21c2:	91 09       	sbc	r25, r1
@@ -3986,17 +3986,17 @@ Disassembly of section .text:
     21c8:	89 2b       	or	r24, r25
     21ca:	09 f4       	brne	.+2      	; 0x21ce <__vector_18+0x10e>
     21cc:	96 c0       	rjmp	.+300    	; 0x22fa <__vector_18+0x23a>
-    21ce:	e0 91 94 04 	lds	r30, 0x0494	; 0x800494 <rxhead>
+    21ce:	e0 91 9e 04 	lds	r30, 0x049E	; 0x80049e <rxhead>
     21d2:	f0 e0       	ldi	r31, 0x00	; 0
-    21d4:	e6 5d       	subi	r30, 0xD6	; 214
+    21d4:	ec 5c       	subi	r30, 0xCC	; 204
     21d6:	fa 4f       	sbci	r31, 0xFA	; 250
     21d8:	80 81       	ld	r24, Z
-    21da:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
+    21da:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
     21de:	81 50       	subi	r24, 0x01	; 1
     21e0:	8f 73       	andi	r24, 0x3F	; 63
-    21e2:	80 93 94 04 	sts	0x0494, r24	; 0x800494 <rxhead>
-    21e6:	80 91 91 04 	lds	r24, 0x0491	; 0x800491 <txtail>
-    21ea:	20 91 92 04 	lds	r18, 0x0492	; 0x800492 <txhead>
+    21e2:	80 93 9e 04 	sts	0x049E, r24	; 0x80049e <rxhead>
+    21e6:	80 91 9b 04 	lds	r24, 0x049B	; 0x80049b <txtail>
+    21ea:	20 91 9c 04 	lds	r18, 0x049C	; 0x80049c <txhead>
     21ee:	90 e0       	ldi	r25, 0x00	; 0
     21f0:	82 1b       	sub	r24, r18
     21f2:	91 09       	sbc	r25, r1
@@ -4006,16 +4006,16 @@ Disassembly of section .text:
     21fa:	89 2b       	or	r24, r25
     21fc:	09 f4       	brne	.+2      	; 0x2200 <__vector_18+0x140>
     21fe:	7d c0       	rjmp	.+250    	; 0x22fa <__vector_18+0x23a>
-    2200:	e0 91 92 04 	lds	r30, 0x0492	; 0x800492 <txhead>
+    2200:	e0 91 9c 04 	lds	r30, 0x049C	; 0x80049c <txhead>
     2204:	f0 e0       	ldi	r31, 0x00	; 0
-    2206:	e6 59       	subi	r30, 0x96	; 150
+    2206:	ec 58       	subi	r30, 0x8C	; 140
     2208:	fa 4f       	sbci	r31, 0xFA	; 250
     220a:	8f e7       	ldi	r24, 0x7F	; 127
     220c:	80 83       	st	Z, r24
-    220e:	80 91 92 04 	lds	r24, 0x0492	; 0x800492 <txhead>
+    220e:	80 91 9c 04 	lds	r24, 0x049C	; 0x80049c <txhead>
     2212:	8f 5f       	subi	r24, 0xFF	; 255
     2214:	8f 73       	andi	r24, 0x3F	; 63
-    2216:	80 93 92 04 	sts	0x0492, r24	; 0x800492 <txhead>
+    2216:	80 93 9c 04 	sts	0x049C, r24	; 0x80049c <txhead>
     221a:	80 91 c1 00 	lds	r24, 0x00C1	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
     221e:	80 62       	ori	r24, 0x20	; 32
     2220:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
@@ -4023,8 +4023,8 @@ Disassembly of section .text:
     2226:	84 30       	cpi	r24, 0x04	; 4
     2228:	09 f0       	breq	.+2      	; 0x222c <__vector_18+0x16c>
     222a:	67 c0       	rjmp	.+206    	; 0x22fa <__vector_18+0x23a>
-    222c:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
-    2230:	20 91 93 04 	lds	r18, 0x0493	; 0x800493 <rxtail>
+    222c:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
+    2230:	20 91 9d 04 	lds	r18, 0x049D	; 0x80049d <rxtail>
     2234:	90 e0       	ldi	r25, 0x00	; 0
     2236:	82 1b       	sub	r24, r18
     2238:	91 09       	sbc	r25, r1
@@ -4032,15 +4032,15 @@ Disassembly of section .text:
     223c:	99 27       	eor	r25, r25
     223e:	89 2b       	or	r24, r25
     2240:	31 f1       	breq	.+76     	; 0x228e <__vector_18+0x1ce>
-    2242:	e0 91 94 04 	lds	r30, 0x0494	; 0x800494 <rxhead>
+    2242:	e0 91 9e 04 	lds	r30, 0x049E	; 0x80049e <rxhead>
     2246:	f0 e0       	ldi	r31, 0x00	; 0
-    2248:	e6 5d       	subi	r30, 0xD6	; 214
+    2248:	ec 5c       	subi	r30, 0xCC	; 204
     224a:	fa 4f       	sbci	r31, 0xFA	; 250
     224c:	80 81       	ld	r24, Z
     224e:	8d 30       	cpi	r24, 0x0D	; 13
     2250:	f1 f0       	breq	.+60     	; 0x228e <__vector_18+0x1ce>
-    2252:	80 91 93 04 	lds	r24, 0x0493	; 0x800493 <rxtail>
-    2256:	20 91 94 04 	lds	r18, 0x0494	; 0x800494 <rxhead>
+    2252:	80 91 9d 04 	lds	r24, 0x049D	; 0x80049d <rxtail>
+    2256:	20 91 9e 04 	lds	r18, 0x049E	; 0x80049e <rxhead>
     225a:	90 e0       	ldi	r25, 0x00	; 0
     225c:	82 1b       	sub	r24, r18
     225e:	91 09       	sbc	r25, r1
@@ -4049,21 +4049,21 @@ Disassembly of section .text:
     2264:	99 27       	eor	r25, r25
     2266:	89 2b       	or	r24, r25
     2268:	91 f0       	breq	.+36     	; 0x228e <__vector_18+0x1ce>
-    226a:	e0 91 94 04 	lds	r30, 0x0494	; 0x800494 <rxhead>
+    226a:	e0 91 9e 04 	lds	r30, 0x049E	; 0x80049e <rxhead>
     226e:	f0 e0       	ldi	r31, 0x00	; 0
-    2270:	e6 5d       	subi	r30, 0xD6	; 214
+    2270:	ec 5c       	subi	r30, 0xCC	; 204
     2272:	fa 4f       	sbci	r31, 0xFA	; 250
     2274:	8d e0       	ldi	r24, 0x0D	; 13
     2276:	80 83       	st	Z, r24
-    2278:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
+    2278:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
     227c:	8f 5f       	subi	r24, 0xFF	; 255
     227e:	8f 73       	andi	r24, 0x3F	; 63
-    2280:	80 93 94 04 	sts	0x0494, r24	; 0x800494 <rxhead>
-    2284:	80 91 95 04 	lds	r24, 0x0495	; 0x800495 <packet_available>
+    2280:	80 93 9e 04 	sts	0x049E, r24	; 0x80049e <rxhead>
+    2284:	80 91 9f 04 	lds	r24, 0x049F	; 0x80049f <packet_available>
     2288:	8f 5f       	subi	r24, 0xFF	; 255
-    228a:	80 93 95 04 	sts	0x0495, r24	; 0x800495 <packet_available>
-    228e:	80 91 93 04 	lds	r24, 0x0493	; 0x800493 <rxtail>
-    2292:	20 91 94 04 	lds	r18, 0x0494	; 0x800494 <rxhead>
+    228a:	80 93 9f 04 	sts	0x049F, r24	; 0x80049f <packet_available>
+    228e:	80 91 9d 04 	lds	r24, 0x049D	; 0x80049d <rxtail>
+    2292:	20 91 9e 04 	lds	r18, 0x049E	; 0x80049e <rxhead>
     2296:	90 e0       	ldi	r25, 0x00	; 0
     2298:	82 1b       	sub	r24, r18
     229a:	91 09       	sbc	r25, r1
@@ -4072,19 +4072,19 @@ Disassembly of section .text:
     22a0:	99 27       	eor	r25, r25
     22a2:	89 2b       	or	r24, r25
     22a4:	51 f1       	breq	.+84     	; 0x22fa <__vector_18+0x23a>
-    22a6:	e0 91 94 04 	lds	r30, 0x0494	; 0x800494 <rxhead>
+    22a6:	e0 91 9e 04 	lds	r30, 0x049E	; 0x80049e <rxhead>
     22aa:	f0 e0       	ldi	r31, 0x00	; 0
-    22ac:	e6 5d       	subi	r30, 0xD6	; 214
+    22ac:	ec 5c       	subi	r30, 0xCC	; 204
     22ae:	fa 4f       	sbci	r31, 0xFA	; 250
     22b0:	84 e0       	ldi	r24, 0x04	; 4
     22b2:	19 c0       	rjmp	.+50     	; 0x22e6 <__vector_18+0x226>
     22b4:	83 30       	cpi	r24, 0x03	; 3
     22b6:	09 f5       	brne	.+66     	; 0x22fa <__vector_18+0x23a>
     22b8:	81 e0       	ldi	r24, 0x01	; 1
-    22ba:	80 93 96 04 	sts	0x0496, r24	; 0x800496 <socket_connected>
+    22ba:	80 93 a0 04 	sts	0x04A0, r24	; 0x8004a0 <socket_connected>
     22be:	1d c0       	rjmp	.+58     	; 0x22fa <__vector_18+0x23a>
-    22c0:	80 91 93 04 	lds	r24, 0x0493	; 0x800493 <rxtail>
-    22c4:	20 91 94 04 	lds	r18, 0x0494	; 0x800494 <rxhead>
+    22c0:	80 91 9d 04 	lds	r24, 0x049D	; 0x80049d <rxtail>
+    22c4:	20 91 9e 04 	lds	r18, 0x049E	; 0x80049e <rxhead>
     22c8:	90 e0       	ldi	r25, 0x00	; 0
     22ca:	82 1b       	sub	r24, r18
     22cc:	91 09       	sbc	r25, r1
@@ -4093,16 +4093,16 @@ Disassembly of section .text:
     22d2:	99 27       	eor	r25, r25
     22d4:	89 2b       	or	r24, r25
     22d6:	79 f0       	breq	.+30     	; 0x22f6 <__vector_18+0x236>
-    22d8:	e0 91 94 04 	lds	r30, 0x0494	; 0x800494 <rxhead>
+    22d8:	e0 91 9e 04 	lds	r30, 0x049E	; 0x80049e <rxhead>
     22dc:	f0 e0       	ldi	r31, 0x00	; 0
     22de:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
-    22e2:	e6 5d       	subi	r30, 0xD6	; 214
+    22e2:	ec 5c       	subi	r30, 0xCC	; 204
     22e4:	fa 4f       	sbci	r31, 0xFA	; 250
     22e6:	80 83       	st	Z, r24
-    22e8:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
+    22e8:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
     22ec:	8f 5f       	subi	r24, 0xFF	; 255
     22ee:	8f 73       	andi	r24, 0x3F	; 63
-    22f0:	80 93 94 04 	sts	0x0494, r24	; 0x800494 <rxhead>
+    22f0:	80 93 9e 04 	sts	0x049E, r24	; 0x80049e <rxhead>
     22f4:	02 c0       	rjmp	.+4      	; 0x22fa <__vector_18+0x23a>
     22f6:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
     22fa:	ff 91       	pop	r31
@@ -4128,8 +4128,8 @@ Disassembly of section .text:
     231e:	9f 93       	push	r25
     2320:	ef 93       	push	r30
     2322:	ff 93       	push	r31
-    2324:	80 91 92 04 	lds	r24, 0x0492	; 0x800492 <txhead>
-    2328:	20 91 91 04 	lds	r18, 0x0491	; 0x800491 <txtail>
+    2324:	80 91 9c 04 	lds	r24, 0x049C	; 0x80049c <txhead>
+    2328:	20 91 9b 04 	lds	r18, 0x049B	; 0x80049b <txtail>
     232c:	90 e0       	ldi	r25, 0x00	; 0
     232e:	82 1b       	sub	r24, r18
     2330:	91 09       	sbc	r25, r1
@@ -4137,16 +4137,16 @@ Disassembly of section .text:
     2334:	99 27       	eor	r25, r25
     2336:	89 2b       	or	r24, r25
     2338:	79 f0       	breq	.+30     	; 0x2358 <__vector_19+0x48>
-    233a:	e0 91 91 04 	lds	r30, 0x0491	; 0x800491 <txtail>
+    233a:	e0 91 9b 04 	lds	r30, 0x049B	; 0x80049b <txtail>
     233e:	f0 e0       	ldi	r31, 0x00	; 0
-    2340:	e6 59       	subi	r30, 0x96	; 150
+    2340:	ec 58       	subi	r30, 0x8C	; 140
     2342:	fa 4f       	sbci	r31, 0xFA	; 250
     2344:	80 81       	ld	r24, Z
     2346:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
-    234a:	80 91 91 04 	lds	r24, 0x0491	; 0x800491 <txtail>
+    234a:	80 91 9b 04 	lds	r24, 0x049B	; 0x80049b <txtail>
     234e:	8f 5f       	subi	r24, 0xFF	; 255
     2350:	8f 73       	andi	r24, 0x3F	; 63
-    2352:	80 93 91 04 	sts	0x0491, r24	; 0x800491 <txtail>
+    2352:	80 93 9b 04 	sts	0x049B, r24	; 0x80049b <txtail>
     2356:	05 c0       	rjmp	.+10     	; 0x2362 <__vector_19+0x52>
     2358:	80 91 c1 00 	lds	r24, 0x00C1	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
     235c:	8f 7d       	andi	r24, 0xDF	; 223
@@ -4163,15 +4163,15 @@ Disassembly of section .text:
     2374:	18 95       	reti
 
 00002376 <serial_rxchars>:
-    2376:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
-    237a:	90 91 93 04 	lds	r25, 0x0493	; 0x800493 <rxtail>
+    2376:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
+    237a:	90 91 9d 04 	lds	r25, 0x049D	; 0x80049d <rxtail>
     237e:	89 1b       	sub	r24, r25
     2380:	8f 73       	andi	r24, 0x3F	; 63
     2382:	08 95       	ret
 
 00002384 <serial_popchar>:
-    2384:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
-    2388:	20 91 93 04 	lds	r18, 0x0493	; 0x800493 <rxtail>
+    2384:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
+    2388:	20 91 9d 04 	lds	r18, 0x049D	; 0x80049d <rxtail>
     238c:	90 e0       	ldi	r25, 0x00	; 0
     238e:	82 1b       	sub	r24, r18
     2390:	91 09       	sbc	r25, r1
@@ -4179,32 +4179,32 @@ Disassembly of section .text:
     2394:	99 27       	eor	r25, r25
     2396:	89 2b       	or	r24, r25
     2398:	c1 f0       	breq	.+48     	; 0x23ca <serial_popchar+0x46>
-    239a:	e0 91 93 04 	lds	r30, 0x0493	; 0x800493 <rxtail>
+    239a:	e0 91 9d 04 	lds	r30, 0x049D	; 0x80049d <rxtail>
     239e:	f0 e0       	ldi	r31, 0x00	; 0
-    23a0:	e6 5d       	subi	r30, 0xD6	; 214
+    23a0:	ec 5c       	subi	r30, 0xCC	; 204
     23a2:	fa 4f       	sbci	r31, 0xFA	; 250
     23a4:	80 81       	ld	r24, Z
-    23a6:	90 91 93 04 	lds	r25, 0x0493	; 0x800493 <rxtail>
+    23a6:	90 91 9d 04 	lds	r25, 0x049D	; 0x80049d <rxtail>
     23aa:	9f 5f       	subi	r25, 0xFF	; 255
     23ac:	9f 73       	andi	r25, 0x3F	; 63
-    23ae:	90 93 93 04 	sts	0x0493, r25	; 0x800493 <rxtail>
-    23b2:	90 91 97 04 	lds	r25, 0x0497	; 0x800497 <socket_mode>
+    23ae:	90 93 9d 04 	sts	0x049D, r25	; 0x80049d <rxtail>
+    23b2:	90 91 a1 04 	lds	r25, 0x04A1	; 0x8004a1 <socket_mode>
     23b6:	99 23       	and	r25, r25
     23b8:	49 f0       	breq	.+18     	; 0x23cc <serial_popchar+0x48>
     23ba:	8d 30       	cpi	r24, 0x0D	; 13
     23bc:	39 f4       	brne	.+14     	; 0x23cc <serial_popchar+0x48>
-    23be:	90 91 95 04 	lds	r25, 0x0495	; 0x800495 <packet_available>
+    23be:	90 91 9f 04 	lds	r25, 0x049F	; 0x80049f <packet_available>
     23c2:	91 50       	subi	r25, 0x01	; 1
-    23c4:	90 93 95 04 	sts	0x0495, r25	; 0x800495 <packet_available>
+    23c4:	90 93 9f 04 	sts	0x049F, r25	; 0x80049f <packet_available>
     23c8:	08 95       	ret
     23ca:	80 e0       	ldi	r24, 0x00	; 0
     23cc:	08 95       	ret
 
 000023ce <serial_isconnected>:
     23ce:	81 e0       	ldi	r24, 0x01	; 1
-    23d0:	80 93 97 04 	sts	0x0497, r24	; 0x800497 <socket_mode>
-    23d4:	80 91 94 04 	lds	r24, 0x0494	; 0x800494 <rxhead>
-    23d8:	20 91 93 04 	lds	r18, 0x0493	; 0x800493 <rxtail>
+    23d0:	80 93 a1 04 	sts	0x04A1, r24	; 0x8004a1 <socket_mode>
+    23d4:	80 91 9e 04 	lds	r24, 0x049E	; 0x80049e <rxhead>
+    23d8:	20 91 9d 04 	lds	r18, 0x049D	; 0x80049d <rxtail>
     23dc:	90 e0       	ldi	r25, 0x00	; 0
     23de:	82 1b       	sub	r24, r18
     23e0:	91 09       	sbc	r25, r1
@@ -4212,36 +4212,36 @@ Disassembly of section .text:
     23e4:	99 27       	eor	r25, r25
     23e6:	89 2b       	or	r24, r25
     23e8:	b1 f0       	breq	.+44     	; 0x2416 <serial_isconnected+0x48>
-    23ea:	e0 91 93 04 	lds	r30, 0x0493	; 0x800493 <rxtail>
+    23ea:	e0 91 9d 04 	lds	r30, 0x049D	; 0x80049d <rxtail>
     23ee:	f0 e0       	ldi	r31, 0x00	; 0
-    23f0:	e6 5d       	subi	r30, 0xD6	; 214
+    23f0:	ec 5c       	subi	r30, 0xCC	; 204
     23f2:	fa 4f       	sbci	r31, 0xFA	; 250
     23f4:	80 81       	ld	r24, Z
     23f6:	84 30       	cpi	r24, 0x04	; 4
     23f8:	71 f4       	brne	.+28     	; 0x2416 <serial_isconnected+0x48>
-    23fa:	10 92 96 04 	sts	0x0496, r1	; 0x800496 <socket_connected>
-    23fe:	e0 91 93 04 	lds	r30, 0x0493	; 0x800493 <rxtail>
+    23fa:	10 92 a0 04 	sts	0x04A0, r1	; 0x8004a0 <socket_connected>
+    23fe:	e0 91 9d 04 	lds	r30, 0x049D	; 0x80049d <rxtail>
     2402:	f0 e0       	ldi	r31, 0x00	; 0
-    2404:	e6 5d       	subi	r30, 0xD6	; 214
+    2404:	ec 5c       	subi	r30, 0xCC	; 204
     2406:	fa 4f       	sbci	r31, 0xFA	; 250
     2408:	80 81       	ld	r24, Z
-    240a:	80 91 93 04 	lds	r24, 0x0493	; 0x800493 <rxtail>
+    240a:	80 91 9d 04 	lds	r24, 0x049D	; 0x80049d <rxtail>
     240e:	8f 5f       	subi	r24, 0xFF	; 255
     2410:	8f 73       	andi	r24, 0x3F	; 63
-    2412:	80 93 93 04 	sts	0x0493, r24	; 0x800493 <rxtail>
-    2416:	80 91 96 04 	lds	r24, 0x0496	; 0x800496 <socket_connected>
+    2412:	80 93 9d 04 	sts	0x049D, r24	; 0x80049d <rxtail>
+    2416:	80 91 a0 04 	lds	r24, 0x04A0	; 0x8004a0 <socket_connected>
     241a:	08 95       	ret
 
 0000241c <serial_is_packet_ready>:
-    241c:	80 91 95 04 	lds	r24, 0x0495	; 0x800495 <packet_available>
+    241c:	80 91 9f 04 	lds	r24, 0x049F	; 0x80049f <packet_available>
     2420:	08 95       	ret
 
 00002422 <serial_writechar>:
     2422:	0f b6       	in	r0, 0x3f	; 63
     2424:	07 fe       	sbrs	r0, 7
     2426:	0e c0       	rjmp	.+28     	; 0x2444 <serial_writechar+0x22>
-    2428:	20 91 91 04 	lds	r18, 0x0491	; 0x800491 <txtail>
-    242c:	90 91 92 04 	lds	r25, 0x0492	; 0x800492 <txhead>
+    2428:	20 91 9b 04 	lds	r18, 0x049B	; 0x80049b <txtail>
+    242c:	90 91 9c 04 	lds	r25, 0x049C	; 0x80049c <txhead>
     2430:	30 e0       	ldi	r19, 0x00	; 0
     2432:	29 1b       	sub	r18, r25
     2434:	31 09       	sbc	r19, r1
@@ -4252,8 +4252,8 @@ Disassembly of section .text:
     243e:	23 2b       	or	r18, r19
     2440:	99 f3       	breq	.-26     	; 0x2428 <serial_writechar+0x6>
     2442:	0d c0       	rjmp	.+26     	; 0x245e <serial_writechar+0x3c>
-    2444:	20 91 91 04 	lds	r18, 0x0491	; 0x800491 <txtail>
-    2448:	90 91 92 04 	lds	r25, 0x0492	; 0x800492 <txhead>
+    2444:	20 91 9b 04 	lds	r18, 0x049B	; 0x80049b <txtail>
+    2448:	90 91 9c 04 	lds	r25, 0x049C	; 0x80049c <txhead>
     244c:	30 e0       	ldi	r19, 0x00	; 0
     244e:	29 1b       	sub	r18, r25
     2450:	31 09       	sbc	r19, r1
@@ -4263,15 +4263,15 @@ Disassembly of section .text:
     2458:	33 27       	eor	r19, r19
     245a:	23 2b       	or	r18, r19
     245c:	61 f0       	breq	.+24     	; 0x2476 <serial_writechar+0x54>
-    245e:	e0 91 92 04 	lds	r30, 0x0492	; 0x800492 <txhead>
+    245e:	e0 91 9c 04 	lds	r30, 0x049C	; 0x80049c <txhead>
     2462:	f0 e0       	ldi	r31, 0x00	; 0
-    2464:	e6 59       	subi	r30, 0x96	; 150
+    2464:	ec 58       	subi	r30, 0x8C	; 140
     2466:	fa 4f       	sbci	r31, 0xFA	; 250
     2468:	80 83       	st	Z, r24
-    246a:	80 91 92 04 	lds	r24, 0x0492	; 0x800492 <txhead>
+    246a:	80 91 9c 04 	lds	r24, 0x049C	; 0x80049c <txhead>
     246e:	8f 5f       	subi	r24, 0xFF	; 255
     2470:	8f 73       	andi	r24, 0x3F	; 63
-    2472:	80 93 92 04 	sts	0x0492, r24	; 0x800492 <txhead>
+    2472:	80 93 9c 04 	sts	0x049C, r24	; 0x80049c <txhead>
     2476:	80 91 c1 00 	lds	r24, 0x00C1	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
     247a:	80 62       	ori	r24, 0x20	; 32
     247c:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
@@ -4338,7 +4338,7 @@ Disassembly of section .text:
     2506:	84 e9       	ldi	r24, 0x94	; 148
     2508:	91 e0       	ldi	r25, 0x01	; 1
     250a:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
-    250e:	81 ef       	ldi	r24, 0xF1	; 241
+    250e:	8b ef       	ldi	r24, 0xFB	; 251
     2510:	91 e0       	ldi	r25, 0x01	; 1
     2512:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     2516:	80 e0       	ldi	r24, 0x00	; 0
@@ -4360,14 +4360,14 @@ Disassembly of section .text:
     2542:	0e 94 bf 09 	call	0x137e	; 0x137e <temp_get>
     2546:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
     254a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
-    254e:	00 91 a2 04 	lds	r16, 0x04A2	; 0x8004a2 <config+0xa>
-    2552:	10 91 a3 04 	lds	r17, 0x04A3	; 0x8004a3 <config+0xb>
-    2556:	20 91 a0 04 	lds	r18, 0x04A0	; 0x8004a0 <config+0x8>
-    255a:	30 91 a1 04 	lds	r19, 0x04A1	; 0x8004a1 <config+0x9>
-    255e:	40 91 9e 04 	lds	r20, 0x049E	; 0x80049e <config+0x6>
-    2562:	50 91 9f 04 	lds	r21, 0x049F	; 0x80049f <config+0x7>
-    2566:	60 91 9c 04 	lds	r22, 0x049C	; 0x80049c <config+0x4>
-    256a:	70 91 9d 04 	lds	r23, 0x049D	; 0x80049d <config+0x5>
+    254e:	00 91 ac 04 	lds	r16, 0x04AC	; 0x8004ac <config+0xa>
+    2552:	10 91 ad 04 	lds	r17, 0x04AD	; 0x8004ad <config+0xb>
+    2556:	20 91 aa 04 	lds	r18, 0x04AA	; 0x8004aa <config+0x8>
+    255a:	30 91 ab 04 	lds	r19, 0x04AB	; 0x8004ab <config+0x9>
+    255e:	40 91 a8 04 	lds	r20, 0x04A8	; 0x8004a8 <config+0x6>
+    2562:	50 91 a9 04 	lds	r21, 0x04A9	; 0x8004a9 <config+0x7>
+    2566:	60 91 a6 04 	lds	r22, 0x04A6	; 0x8004a6 <config+0x4>
+    256a:	70 91 a7 04 	lds	r23, 0x04A7	; 0x8004a7 <config+0x5>
     256e:	0e 94 5c 00 	call	0xb8	; 0xb8 <tempfsm_update>
     2572:	0e 94 b9 09 	call	0x1372	; 0x1372 <temp_start>
     2576:	68 ee       	ldi	r22, 0xE8	; 232
@@ -4381,7 +4381,7 @@ Disassembly of section .text:
     2588:	0e 94 a4 0b 	call	0x1748	; 0x1748 <uartsocket_is_connected>
     258c:	88 23       	and	r24, r24
     258e:	79 f2       	breq	.-98     	; 0x252e <main+0x58>
-    2590:	8d e9       	ldi	r24, 0x9D	; 157
+    2590:	87 ea       	ldi	r24, 0xA7	; 167
     2592:	91 e0       	ldi	r25, 0x01	; 1
     2594:	0e 94 31 0a 	call	0x1462	; 0x1462 <uart_writestr>
     2598:	1b c0       	rjmp	.+54     	; 0x25d0 <main+0xfa>
@@ -4392,7 +4392,7 @@ Disassembly of section .text:
     25a6:	0e 94 a4 0b 	call	0x1748	; 0x1748 <uartsocket_is_connected>
     25aa:	81 11       	cpse	r24, r1
     25ac:	11 c0       	rjmp	.+34     	; 0x25d0 <main+0xfa>
-    25ae:	86 eb       	ldi	r24, 0xB6	; 182
+    25ae:	80 ec       	ldi	r24, 0xC0	; 192
     25b0:	91 e0       	ldi	r25, 0x01	; 1
     25b2:	0e 94 9c 0b 	call	0x1738	; 0x1738 <uartsocket_writestr>
     25b6:	ba cf       	rjmp	.-140    	; 0x252c <main+0x56>
