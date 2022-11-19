@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1668819953 source:/home/solisjose46/Desktop/SER486/github/project3/main.c
+	"alarm.h"
+	"config.h"
+	"delay.h"
+	"eeprom.h"
+	"led.h"
+	"log.h"
+	"rtc.h"
+	"temp.h"
+	"tempfsm.h"
+	"uart.h"
+	"uartsocket.h"
+	"util.h"
+	"process_packet.h"
+	"vpd.h"
+	"wdt.h"
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/alarm.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/config.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/delay.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/eeprom.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/led.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/log.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/rtc.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/temp.h
+
+1668815452 /home/solisjose46/Desktop/SER486/github/project3/tempfsm.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/uart.h
+
+1570800714 /home/solisjose46/Desktop/SER486/github/project3/uartsocket.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/util.h
+
+1570801072 /home/solisjose46/Desktop/SER486/github/project3/process_packet.h
+
+1570799814 /home/solisjose46/Desktop/SER486/github/project3/vpd.h
+
+1570799896 /home/solisjose46/Desktop/SER486/github/project3/wdt.h
+
+1668815446 source:/home/solisjose46/Desktop/SER486/github/project3/tempfsm.c
+	"tempfsm.h"
+	"log.h"
+	"alarm.h"
+	"led.h"
+
+1668817617 source:/home/solisjose46/Desktop/SER486/github/project3/util.c
+	"util.h"
+	"config.h"
+
+1668820408 source:/home/solisjose46/Desktop/SER486/github/project3/wdt.c
+	"wdt.h"
+	"led.h"
+	"log.h"
+	"config.h"
+
