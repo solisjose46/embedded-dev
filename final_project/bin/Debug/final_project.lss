@@ -116,9 +116,9 @@ Disassembly of section .text:
       c4:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 000000c8 <update_tcrit_hi>:
+/* variable to determine whether or not to reset device after http request has been verified. */
 static unsigned char reset = 0;
 
-// config stuff
 extern config_struct config;
 
 int update_tcrit_hi(int value){
