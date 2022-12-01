@@ -954,9 +954,9 @@ END GROUP
  .stab          0x00000000000012cc      0x588 obj/Debug/main.o
                                         0x594 (size before relaxing)
 
-.stabstr        0x0000000000000000     0x1099
+.stabstr        0x0000000000000000     0x106d
  *(.stabstr)
- .stabstr       0x0000000000000000     0x1099 obj/Debug/httpfsm.o
+ .stabstr       0x0000000000000000     0x106d obj/Debug/httpfsm.o
 
 .stab.excl
  *(.stab.excl)

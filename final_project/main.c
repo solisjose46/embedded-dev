@@ -1,6 +1,12 @@
 /*
 * main.c
 *
+* SER486 Final Project
+* Fall 2022
+* Author: Jose Solis Salazar
+*
+* FSM implemented to parse and respond to HTTP requests.
+*
 */
 #include "config.h"
 #include "delay.h"

@@ -1,3 +1,14 @@
+/*
+* httpfsm.c
+*
+* SER486 Final Project
+* Fall 2022
+* Author: Jose Solis Salazar
+*
+* FSM implemented to parse and respond to HTTP requests.
+*
+*/
+
 #include "httpfsm.h"
 #include "vpd.h"
 #include "socket.h"
@@ -7,8 +18,6 @@
 #include "wdt.h"
 #include "rtc.h"
 #include "uart.h"
-
-// TODO: rename private methods and add comment blocks
 
 /* Possible FSM states */
 typedef enum {
@@ -43,11 +52,19 @@ static UPDATE_TEMP temp_value_to_update;
 /* The value received in the put request for temp update */
 static int update_temp_value;
 
-/* variable to determine whether or not to reset device after http request has been verified. */
 static unsigned char reset = 0;
 
 extern config_struct config;
 
+/* int update_tcrit_hi(int value)
+ * 
+ * Update critical high alarm value.
+ *
+ * arguments:
+ *     int value
+ * returns:
+ *     0 if success else 1
+ */
 int update_tcrit_hi(int value){
     if(value > config.hi_warn){
         config.hi_alarm = value;
@@ -58,6 +75,15 @@ int update_tcrit_hi(int value){
     return 1;
 }
 
+/* int update_twarn_hi(int value)
+ * 
+ * Update critical high alarm value.
+ * 
+ * arguments:
+ *     int value
+ * returns:
+ *     0 if success else 1
+ */
 int update_twarn_hi(int value){
     if(value < config.hi_alarm && value > config.lo_warn){
         config.hi_warn = value;
@@ -68,6 +94,15 @@ int update_twarn_hi(int value){
     return 1;
 }
 
+/* int update_tcrit_lo(int value)
+ * 
+ * Update critical low alarm value.
+ * 
+ * arguments:
+ *     int value
+ * returns:
+ *     0 if success else 1
+ */
 int update_tcrit_lo(int value){
     if(value < config.lo_warn){
         config.lo_alarm = value;
@@ -80,6 +115,15 @@ int update_tcrit_lo(int value){
 
 }
 
+/* int update_twarn_lo(int value)
+ * 
+ * Update warning low alarm value.
+ * 
+ * arguments:
+ *     int value
+ * returns:
+ *     0 if success else 1
+ */
 int update_twarn_lo(int value){
     if(value > config.lo_alarm && value < config.hi_warn){
         config.lo_warn = value;
@@ -90,8 +134,16 @@ int update_twarn_lo(int value){
     return 1;
 }
 
-
-// Private method for getting temp state based on current temp.
+/* static char * get_temp_state()
+ * 
+ * Private method for getting temp state based on current temp.
+ *
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     (char *) temp state
+ */
 static char * get_temp_state(){
     int temp = temp_get();
     if(temp >= config.hi_alarm){
@@ -111,21 +163,28 @@ static char * get_temp_state(){
     }
 }
 
-// Private method for responding to HTTP get request. Response is json of current device state.
-
+/* static void http_response_get()
+ *
+ * Private method for responding to HTTP get request.
+ * Response is json of current device state.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ */
 static void http_response_get(){
-    // write http response code
+    /* Write HTTP response code, headers and prepare json body */
     socket_writestr(CLIENT_SOCKET, "HTTP/1.1 200 OK\n");
 
-    //write headers
     socket_writestr(CLIENT_SOCKET, "Content-Type: application/vnd.api+json\r\n");
     socket_writestr(CLIENT_SOCKET, "Connection: close\r\n");
     socket_writestr(CLIENT_SOCKET, "\r\n");
 
-    // write json body
     socket_writestr(CLIENT_SOCKET, "{");
 
-    // write the vpd data
+    /* Write VPD data */
     socket_writequotedstring(CLIENT_SOCKET, "vpd"); socket_writestr(CLIENT_SOCKET, ":{");
     socket_writequotedstring(CLIENT_SOCKET,"model"); socket_writestr(CLIENT_SOCKET, ":"); socket_writequotedstring(CLIENT_SOCKET, vpd.model); socket_writestr(CLIENT_SOCKET, ",");
     socket_writequotedstring(CLIENT_SOCKET,"manufacturer"); socket_writestr(CLIENT_SOCKET, ":"); socket_writequotedstring(CLIENT_SOCKET, vpd.manufacturer); socket_writestr(CLIENT_SOCKET, ",");
@@ -135,19 +194,18 @@ static void http_response_get(){
     socket_writequotedstring(CLIENT_SOCKET,"country_code"); socket_writestr(CLIENT_SOCKET, ":"); socket_writequotedstring(CLIENT_SOCKET, vpd.country_of_origin);
     socket_writestr(CLIENT_SOCKET, "},");
 
-    // write the temp alarm values
+    /* Write alarm temps */
     socket_writequotedstring(CLIENT_SOCKET,"tcrit_hi"); socket_writestr(CLIENT_SOCKET, ":"); socket_writedec32(CLIENT_SOCKET, config.hi_alarm); socket_writestr(CLIENT_SOCKET, ",");
     socket_writequotedstring(CLIENT_SOCKET,"twarn_hi"); socket_writestr(CLIENT_SOCKET, ":"); socket_writedec32(CLIENT_SOCKET, config.hi_warn); socket_writestr(CLIENT_SOCKET, ",");
     socket_writequotedstring(CLIENT_SOCKET,"tcrit_lo"); socket_writestr(CLIENT_SOCKET, ":"); socket_writedec32(CLIENT_SOCKET, config.lo_alarm); socket_writestr(CLIENT_SOCKET, ",");
     socket_writequotedstring(CLIENT_SOCKET,"twarn_lo"); socket_writestr(CLIENT_SOCKET, ":"); socket_writedec32(CLIENT_SOCKET, config.lo_warn); socket_writestr(CLIENT_SOCKET, ",");
 
-    // write current temp
     socket_writequotedstring(CLIENT_SOCKET,"temperature"); socket_writestr(CLIENT_SOCKET, ":"); socket_writedec32(CLIENT_SOCKET, temp_get()); socket_writestr(CLIENT_SOCKET, ",");
 
-    //write state
+    /* Write temp state */
     socket_writequotedstring(CLIENT_SOCKET,"state"); socket_writestr(CLIENT_SOCKET, ":"); socket_writequotedstring(CLIENT_SOCKET, get_temp_state()); socket_writestr(CLIENT_SOCKET, ",");
 
-    // write log
+    /* Write log */
     socket_writequotedstring(CLIENT_SOCKET,"log"); socket_writestr(CLIENT_SOCKET, ":[");
 
     for(int i = 0; i < log_get_num_entries(); i++){
@@ -166,35 +224,55 @@ static void http_response_get(){
     }
 
     socket_writestr(CLIENT_SOCKET, "]}");
-
-    //write final CRLF
     socket_writestr(CLIENT_SOCKET, "\r\n");
-
-    //disconnect the socket
     socket_disconnect(CLIENT_SOCKET);
 }
 
-// Private method for replying with HTTP reponse 200.
-static void http_response_delete(){
+/* static void http_response_ok()
+ *
+ * Private method for replying with HTTP reponse 200.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ */
+static void http_response_ok(){
     socket_writestr(CLIENT_SOCKET, "HTTP/1.1 200 OK\n");
     socket_writestr(CLIENT_SOCKET, "Connection: close\r\n");
     socket_writestr(CLIENT_SOCKET, "\r\n");
     socket_disconnect(CLIENT_SOCKET);
 }
 
-// Private method for replying with HTTP reposonse 400.
-static void httpfsm_send_error_response(){
+/* static void send_error_response()
+ *
+ * Private method for replying with HTTP reposonse 400.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ */
+static void send_error_response(){
     socket_writestr(CLIENT_SOCKET, "HTTP/1.1 400 Bad Request\n");
     socket_writestr(CLIENT_SOCKET, "Connection: close\r\n");
     socket_writestr(CLIENT_SOCKET, "\r\n");
     socket_disconnect(CLIENT_SOCKET);
 }
 
-
-
-// Private method for determining is uri is valid.
-// 0 if invalid 1 if valid
-static unsigned char httpfsm_process_uri(){
+/* static unsigned char process_uri()
+ *
+ * Private method for determining is uri is valid.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     0 if invalid 1 if valid
+ */
+static unsigned char process_uri(){
     unsigned char MAX_CHARS_BEFORE_RESOURCE = 30; 
     unsigned char count = 0;
     unsigned char buf[1];
@@ -205,13 +283,14 @@ static unsigned char httpfsm_process_uri(){
         }
         count++;
     }
+
+    /* Bad request */
     if(count>= MAX_CHARS_BEFORE_RESOURCE){
-        // too many characters before resource return 0 indicating a bad request
         return 0;
     }
 
+    /* If top level uri not device then bad request */
     if(!socket_recv_compare(CLIENT_SOCKET, "device")){
-        // device is the only valid top level resource. If it is anything else this is a bad request
         return 0;
     }
 
@@ -219,16 +298,32 @@ static unsigned char httpfsm_process_uri(){
     return 1;
 }
 
-// Private method for validating get request.
-// 0 if invalid 1 if valid.
-static unsigned char httpfsm_process_get(){
-    return httpfsm_process_uri();
+/* static unsigned char process_get()
+ *
+ * Private method for validating get request.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     0 if invalid 1 if valid
+ */
+static unsigned char process_get(){
+    return process_uri();
 }
 
-// Private method for validating put request.
-// 0 if invalid 1 if valid.
-static unsigned char httpfsm_process_put(){
-    if(httpfsm_process_uri() == 0){
+/* static unsigned char process_put()
+ *
+ * Private method for validating put request.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     0 if invalid 1 if valid
+ */
+static unsigned char process_put(){
+    if(process_uri() == 0){
         return 0;
     }
 
@@ -278,28 +373,29 @@ static unsigned char httpfsm_process_put(){
     return 0;
 }
 
-/**
-httpfsm_process_delete()
-
-returns
-    0 if the request is bad
-    1 otherwise
-*/
-static unsigned char httpfsm_process_delete(){
-    if(httpfsm_process_uri() == 0){
+/* static unsigned char process_delete()
+ *
+ * Private method for validating delete request.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     0 if invalid 1 if valid
+ */
+static unsigned char process_delete(){
+    if(process_uri() == 0){
         return 0;
     }
 
+    /* log only valid DELETE endpoint */
     if(!socket_recv_compare(CLIENT_SOCKET, "/log")){
-        // the only valid resources for a delete command is log.
-        // If this is not the case it is a bad request
         return 0;
     }
 
     unsigned char buf[2];
     socket_peek(CLIENT_SOCKET, buf);
     if(buf[0] != ' '){
-        // there must be a space after /log otherwise an invalid uri was passed in for a delete request.
         return 0;
     }
 
@@ -309,55 +405,74 @@ static unsigned char httpfsm_process_delete(){
     return 1;
 }
 
-// Private method for replying to HTTP PUT request.
+/* static void http_response_put()
+ *
+ * Private method for replying to HTTP PUT request.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ */
 static void http_response_put(){
     if(reset > 0){
-        http_response_delete();
+        http_response_ok();
         wdt_force_restart();
     }
     else{
         switch(temp_value_to_update){
-        case TCRIT_HI:
-            if(update_tcrit_hi(update_temp_value) == 0){
-                http_response_delete();
-            }
-            else{
-                httpfsm_send_error_response();
-            }
-            break;
-        case TWARN_HI:
-            if(update_twarn_hi(update_temp_value) == 0){
-                http_response_delete();
-            }
-            else{
-                httpfsm_send_error_response();
-            }
-            break;
-        case TCRIT_LO:
-            if(update_tcrit_lo(update_temp_value) == 0){
-                http_response_delete();
-            }
-            else{
-                httpfsm_send_error_response();
-            }
-            break;
-        case TWARN_LO:
-            if(update_twarn_lo(update_temp_value) == 0){
-                http_response_delete();
-            }
-            else{
-                httpfsm_send_error_response();
-            }
-            break;
+	    case TCRIT_HI:
+                if(update_tcrit_hi(update_temp_value) == 0){
+		    http_response_ok();
+                }
+                else{
+                    send_error_response();
+                }
+                break;
+            case TWARN_HI:
+                if(update_twarn_hi(update_temp_value) == 0){
+                    http_response_ok();
+		}
+                else{
+                    send_error_response();
+                }
+                break;
+            case TCRIT_LO:
+                if(update_tcrit_lo(update_temp_value) == 0){
+                    http_response_ok();
+		}
+                else{
+                    send_error_response();
+                }
+                break;
+            case TWARN_LO:
+                if(update_twarn_lo(update_temp_value) == 0){
+                    http_response_ok();
+		}
+                else{
+                    send_error_response();
+                }
+                break;
         }
     }
 }
 
-// Mehtod for updating HTTP FSM.
+/* void httpfsm_update()
+ *
+ * Mehtod for updating HTTP FSM.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ */
 void httpfsm_update(){
     static REQUEST_TYPE request_type;
     switch(state){
         case INITIAL_STATE:
+	    /* If request not GET, PUT, DELETE then FLUSH */
             if(socket_recv_compare(CLIENT_SOCKET, "GET")){
                 request_type = GET;
                 state = GET;
@@ -375,14 +490,16 @@ void httpfsm_update(){
             }
             break;
         case FLUSH:
+	    /* flush and reset state */
             while(socket_recv_available(CLIENT_SOCKET)){
                 socket_flush_line(CLIENT_SOCKET);
             }
-            httpfsm_send_error_response();
+            send_error_response();
             state = INITIAL_STATE;
             break;
+	/* Validate GET, PUT, DELETE else FLUSH */
         case GET:
-            if(httpfsm_process_get() == 0){
+            if(process_get() == 0){
                 state = FLUSH;
             }
             else{
@@ -390,7 +507,7 @@ void httpfsm_update(){
             }
             break;
         case PUT:
-            if(httpfsm_process_put() == 0){
+            if(process_put() == 0){
                 state = FLUSH;
             }
             else{
@@ -398,7 +515,7 @@ void httpfsm_update(){
             }
             break;
         case DELETE:
-            if(httpfsm_process_delete() == 0){
+            if(process_delete() == 0){
                 state = FLUSH;
             }
             else{
@@ -406,6 +523,7 @@ void httpfsm_update(){
             }
             break;
         case HTTP_VERSION:
+	    /* Validate HTTP version */
             if(!socket_recv_compare(CLIENT_SOCKET, " HTTP/1.1\r\n")){
                 state = FLUSH;
             }
@@ -414,6 +532,7 @@ void httpfsm_update(){
             }
             break;
         case HEADERS:
+	    /* Validate Headers */
             while(1){
                 if(socket_is_blank_line(CLIENT_SOCKET)){
                     break;
@@ -430,7 +549,7 @@ void httpfsm_update(){
                 http_response_put();
             }
             else if (request_type == DELETE){
-                http_response_delete();
+                http_response_ok();
             }
 
             state = INITIAL_STATE;
@@ -439,13 +558,31 @@ void httpfsm_update(){
 
 }
 
-// Initializes state to INITIAL_STATE.
+/* void httpfsm_init()
+ *
+ * Initializes state to INITIAL_STATE.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ */
 void httpfsm_init(){
     state = INITIAL_STATE;
     reset = 0;
 }
 
-// Resets the fsm by setting state to FLUSH.
+/* void httpfsm_reset()
+ *
+ * Resets the fsm by setting state to FLUSH.
+ * 
+ * arguments:
+ *     None
+ *
+ * returns:
+ *     Nothing
+ */
 void httpfsm_reset(){
     state = FLUSH;
 }
