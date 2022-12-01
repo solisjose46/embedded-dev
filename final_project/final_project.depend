@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1669855372 source:/home/solisjose46/Desktop/SER486/github/final_project/httpfsm.c
+	"httpfsm.h"
+	"vpd.h"
+	"socket.h"
+	"temp.h"
+	"config.h"
+	"log.h"
+	"wdt.h"
+	"rtc.h"
+	"uart.h"
+
+1669841664 /home/solisjose46/Desktop/SER486/github/final_project/httpfsm.h
+
+1564433694 /home/solisjose46/Desktop/SER486/github/final_project/vpd.h
+
+1524183371 /home/solisjose46/Desktop/SER486/github/final_project/socket.h
+
+1524183585 /home/solisjose46/Desktop/SER486/github/final_project/temp.h
+
+1564432663 /home/solisjose46/Desktop/SER486/github/final_project/config.h
+
+1523113274 /home/solisjose46/Desktop/SER486/github/final_project/log.h
+
+1523124591 /home/solisjose46/Desktop/SER486/github/final_project/wdt.h
+
+1523480741 /home/solisjose46/Desktop/SER486/github/final_project/rtc.h
+
+1524183663 /home/solisjose46/Desktop/SER486/github/final_project/uart.h
+
+1669855067 source:/home/solisjose46/Desktop/SER486/github/final_project/main.c
+	"config.h"
+	"delay.h"
+	"dhcp.h"
+	"led.h"
+	"log.h"
+	"rtc.h"
+	"spi.h"
+	"uart.h"
+	"vpd.h"
+	"temp.h"
+	"socket.h"
+	"alarm.h"
+	"wdt.h"
+	"tempfsm.h"
+	"eeprom.h"
+	"ntp.h"
+	"w51.h"
+	"signature.h"
+	"httpfsm.h"
+
+1564432838 /home/solisjose46/Desktop/SER486/github/final_project/delay.h
+
+1524177000 /home/solisjose46/Desktop/SER486/github/final_project/dhcp.h
+
+1520446007 /home/solisjose46/Desktop/SER486/github/final_project/led.h
+
+1555443756 /home/solisjose46/Desktop/SER486/github/final_project/spi.h
+
+1524177000 /home/solisjose46/Desktop/SER486/github/final_project/alarm.h
+
+1524183556 /home/solisjose46/Desktop/SER486/github/final_project/tempfsm.h
+
+1524179239 /home/solisjose46/Desktop/SER486/github/final_project/eeprom.h
+
+1524179957 /home/solisjose46/Desktop/SER486/github/final_project/ntp.h
+
+1669838723 /home/solisjose46/Desktop/SER486/github/final_project/w51.h
+
+1573501852 /home/solisjose46/Desktop/SER486/github/final_project/signature.h
+
