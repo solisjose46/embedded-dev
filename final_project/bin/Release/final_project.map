@@ -1,0 +1,1605 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                              obj/Release/main.o (alarm_send)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                              obj/Release/httpfsm.o (config_set_modified)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+                              obj/Release/main.o (delay_isdone)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                              obj/Release/main.o (dhcp_getLocalIp)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o) (eeprom_writebuf)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                              obj/Release/main.o (led_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                              obj/Release/main.o (log_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                              obj/Release/main.o (ntp_sync_network_time)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                              obj/Release/main.o (rtc_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                              obj/Release/main.o (signature_set)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o) (udpsocket_open_multicast)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+                              obj/Release/main.o (spi_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o) (mem_cpy)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+                              obj/Release/main.o (temp_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                              obj/Release/main.o (tempfsm_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o) (timer1_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                              obj/Release/main.o (uart_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o) (str_cmp)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                              obj/Release/httpfsm.o (vpd)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                              obj/Release/main.o (W5x_config)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+                              obj/Release/main.o (wdt_init)
+/home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o) (serial_init)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o) (__mulsi3)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o) (__udivmodhi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o) (__divmodhi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o) (__udivmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o) (__divmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o) (__negsi2)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                              obj/Release/httpfsm.o (__tablejump2__)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                              obj/Release/httpfsm.o (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                              obj/Release/httpfsm.o (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o) (__bswapsi2)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o) (__umulhisi3)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o) (__muluhisi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+rxbuf               0x40              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+write_busy          0x1               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+vpd                 0x37              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+writeaddr           0x2               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+rtc_base            0x4               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+writesize           0x1               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+writebuf            0x40              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+txbuf               0x40              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+bufidx              0x1               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+config              0x12              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+LOAD obj/Release/httpfsm.o
+LOAD obj/Release/main.o
+LOAD /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libatmega328p.a
+END GROUP
+                0x0000000000020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x4f3a
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table
+                0x0000000000000068       0x10 obj/Release/httpfsm.o
+ .progmem.gcc_sw_table
+                0x0000000000000078       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                0x000000000000008a                . = ALIGN (0x2)
+                0x000000000000008a                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000000000008a        0x0 linker stubs
+ *(.trampolines*)
+                0x000000000000008a                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+                0x000000000000008a                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000000008a                __ctors_start = .
+ *(.ctors)
+                0x000000000000008a                __ctors_end = .
+                0x000000000000008a                __dtors_start = .
+ *(.dtors)
+                0x000000000000008a                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000000008a        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x000000000000008a                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000000008a        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000096       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000096                __do_copy_data
+ .init4         0x00000000000000ac       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000000ac                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000000bc        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000c4        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000c4                __vector_1
+                0x00000000000000c4                __vector_24
+                0x00000000000000c4                __vector_12
+                0x00000000000000c4                __bad_interrupt
+                0x00000000000000c4                __vector_3
+                0x00000000000000c4                __vector_23
+                0x00000000000000c4                __vector_25
+                0x00000000000000c4                __vector_13
+                0x00000000000000c4                __vector_17
+                0x00000000000000c4                __vector_7
+                0x00000000000000c4                __vector_5
+                0x00000000000000c4                __vector_4
+                0x00000000000000c4                __vector_9
+                0x00000000000000c4                __vector_2
+                0x00000000000000c4                __vector_21
+                0x00000000000000c4                __vector_15
+                0x00000000000000c4                __vector_8
+                0x00000000000000c4                __vector_10
+                0x00000000000000c4                __vector_16
+                0x00000000000000c4                __vector_20
+ .text          0x00000000000000c8      0x79a obj/Release/httpfsm.o
+                0x0000000000000158                update_tcrit_hi
+                0x0000000000000182                update_twarn_hi
+                0x00000000000001ba                update_tcrit_lo
+                0x00000000000001e4                update_twarn_lo
+                0x000000000000021c                httpfsm_update
+                0x0000000000000846                httpfsm_init
+                0x0000000000000854                httpfsm_reset
+ .text          0x0000000000000862        0x0 obj/Release/main.o
+ .text          0x0000000000000862      0x18c /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                0x0000000000000862                alarm_init
+                0x0000000000000864                alarm_send
+ .text          0x00000000000009ee       0xf0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                0x00000000000009ee                config_set_modified
+                0x00000000000009f6                config_is_data_valid
+                0x0000000000000a36                config_write_defaults
+                0x0000000000000a50                config_init
+                0x0000000000000a86                config_update
+                0x0000000000000ab6                config_update_noisr
+ .text          0x0000000000000ade      0x19e /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+                0x0000000000000ade                __vector_14
+                0x0000000000000b80                delay_init
+                0x0000000000000ba4                delay_get
+                0x0000000000000bc4                delay_isdone
+                0x0000000000000bf6                delay_set
+                0x0000000000000c4a                millis
+ .text          0x0000000000000c7c      0xbfc /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                0x0000000000000c7c                dhcp_getLocalIp
+                0x0000000000000c82                dhcp_getSubnetMask
+                0x0000000000000c88                dhcp_getGatewayIp
+                0x0000000000000c8e                dhcp_getDhcpServerIp
+                0x0000000000000c94                dhcp_getDnsServerIp
+                0x0000000000000c9a                _ZN9DhcpClass16reset_DHCP_leaseEv
+                0x0000000000000ca6                _ZN9DhcpClass12presend_DHCPEv
+                0x0000000000000ca8                _ZN9DhcpClass17parseDHCPResponseEmRm
+                0x00000000000010de                _ZN9DhcpClass10getLocalIpEv
+                0x00000000000010e2                _ZN9DhcpClass13getSubnetMaskEv
+                0x00000000000010e6                _ZN9DhcpClass12getGatewayIpEv
+                0x00000000000010ea                _ZN9DhcpClass15getDhcpServerIpEv
+                0x00000000000010ee                _ZN9DhcpClass14getDnsServerIpEv
+                0x00000000000010f2                _ZN9DhcpClass9printByteEPch
+                0x000000000000111c                _ZN9DhcpClass17send_DHCP_MESSAGEEhj
+                0x0000000000001398                _ZN9DhcpClass18request_DHCP_leaseEv
+                0x0000000000001694                _ZN9DhcpClass13beginWithDHCPEPhmm
+                0x0000000000001712                dhcp_start
+                0x0000000000001736                _ZN9DhcpClass10checkLeaseEv
+                0x0000000000001870                dhcp_checkLease
+ .text          0x0000000000001878      0x12c /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                0x0000000000001878                eeprom_startwrite
+                0x000000000000187e                __vector_22
+                0x000000000000190a                eeprom_writebuf
+                0x0000000000001944                eeprom_writebuf_noisr
+                0x0000000000001972                eeprom_readbuf
+                0x000000000000199c                eeprom_isbusy
+ .text          0x00000000000019a4       0xfc /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                0x00000000000019a4                led_init
+                0x00000000000019b6                led_on
+                0x00000000000019ba                led_off
+                0x00000000000019be                led_set_blink
+                0x00000000000019e2                led_update
+                0x0000000000001a96                led_is_on
+ .text          0x0000000000001aa0      0x43c /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                0x0000000000001aa0                log_is_data_valid
+                0x0000000000001aec                log_init
+                0x0000000000001c76                log_update
+                0x0000000000001ce2                log_update_noisr
+                0x0000000000001d46                log_add_record
+                0x0000000000001de8                log_clear
+                0x0000000000001e22                log_get_num_entries
+                0x0000000000001e54                log_get_record
+ .text          0x0000000000001edc      0x1be /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                0x0000000000001edc                ntp_sync_network_time
+ .text          0x000000000000209a      0x5d8 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                0x000000000000209a                rtc_init
+                0x000000000000209e                rtc_get_date
+                0x00000000000020a2                rtc_set_date
+                0x00000000000020b6                is_leapyear
+                0x00000000000020ea                rtc_set_by_datestr
+                0x00000000000023b4                get_month
+                0x0000000000002444                rtc_num2datestr
+                0x000000000000264a                rtc_get_date_string
+ .text          0x0000000000002672       0xea /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                0x0000000000002672                signature_set
+                0x000000000000273a                check_for_test_start
+ .text          0x000000000000275c      0xb78 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                0x000000000000275c                udpsocket_open_multicast
+                0x00000000000027e2                udpsocket_is_open
+                0x00000000000027f2                socket_is_active
+                0x000000000000280e                socket_is_listening
+                0x000000000000281e                socket_is_established
+                0x000000000000282e                socket_is_closed
+                0x000000000000283c                udpsocket_is_closed
+                0x0000000000002840                socket_close
+                0x00000000000028a6                udpsocket_open
+                0x00000000000028ae                socket_open
+                0x00000000000028b6                udpsocket_close
+                0x00000000000028ba                socket_listen
+                0x00000000000028d8                socket_connect
+                0x0000000000002940                socket_disconnect
+                0x0000000000002946                socket_send
+                0x00000000000029d2                socket_recv
+                0x0000000000002a46                socket_recv_available
+                0x0000000000002a4a                udpsocket_recv_available
+                0x0000000000002a4e                socket_peek
+                0x0000000000002a5e                udpsocket_sendto
+                0x0000000000002b02                udpsocket_recv_data
+                0x0000000000002b44                udpsocket_recvfrom
+                0x0000000000002c96                socket_igmpsend
+                0x0000000000002cf4                udpsocket_add_to_datagram
+                0x0000000000002d3a                socket_writestr
+                0x0000000000002d5a                socket_writechar
+                0x0000000000002d7c                socket_writequotedstring
+                0x0000000000002da2                socket_writedate
+                0x0000000000002dbc                socket_writehex8
+                0x0000000000002df8                socket_write_macaddress
+                0x0000000000002e4a                socket_writehex16
+                0x0000000000002e64                socket_writedec32
+                0x0000000000002f8a                udpsocket_start_datagram
+                0x0000000000002fd4                udpsocket_send_datagram
+                0x0000000000003010                socket_received_line
+                0x000000000000306c                socket_is_blank_line
+                0x00000000000030b0                socket_recv_compare
+                0x000000000000315c                socket_flush_line
+                0x00000000000031ee                socket_recv_int
+ .text          0x00000000000032d4       0x5c /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+                0x00000000000032d4                spi_init
+                0x00000000000032f8                spi_is_locked
+                0x00000000000032fe                spi_begin_transfer
+                0x000000000000331a                spi_transfer
+                0x0000000000003328                spi_end_transfer
+ .text          0x0000000000003330      0x144 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                0x0000000000003330                mem_cpy
+                0x0000000000003348                mem_set
+                0x000000000000335c                mem_cmp
+                0x000000000000338a                str_cpy
+                0x000000000000339e                str_len
+                0x00000000000033b0                str_writeudec16
+ .text          0x0000000000003474       0x6e /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+                0x0000000000003474                temp_init
+                0x0000000000003482                temp_is_data_ready
+                0x0000000000003498                temp_start
+                0x00000000000034a4                temp_get
+ .text          0x00000000000034e2      0x170 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                0x00000000000034e2                tempfsm_init
+                0x00000000000034e4                tempfsm_update
+                0x0000000000003648                tempfsm_reset
+ .text          0x0000000000003652       0x9a /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+                0x0000000000003652                __vector_11
+                0x000000000000369c                timer1_init
+                0x00000000000036bc                timer1_get
+                0x00000000000036d4                timer1_clear
+ .text          0x00000000000036ec      0x23c /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                0x00000000000036ec                uart_init
+                0x00000000000036f4                uart_writechar
+                0x00000000000036f8                uart_writestr
+                0x0000000000003710                uart_writehex8
+                0x0000000000003742                uart_writehex16
+                0x0000000000003754                uart_writedec32
+                0x000000000000387c                uart_is_connected
+                0x0000000000003880                uart_is_packet_available
+                0x0000000000003884                uart_readpacket
+                0x00000000000038e4                uart_writeip
+ .text          0x0000000000003928      0x214 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                0x0000000000003928                str_cmp
+                0x000000000000395e                update_checksum
+                0x0000000000003986                random_seed
+                0x00000000000039bc                random
+                0x0000000000003abe                strtoi
+ .text          0x0000000000003b3c       0xc6 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                0x0000000000003b3c                vpd_is_data_valid
+                0x0000000000003b7c                vpd_write_defaults
+                0x0000000000003bd0                vpd_init
+ .text          0x0000000000003c02      0xbfe /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                0x0000000000003c02                W5x_writebuf
+                0x0000000000003d08                W5x_write
+                0x0000000000003d2a                W5x_config
+                0x0000000000003ec6                W5x_readbuf
+                0x0000000000003fd0                W5x_read
+                0x0000000000003ff2                W5x_readSn
+                0x0000000000004002                W5x_writeSn
+                0x0000000000004018                W5x_readbufSn
+                0x000000000000402e                W5x_writebufSn
+                0x0000000000004044                W5x_read_data
+                0x00000000000040ca                W5x_writeMR
+                0x00000000000040d4                W5x_readMR
+                0x00000000000040dc                isW5100
+                0x0000000000004152                isW5500
+                0x00000000000041c8                W5x_init
+                0x00000000000041d6                W5x_writebufGAR
+                0x00000000000041e4                W5x_readbufGAR
+                0x00000000000041f2                W5x_writebufSUBR
+                0x0000000000004200                W5x_readbufSUBR
+                0x000000000000420e                W5x_writebufSHAR
+                0x000000000000421c                W5x_readbufSHAR
+                0x000000000000422a                W5x_writebufSIPR
+                0x0000000000004238                W5x_readbufSIPR
+                0x0000000000004246                W5x_writeIR
+                0x0000000000004250                W5x_readIR
+                0x0000000000004258                W5x_writeRTR
+                0x0000000000004272                W5x_readRTR
+                0x000000000000429c                W5x_writebufUIPR
+                0x00000000000042aa                W5x_readbufUIPR
+                0x00000000000042b8                W5x_writeUPORT
+                0x00000000000042d2                W5x_readUPORT
+                0x00000000000042fc                W5x_writeSnMR
+                0x0000000000004306                W5x_readSnMR
+                0x000000000000430e                W5x_writeSnCR
+                0x0000000000004318                W5x_readSnCR
+                0x0000000000004320                W5x_execCmdSn
+                0x0000000000004336                W5x_writeSnIR
+                0x0000000000004340                W5x_readSnIR
+                0x0000000000004348                W5x_writeSnSR
+                0x0000000000004352                W5x_readSnSR
+                0x000000000000435a                W5x_writeSnPORT
+                0x000000000000437c                W5x_readSnPORT
+                0x00000000000043ac                W5x_writeSnDHAR
+                0x00000000000043ba                W5x_readSnDHAR
+                0x00000000000043c8                W5x_writeSnDIPR
+                0x00000000000043d6                W5x_readSnDIPR
+                0x00000000000043e4                W5x_writeSnDPORT
+                0x0000000000004406                W5x_readSnDPORT
+                0x0000000000004436                W5x_writeSnMSSR
+                0x0000000000004458                W5x_readSnMSSR
+                0x0000000000004488                W5x_writeSnTX_FSR
+                0x00000000000044aa                W5x_readSnTX_FSR
+                0x00000000000044da                W5x_getTXFreeSize
+                0x0000000000004512                W5x_writeSnTX_RD
+                0x0000000000004534                W5x_readSnTX_RD
+                0x0000000000004564                W5x_writeSnTX_WR
+                0x0000000000004586                W5x_send_data_processing_offset
+                0x000000000000461c                W5x_send_data_processing
+                0x0000000000004628                W5x_readSnTX_WR
+                0x0000000000004658                W5x_writeSnRX_RSR
+                0x000000000000467a                W5x_readSnRX_RSR
+                0x00000000000046aa                W5x_getRXReceivedSize
+                0x00000000000046e2                W5x_writeSnRX_RD
+                0x0000000000004704                W5x_readSnRX_RD
+                0x0000000000004734                W5x_recv_data_processing_offset
+                0x000000000000479e                W5x_recv_data_processing
+                0x00000000000047ae                W5x_writeSnRX_WR
+                0x00000000000047d0                W5x_readSnRX_WR
+ .text          0x0000000000004800       0x46 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+                0x0000000000004800                __vector_6
+                0x000000000000481e                wdt_init
+                0x0000000000004836                wdt_reset
+                0x000000000000483a                wdt_force_restart
+ .text          0x0000000000004846      0x43c /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                0x0000000000004846                serial_init
+                0x000000000000486c                __vector_18
+                0x0000000000004abc                __vector_19
+                0x0000000000004b22                serial_rxchars
+                0x0000000000004b30                serial_popchar
+                0x0000000000004b7a                serial_isconnected
+                0x0000000000004bc8                serial_is_packet_ready
+                0x0000000000004bce                serial_writechar
+                0x0000000000004c2e                serial_writestr
+                0x0000000000004c58                serial_writestr_P
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text          0x0000000000004c82        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004c82                . = ALIGN (0x2)
+ *(.text.*)
+ .text.startup  0x0000000000004c82      0x174 obj/Release/main.o
+                0x0000000000004c82                main
+ .text.libgcc.mul
+                0x0000000000004df6       0x20 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004df6                __mulsi3
+ .text.libgcc.div
+                0x0000000000004e16        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc   0x0000000000004e16        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.prologue
+                0x0000000000004e16        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.builtins
+                0x0000000000004e16        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fmul
+                0x0000000000004e16        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.fixed
+                0x0000000000004e16        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .text.libgcc.mul
+                0x0000000000004e16        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x0000000000004e16       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000004e16                __udivmodhi4
+ .text.libgcc   0x0000000000004e3e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000004e3e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000004e3e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000004e3e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000004e3e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000004e3e        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x0000000000004e3e       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004e3e                __divmodhi4
+                0x0000000000004e3e                _div
+ .text.libgcc   0x0000000000004e66        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000004e66        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000004e66        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000004e66        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000004e66        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000004e66        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x0000000000004e66       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000004e66                __udivmodsi4
+ .text.libgcc   0x0000000000004eaa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000004eaa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000004eaa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000004eaa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000004eaa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000004eaa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.div
+                0x0000000000004eaa       0x2e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004eaa                __divmodsi4
+ .text.libgcc   0x0000000000004ed8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000004ed8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000004ed8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000004ed8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000004ed8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000004ed8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.div
+                0x0000000000004ed8       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                0x0000000000004ed8                __negsi2
+ .text.libgcc   0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.prologue
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.builtins
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fmul
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fixed
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.mul
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x0000000000004ee8        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc   0x0000000000004ee8        0xc /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000004ee8                __tablejump2__
+ .text.libgcc.prologue
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text.libgcc.div
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text.libgcc   0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text.libgcc.prologue
+                0x0000000000004ef4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text.libgcc.builtins
+                0x0000000000004ef4        0xe /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                0x0000000000004ef4                __bswapsi2
+ .text.libgcc.fmul
+                0x0000000000004f02        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text.libgcc.fixed
+                0x0000000000004f02        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .text.libgcc.mul
+                0x0000000000004f02       0x1e /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x0000000000004f02                __umulhisi3
+ .text.libgcc.div
+                0x0000000000004f20        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000004f20        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000004f20        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000004f20        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000004f20        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000004f20        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x0000000000004f20       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004f20                __muluhisi3
+ .text.libgcc.div
+                0x0000000000004f36        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000004f36        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000004f36        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000004f36        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000004f36        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000004f36        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                0x0000000000004f36                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000004f36        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x0000000000004f36                exit
+                0x0000000000004f36                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000004f36        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000004f3a                _etext = .
+
+.siminfo        0x0000000000004f3a       0x28
+ .siminfo       0x0000000000004f3a       0x28 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                0x0000000000004f3a                siminfo_serial_out
+                0x0000000000004f45                siminfo_serial_in
+                0x0000000000004f50                siminfo_cpufrequency
+                0x0000000000004f56                siminfo_device
+
+.data           0x0000000000800100      0x34e load address 0x0000000000004f62
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .data          0x0000000000800100        0x0 obj/Release/httpfsm.o
+ .data          0x0000000000800100        0x2 obj/Release/main.o
+                0x0000000000800100                current_temperature
+ .data          0x0000000000800102        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+ .data          0x0000000000800102       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+ .data          0x0000000000800114        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+ .data          0x0000000000800114        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+ .data          0x0000000000800114        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+ .data          0x0000000000800114        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+ .data          0x0000000000800114        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+ .data          0x0000000000800114        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+ .data          0x0000000000800114       0x14 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+ .data          0x0000000000800128        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+ .data          0x0000000000800128        0x8 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+ .data          0x0000000000800130        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+ .data          0x0000000000800130        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+ .data          0x0000000000800130        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+ .data          0x0000000000800130        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .data          0x0000000000800130        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ *(.data*)
+ *(.rodata)
+ .rodata        0x0000000000800130        0x4 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+ .rodata        0x0000000000800134        0x4 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+ .rodata        0x0000000000800138        0x4 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+ .rodata        0x000000000080013c        0xc /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+ .rodata        0x0000000000800148        0x6 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+ .rodata        0x000000000080014e       0x37 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+ .rodata        0x0000000000800185       0x10 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000000800195      0x21d obj/Release/httpfsm.o
+                                        0x22a (size before relaxing)
+ .rodata.str1.1
+                0x00000000008003b2       0x26 obj/Release/main.o
+ .rodata.str1.1
+                0x00000000008003d8        0xa /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                                          0xf (size before relaxing)
+ .rodata.str1.1
+                0x00000000008003e2        0x7 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+ .rodata.str1.1
+                0x00000000008003e9       0x13 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+ .rodata.str1.1
+                0x00000000008003fc       0x14 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+ .rodata.str1.1
+                0x0000000000800410       0x3a /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+ .rodata.str1.1
+                0x000000000080044a        0x4 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                          0x6 (size before relaxing)
+ .rodata.str1.1
+                0x000000000080044e        0x3 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+ *(.gnu.linkonce.d*)
+                0x0000000000800452                . = ALIGN (0x2)
+                0x0000000000800452                _edata = .
+                0x0000000000800452                PROVIDE (__data_end, .)
+
+.bss            0x000000000080044e      0x206
+                0x000000000080044e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x000000000080044e        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x000000000080044e        0x9 obj/Release/httpfsm.o
+ .bss           0x0000000000800457        0x0 obj/Release/main.o
+ .bss           0x0000000000800457        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+ .bss           0x0000000000800457        0x1 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+ .bss           0x0000000000800458        0xe /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+ .bss           0x0000000000800466       0x43 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+ .bss           0x00000000008004a9        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+ .bss           0x00000000008004a9        0x5 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+ .bss           0x00000000008004ae       0x83 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+ .bss           0x0000000000800531        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+ .bss           0x0000000000800531        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+ .bss           0x0000000000800531        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+ .bss           0x0000000000800531        0x2 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+ .bss           0x0000000000800533        0x1 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+ .bss           0x0000000000800534        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+ .bss           0x0000000000800534        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+ .bss           0x0000000000800534        0x2 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+ .bss           0x0000000000800536        0x4 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+ .bss           0x000000000080053a        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+ .bss           0x000000000080053a        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+ .bss           0x000000000080053a        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+ .bss           0x000000000080053a        0x1 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+ .bss           0x000000000080053b        0x0 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+ .bss           0x000000000080053b        0x7 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                0x000000000080053b                txtail
+                0x000000000080053c                txhead
+                0x000000000080053d                rxtail
+                0x000000000080053e                rxhead
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000800542        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0000000000800542       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                0x0000000000800542                config
+ COMMON         0x0000000000800554       0x45 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                0x0000000000800554                write_busy
+                0x0000000000800555                writeaddr
+                0x0000000000800557                writesize
+                0x0000000000800558                writebuf
+                0x0000000000800598                bufidx
+ COMMON         0x0000000000800599        0x4 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                0x0000000000800599                rtc_base
+ COMMON         0x000000000080059d       0x37 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                0x000000000080059d                vpd
+ COMMON         0x00000000008005d4       0x80 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                0x00000000008005d4                rxbuf
+                0x0000000000800614                txbuf
+                0x0000000000800654                PROVIDE (__bss_end, .)
+                0x0000000000004f62                __data_load_start = LOADADDR (.data)
+                0x00000000000052b0                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800654        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800654                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 obj/Release/httpfsm.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 obj/Release/main.o
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+ .comment       0x0000000000000011       0x12 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x5f4
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x5f4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_abbrev   0x0000000000000000      0x5a2
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x5a2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_line     0x0000000000000000       0x1a
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000      0x208
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x208 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bin/Release/final_project.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+W5x_config                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  obj/Release/main.o
+W5x_execCmdSn                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_getRXReceivedSize                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_getTXFreeSize                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_init                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  obj/Release/main.o
+W5x_read                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readIR                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readMR                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readRTR                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSn                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnCR                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnDHAR                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnDIPR                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnDPORT                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnIR                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_readSnMR                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_readSnMSSR                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnPORT                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnRX_RD                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_readSnRX_RSR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnRX_WR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnSR                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_readSnTX_FSR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnTX_RD                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readSnTX_WR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readUPORT                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_read_data                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_readbuf                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readbufGAR                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readbufSHAR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readbufSIPR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readbufSUBR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readbufSn                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_readbufUIPR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_recv_data_processing                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_recv_data_processing_offset                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_send_data_processing                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_send_data_processing_offset                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_write                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeIR                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeMR                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeRTR                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSn                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnCR                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnDHAR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_writeSnDIPR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_writeSnDPORT                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_writeSnIR                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_writeSnMR                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_writeSnMSSR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnPORT                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_writeSnRX_RD                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+W5x_writeSnRX_RSR                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnRX_WR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnSR                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnTX_FSR                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnTX_RD                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeSnTX_WR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writeUPORT                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writebuf                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writebufGAR                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writebufSHAR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writebufSIPR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writebufSUBR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writebufSn                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+W5x_writebufUIPR                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+_ZN9DhcpClass10checkLeaseEv                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass10getLocalIpEv                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass12getGatewayIpEv                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass12presend_DHCPEv                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass13beginWithDHCPEPhmm                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass13getSubnetMaskEv                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass14getDnsServerIpEv                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass15getDhcpServerIpEv                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass16reset_DHCP_leaseEv                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass17parseDHCPResponseEmRm              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass17send_DHCP_MESSAGEEhj               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass18request_DHCP_leaseEv               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+_ZN9DhcpClass9printByteEPch                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+__FUSE_REGION_LENGTH__                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__bad_interrupt                                   /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__bss_end                                         /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+__bswapsi2                                        /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_bswapsi2.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+__data_end                                        /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+__divmodsi4                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  obj/Release/httpfsm.o
+__do_copy_data                                    /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                                                  obj/Release/main.o
+                                                  obj/Release/httpfsm.o
+__heap_end                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__init                                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__mulsi3                                          /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+__muluhisi3                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_mulsi3.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+__negsi2                                          /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_negsi2.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+__stack                                           /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__tablejump2__                                    /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                                  obj/Release/httpfsm.o
+__udivmodhi4                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+__udivmodsi4                                      /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodsi4.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+__umulhisi3                                       /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_muluhisi3.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+__vector_1                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_10                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_11                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_12                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_13                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_14                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_15                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_16                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_17                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_18                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_19                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_2                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_20                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_21                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_22                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_23                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_24                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_25                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_3                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_4                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_5                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_6                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_7                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_8                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_9                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vector_default                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+__vectors                                         /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+_div                                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+_exit                                             /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+alarm_init                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+alarm_send                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                                                  obj/Release/main.o
+bufidx                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+check_for_test_start                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                                                  obj/Release/main.o
+config                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  obj/Release/main.o
+                                                  obj/Release/httpfsm.o
+config_init                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  obj/Release/main.o
+config_is_data_valid                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+config_set_modified                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  obj/Release/httpfsm.o
+config_update                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  obj/Release/main.o
+                                                  obj/Release/httpfsm.o
+config_update_noisr                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+config_write_defaults                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+current_temperature                               obj/Release/main.o
+delay_get                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+delay_init                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+delay_isdone                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                                                  obj/Release/main.o
+delay_set                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                                                  obj/Release/main.o
+dhcp_checkLease                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+dhcp_getDhcpServerIp                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+dhcp_getDnsServerIp                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+dhcp_getGatewayIp                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  obj/Release/main.o
+dhcp_getLocalIp                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  obj/Release/main.o
+dhcp_getSubnetMask                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  obj/Release/main.o
+dhcp_start                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  obj/Release/main.o
+eeprom_isbusy                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+                                                  obj/Release/main.o
+eeprom_readbuf                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+eeprom_startwrite                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+eeprom_writebuf                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+eeprom_writebuf_noisr                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+exit                                              /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+get_month                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+httpfsm_init                                      obj/Release/httpfsm.o
+                                                  obj/Release/main.o
+httpfsm_reset                                     obj/Release/httpfsm.o
+httpfsm_update                                    obj/Release/httpfsm.o
+                                                  obj/Release/main.o
+isW5100                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+isW5500                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+is_leapyear                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+led_init                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                                                  obj/Release/main.o
+led_is_on                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+led_off                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+led_on                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+led_set_blink                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+led_update                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(led.o)
+                                                  obj/Release/main.o
+log_add_record                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                                  obj/Release/main.o
+log_clear                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  obj/Release/httpfsm.o
+log_get_num_entries                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  obj/Release/httpfsm.o
+log_get_record                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  obj/Release/httpfsm.o
+log_init                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  obj/Release/main.o
+log_is_data_valid                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+log_update                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  obj/Release/main.o
+log_update_noisr                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+main                                              obj/Release/main.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+mem_cmp                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+mem_cpy                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+mem_set                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+millis                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(delay.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+ntp_sync_network_time                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  obj/Release/main.o
+random                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+random_seed                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+rtc_base                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+rtc_get_date                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+rtc_get_date_string                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+rtc_init                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  obj/Release/main.o
+rtc_num2datestr                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  obj/Release/httpfsm.o
+rtc_set_by_datestr                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+rtc_set_date                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+rxbuf                                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+rxhead                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+rxtail                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+serial_init                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+serial_is_packet_ready                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+serial_isconnected                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+serial_popchar                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+serial_rxchars                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+serial_writechar                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+serial_writestr                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+serial_writestr_P                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+signature_set                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                                                  obj/Release/main.o
+siminfo_cpufrequency                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+siminfo_device                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+siminfo_serial_in                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+siminfo_serial_out                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+socket_close                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_connect                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_disconnect                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_flush_line                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_igmpsend                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_is_active                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_is_blank_line                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_is_closed                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/main.o
+socket_is_established                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_is_listening                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_listen                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/main.o
+socket_open                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/main.o
+socket_peek                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_received_line                              /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_recv                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_recv_available                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/main.o
+                                                  obj/Release/httpfsm.o
+socket_recv_compare                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_recv_int                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_send                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_write_macaddress                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_writechar                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_writedate                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_writedec32                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_writehex16                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_writehex8                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+socket_writequotedstring                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+socket_writestr                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  obj/Release/httpfsm.o
+spi_begin_transfer                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+spi_end_transfer                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+spi_init                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+                                                  obj/Release/main.o
+spi_is_locked                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+spi_transfer                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(spi.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(w5x00.o)
+str_cmp                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+str_cpy                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+str_len                                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+str_writeudec16                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(str.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+strtoi                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+temp_get                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+                                                  obj/Release/main.o
+                                                  obj/Release/httpfsm.o
+temp_init                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+                                                  obj/Release/main.o
+temp_is_data_ready                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+temp_start                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(temp.o)
+                                                  obj/Release/main.o
+tempfsm_init                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                                  obj/Release/main.o
+tempfsm_reset                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+tempfsm_update                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(tempfsm.o)
+                                                  obj/Release/main.o
+timer1_clear                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+timer1_get                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+timer1_init                                       /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(timer1.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(rtc.o)
+txbuf                                             /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+txhead                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+txtail                                            /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(serial.o)
+uart_init                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  obj/Release/main.o
+uart_is_connected                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+uart_is_packet_available                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+uart_readpacket                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+uart_writechar                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+uart_writedec32                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                                                  obj/Release/httpfsm.o
+uart_writehex16                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+uart_writehex8                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+uart_writeip                                      /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  obj/Release/main.o
+uart_writestr                                     /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(uart.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                                                  obj/Release/main.o
+                                                  obj/Release/httpfsm.o
+udpsocket_add_to_datagram                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+udpsocket_close                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+udpsocket_is_closed                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+udpsocket_is_open                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+udpsocket_open                                    /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+udpsocket_open_multicast                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+udpsocket_recv_available                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+udpsocket_recv_data                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+udpsocket_recvfrom                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+udpsocket_send_datagram                           /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+udpsocket_sendto                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(ntp.o)
+udpsocket_start_datagram                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(socket.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(Dhcp.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+update_checksum                                   /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(util.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(log.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(config.o)
+update_tcrit_hi                                   obj/Release/httpfsm.o
+update_tcrit_lo                                   obj/Release/httpfsm.o
+update_twarn_hi                                   obj/Release/httpfsm.o
+update_twarn_lo                                   obj/Release/httpfsm.o
+vpd                                               /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(signature.o)
+                                                  /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(alarm.o)
+                                                  obj/Release/main.o
+                                                  obj/Release/httpfsm.o
+vpd_init                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+                                                  obj/Release/main.o
+vpd_is_data_valid                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+vpd_write_defaults                                /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(vpd.o)
+wdt_force_restart                                 /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+                                                  obj/Release/httpfsm.o
+wdt_init                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+                                                  obj/Release/main.o
+wdt_reset                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(wdt.o)
+                                                  obj/Release/main.o
+write_busy                                        /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+writeaddr                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+writebuf                                          /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
+writesize                                         /home/solisjose46/Desktop/SER486/github/final_project/lib_projd.a(eeprom.o)
